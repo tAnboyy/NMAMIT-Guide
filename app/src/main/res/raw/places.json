@@ -1,0 +1,641 @@
+[
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182198052773389,
+        "lng": 74.93790481587347
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Sanmathi Cafe",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183179236521703,
+        "lng": 74.93662351268289
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Shabari",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183513897912382,
+        "lng": 74.93648961370626
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Harshitha",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184237848520878,
+        "lng": 74.93442979220897
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Shisha Food Court",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184107478857557,
+        "lng": 74.933105986856
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Oven Fresh",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182766201404583,
+        "lng": 74.93459913468243
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Maggi shop",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182770214687078,
+        "lng": 74.93376474826671
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Raghanna's",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182316689589411,
+        "lng": 74.93406774184405
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "NMAMIT/Durga Canteen",
+    "rating": 4.1,
+    "vicinity": "",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18290334253753,
+        "lng": 74.93327064991891
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "LC block",
+    "rating": 4.1,
+    "vicinity": "First years' block",
+    "cat": "block"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182469111731345,
+        "lng": 74.93358768215609
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7771379302915,
+          "lng": -122.4106816697085
+        },
+        "southwest": {
+          "lat": 37.7744399697085,
+          "lng": -122.4133796302915
+        }
+      }
+    },
+    "name": "NC block",
+    "rating": 4,
+    "vicinity": "CIVIL/EE",
+    "cat": "block"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183010915209202,
+        "lng": 74.93394291800146
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8074053802915,
+          "lng": -122.4191828197085
+        },
+        "southwest": {
+          "lat": 37.80470741970851,
+          "lng": -122.4218807802915
+        }
+      }
+    },
+    "name": "LH block",
+    "rating": 4.1,
+    "vicinity": "MECH/EC",
+    "cat": "block"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8074053802915,
+          "lng": -122.4191828197085
+        },
+        "southwest": {
+          "lat": 37.80470741970851,
+          "lng": -122.4218807802915
+        }
+      }
+    },
+    "name": "Admin block",
+    "rating": 4.1,
+    "vicinity": "CS/IS/BT",
+    "cat": "block"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182725038004124,
+        "lng": 74.93351803675206
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7823185302915,
+          "lng": -122.4104349697085
+        },
+        "southwest": {
+          "lat": 37.7796205697085,
+          "lng": -122.4131329302915
+        }
+      }
+    },
+    "name": "Usha Divakarla",
+    "rating": 4.7,
+    "vicinity": "1st floor",
+    "cat": "teacher"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18290334253753,
+        "lng": 74.93327064991891
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7678018302915,
+          "lng": -122.4518091697085
+        },
+        "southwest": {
+          "lat": 37.7651038697085,
+          "lng": -122.4545071302915
+        }
+      }
+    },
+    "name": "Sapna S",
+    "rating": 4.5,
+    "vicinity": "3rd floor",
+    "cat": "teacher"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Vasudeva Pai",
+    "rating": 4.8,
+    "vicinity": "3rd floor",
+    "cat": "teacher"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183117527197503,
+        "lng": 74.93423665603461
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sambhram hall",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "hall"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182929676581812,
+        "lng": 74.93529689767374
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sadananda hall",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "hall"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182992878678006,
+        "lng": 74.93387062022894
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Main library",
+    "rating": 4.8,
+    "vicinity": "1st floor",
+    "cat": "study"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183322933777333,
+        "lng": 74.93360736294888
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "1",
+    "rating": 4.8,
+    "vicinity": "-1st floor",
+    "cat": "print"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182829606572119,
+        "lng": 74.93326837412786
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "2",
+    "rating": 4.8,
+    "vicinity": "ground floor",
+    "cat": "print"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183406595007204,
+        "lng": 74.93656234357086
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Ground Zero cyber",
+    "rating": 4.8,
+    "vicinity": "print/xerox/gznitte@gmail.com",
+    "cat": "print"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181550122057747,
+        "lng": 74.93797108588376
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sanmathi garden",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "hangout"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183102664770374,
+        "lng": 74.93463845054542
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Clinic",
+    "rating": 4.8,
+    "vicinity": "ground floor",
+    "cat": "med"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.180199518708614,
+        "lng": 74.93493759341429
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "BC Alva Sports Complex",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "sport"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182634599753648,
+        "lng": 74.9386598816319
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "BC Alva Memorial Indoor Stadium",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "sport"
+  },
+
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183714246391565,
+          "lng": 74.93881468320654
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "NET Gents Main Hostel- Block 3",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "block2"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183909109074776,
+        "lng": 74.93533892636647
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "NET PG Girls Hostel",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "block2"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.1825087325393,
+        "lng": 74.93458495108649
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "rating": 4.8,
+    "vicinity": "-1st floor",
+    "cat": "store"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat":  13.183175458490435,
+        "lng": 74.9366243020486
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Shabari store",
+    "rating": 4.8,
+    "vicinity": "",
+    "cat": "store"
+  }
+]

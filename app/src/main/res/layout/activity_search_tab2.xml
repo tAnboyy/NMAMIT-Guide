@@ -34,59 +34,93 @@
                 app:iconStartPadding="5dp" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipBlock"
+                android:id="@+id/chipHangout"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Block"
-                app:chipIcon="@drawable/ic_building"
+                android:text="Garden/Hangout"
+                app:chipIcon="@drawable/ic_park"
                 app:chipIconEnabled="true"
 
                 app:iconStartPadding="5dp" />
 
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipTeacher"
+                android:id="@+id/chipStore"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Teacher"
-                app:chipIcon="@drawable/ic_teacher"
+                android:text="Store"
+                app:chipIcon="@drawable/ic_store"
                 app:chipIconEnabled="true"
 
                 app:iconStartPadding="5dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipHall"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hall"
-                app:chipIcon="@drawable/ic_stage"
-                app:chipIconEnabled="true"
-
-                app:iconStartPadding="5dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipStudy"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Library/Study"
-                app:chipIcon="@drawable/ic_books"
-                app:chipIconEnabled="true"
-
-                app:iconStartPadding="5dp" />
-
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPrint"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xerox/Print"
+                android:text="Xerox/Cyber"
                 app:chipIcon="@drawable/ic_print"
                 app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMedicine"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                app:chipIcon="@drawable/ic_medicine"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHostel"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostel"
+                app:chipIcon="@drawable/ic_building"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSport"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport/Ground"
+                app:chipIcon="@drawable/ic_stadium"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGarage"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuel/Garage"
+                app:chipIcon="@drawable/ic_fuel"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBusAuto"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus/Auto"
+                app:chipIcon="@drawable/ic_auto"
+                app:chipIconEnabled="true"
+
                 app:iconStartPadding="5dp" />
 
             <com.google.android.material.chip.Chip
@@ -98,7 +132,6 @@
                 app:chipIcon="@drawable/ic_pie_chart"
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
-
         </com.google.android.material.chip.ChipGroup>
 
 

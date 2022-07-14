@@ -47,4 +47,16 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:+'
     androidTestImplementation 'androidx.test.espresso:espresso-core:+'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Utilities for Maps SDK for Android (requires Google Play Services)
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+
+    // KTX for the Maps SDK for Android library
+    implementation 'com.google.maps.android:maps-ktx:3.4.0'
+
+    // KTX for the Maps SDK for Android Utility Library
+    implementation 'com.google.maps.android:maps-utils-ktx:3.4.0'
+
 }

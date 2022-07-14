@@ -3,13 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_maps.xml" value="0.264" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable-v24/ic_directions_bike_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1255" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_building.xml" value="0.1285" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_building2.xml" value="0.1285" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_burger.xml" value="0.2465" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_list.xml" value="0.2465" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_map.xml" value="0.2465" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_map_marker.xml" value="0.2465" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_medicine.xml" value="0.1285" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_out.xml" value="0.17" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_park.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_print.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_shop.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_stadium.xml" value="0.1285" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_stage.xml" value="0.1285" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_maps.xml" value="0.14473684210526316" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_search_tab.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_search_tab2.xml" value="0.264" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/item_view_pager.xml" value="0.1933876811594203" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/list.xml" value="0.1" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/marker_info_contents.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
       </map>
     </option>
   </component>

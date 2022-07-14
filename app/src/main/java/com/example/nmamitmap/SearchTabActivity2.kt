@@ -41,33 +41,34 @@ import android.widget.Toast
 import androidx.core.view.size
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
 import com.example.nmamitmap.databinding.ActivitySearchTabBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 //viewpager2 tab layout
-class SearchTabActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySearchTabBinding
+class SearchTabActivity2 : AppCompatActivity() {
+    private lateinit var binding: ActivitySearchTab2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySearchTabBinding.inflate(layoutInflater)
+        binding = ActivitySearchTab2Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
-//        val images = listOf(
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background,
-//            R.drawable.ic_launcher_background
-//        )
-//
-//        var tabNo: Int = 0;
+        val images = listOf(
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background
+        )
+
+        var tabNo: Int = 0;
 
 //        val adapter = ViewPagerAdapter2(this, images)
 //        binding.viewPager.adapter = adapter
@@ -114,13 +115,8 @@ class SearchTabActivity : AppCompatActivity() {
 
         val listView = binding.listView;
 
-        val names = arrayOf(
-            "Durga canteen",
-            "Cafe On The Corner",
-            "Maggi shop",
-            "Raghanna's",
-            "NMAMIT Canteen",
-        );
+        val names =
+            arrayOf("Sanmathi Cafe", "Shabari", "Harshitha", "Shisha Food Court", "Oven Fresh");
 
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
             this, android.R.layout.simple_list_item_1, names
@@ -131,14 +127,12 @@ class SearchTabActivity : AppCompatActivity() {
             Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
             val intent = Intent(this, MapsActivity::class.java)
 //            var latlng = LatLng(16.099108, -22.812924);
-            var lat = 13.182316689589411
-            var lng = 74.93406774184405
+            var lat = 13.18331782186854
+            var lng = 74.93365618783577
             intent.putExtra("key-lat", lat);
             intent.putExtra("key-lng", lng);
             intent.putExtra("viaIntent", 1);
-            intent.putExtra("title", "");
 
-            intent.putExtra("snippet", "");
             this.startActivity(intent)
         }
 
@@ -146,7 +140,7 @@ class SearchTabActivity : AppCompatActivity() {
         binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
             // Responds to child chip checked/unchecked
 //            Toast.makeText(
-//                this@SearchTabActivity,
+//                this@SearchTabActivity2,
 //                "hi${checkedId.size}${checkedId.get(0)}",
 //                Toast.LENGTH_LONG
 //            ).show()
@@ -157,10 +151,11 @@ class SearchTabActivity : AppCompatActivity() {
                 //            food
                 val listView = binding.listView;
                 val names = arrayOf(
-                    "Durga/NMAMIT canteen",
-                    "Cafe On The Corner",
-                    "Maggi shop",
-                    "Raghanna's",
+                    "Sanmathi Cafe",
+                    "Shabari",
+                    "Harshitha",
+                    "Shisha Food Court",
+                    "Oven Fresh",
                 );
 
                 val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
@@ -169,27 +164,24 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = arrayAdapter
                 listView.setOnItemClickListener { adapterView, view, i, l ->
-
-                    if (i == 0) {
-                        Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                        val intent = Intent(this, MapsActivity::class.java)
+                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
 //            var latlng = LatLng(16.099108, -22.812924);
-                        var lat = 13.182316689589411
-                        var lng = 74.93406774184405
-                        intent.putExtra("key-lat", lat);
-                        intent.putExtra("key-lng", lng);
-                        intent.putExtra("viaIntent", 1);
+                    var lat = 13.18331782186854
+                    var lng = 74.93365618783577
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
 
-                        this.startActivity(intent)
-                    }
+                    this.startActivity(intent)
                 }
             }
 
 //            2
-            if (checkedId.contains(binding.chipBlock.id)) {
-                //            block
+            if (checkedId.contains(binding.chipHangout.id)) {
+                //            hangout
                 val listView = binding.listView;
-                val names = arrayOf("LC block", "NC block", "LH block", "Admin block");
+                val names = arrayOf("Sanmathi garden");
 
                 val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
                     this, android.R.layout.simple_list_item_1, names
@@ -197,39 +189,24 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = arrayAdapter
                 listView.setOnItemClickListener { adapterView, view, i, l ->
-
-                    if (i == 0) {
-                        Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                        val intent = Intent(this, MapsActivity::class.java)
+                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
 //            var latlng = LatLng(16.099108, -22.812924);
-                        var lat = 13.18290334253753
-                        var lng = 74.93327064991891
-                        intent.putExtra("key-lat", lat);
-                        intent.putExtra("key-lng", lng);
-                        intent.putExtra("viaIntent", 1);
-                        intent.putExtra("title", names[i])
-                        this.startActivity(intent)
-                    } else if (i == 1) {
-                        Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                        val intent = Intent(this, MapsActivity::class.java)
-//            var latlng = LatLng(16.099108, -22.812924);
-                        var lat = 13.182469111731345
-                        var lng = 74.93358768215609
-                        intent.putExtra("key-lat", lat);
-                        intent.putExtra("key-lng", lng);
-                        intent.putExtra("viaIntent", 1);
-                        intent.putExtra("title", names[i])
-                        this.startActivity(intent)
-                    }
+                    var lat = 13.18331782186854
+                    var lng = 74.93365618783577
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
 
+                    this.startActivity(intent)
                 }
             }
 
-//            3
-            if (checkedId.contains(binding.chipTeacher.id)) {
-                //            teacher
+            //            2
+            if (checkedId.contains(binding.chipStore.id)) {
+                //            shop
                 val listView = binding.listView;
-                val names = arrayOf("Usha Divakarla", "Sapna S", "Vasudeva Pai");
+                val names = arrayOf("Shabari store");
 
                 val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
                     this, android.R.layout.simple_list_item_1, names
@@ -237,43 +214,24 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = arrayAdapter
                 listView.setOnItemClickListener { adapterView, view, i, l ->
-                    if (i == 0) {
-                        Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                        val intent = Intent(this, MapsActivity::class.java)
+                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
 //            var latlng = LatLng(16.099108, -22.812924);
-                        var lat = 13.182725038004124
-                        var lng = 74.93351803675206
-                        intent.putExtra("key-lat", lat);
-                        intent.putExtra("key-lng", lng);
-                        intent.putExtra("viaIntent", 1);
+                    var lat = 13.18331782186854
+                    var lng = 74.93365618783577
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
 
-                        intent.putExtra("title", names[i]);
-
-                        intent.putExtra("snippet", "1st floor");
-                        this.startActivity(intent)
-                    } else if (i == 1) {
-                        Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                        val intent = Intent(this, MapsActivity::class.java)
-//            var latlng = LatLng(16.099108, -22.812924);
-                        var lat = 13.18331782186854
-                        var lng = 74.93365618783577
-                        intent.putExtra("key-lat", lat);
-                        intent.putExtra("key-lng", lng);
-                        intent.putExtra("viaIntent", 1);
-
-                        intent.putExtra("title", names[i]);
-
-                        intent.putExtra("snippet", "3rd floor");
-                        this.startActivity(intent)
-                    }
+                    this.startActivity(intent)
                 }
             }
 
 //            4
-            if (checkedId.contains(binding.chipHall.id)) {
-                //            hall
+            if (checkedId.contains(binding.chipMedicine.id)) {
+                //            medicine
                 val listView = binding.listView;
-                val names = arrayOf("Sambhram hall", "Sadananda hall");
+                val names = arrayOf("gznitte");
 
                 val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
                     this, android.R.layout.simple_list_item_1, names
@@ -295,11 +253,37 @@ class SearchTabActivity : AppCompatActivity() {
             }
 
 //            5
+            if (checkedId.contains(binding.chipPrint.id)) {
+                //            print
+                val listView = binding.listView;
+                val names = arrayOf("Ground Zero cyber");
+
+                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+                    this, android.R.layout.simple_list_item_1, names
+                )
+
+                listView.adapter = arrayAdapter
+                listView.setOnItemClickListener { adapterView, view, i, l ->
+                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+//            var latlng = LatLng(16.099108, -22.812924);
+                    var lat = 13.18331782186854
+                    var lng = 74.93365618783577
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
+
+                    this.startActivity(intent)
+                }
+            }
+
 //            6
 //            7
+//            8
+//            9
         }
 
-        binding.bottomNavigationView.selectedItemId = R.id.miIn
+        binding.bottomNavigationView.selectedItemId = R.id.miOut
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.miMap -> {
@@ -308,8 +292,8 @@ class SearchTabActivity : AppCompatActivity() {
                 }
 //                R.id.miProfile -> setCurrentFragment(secondFragment)
 //                R.id.miProfile -> startActivity(intent)
-                R.id.miOut -> {
-                    val intent = Intent(this, SearchTabActivity2::class.java)
+                R.id.miIn -> {
+                    val intent = Intent(this, SearchTabActivity::class.java)
                     startActivity(intent)
                 }
             }

@@ -21,11 +21,11 @@ import com.google.android.gms.maps.model.MarkerOptions
 import java.util.Collections.sort
 
 
-class ViewPagerAdapter(
+class ViewPagerAdapter2(
     private val context: Context,
     val images: List<Int>,
 //    var tabNo: Int
-) : RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
+) : RecyclerView.Adapter<ViewPagerAdapter2.ViewPagerViewHolder>() {
     private lateinit var binding: ItemViewPagerBinding
 
     //    inner class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
