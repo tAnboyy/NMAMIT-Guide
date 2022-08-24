@@ -32,7 +32,7 @@ import com.google.android.gms.maps.model.Dash
 import com.google.android.gms.maps.model.Dot
 import com.google.android.gms.maps.model.Gap
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(),OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -43,13 +43,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationCallback: LocationCallback
 
     private lateinit var lastLocation: Location
-
-    private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-//            replace(R.id.flFragment, fragment)
-            commit()
-        }
-    }
 
     @SuppressLint("MissingPermission")
     private fun getLocationAccess() {
@@ -102,18 +95,27 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //TODO: Api call to get data
+
+
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+//        val mapFragment = supportFragmentManager
+//            .findFragmentById(R.id.map) as SupportMapFragment
+//        mapFragment.getMapAsync(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         val firstFragment = FirstFragment()
         val secondFragment = SecondFragment()
+        val thirdFragment = ThirdFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragment, firstFragment)
+            commit()
+        }
 
 //        setCurrentFragment(firstFragment)
 
@@ -122,15 +124,33 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             when (it.itemId) {
 //                R.id.miHome -> setCurrentFragment(firstFragment)
 //                R.id.miProfile -> setCurrentFragment(secondFragment)
-                R.id.miIn -> {
-                    val intent = Intent(this, SearchTabActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+                R.id.miMap -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.flFragment, firstFragment)
+                        commit()
+                    }
                 }
+
+                R.id.miIn -> {
+//                    val intent = Intent(this, SearchTabActivity::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                    startActivity(intent)
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.flFragment, secondFragment)
+                        commit()
+                    }
+                }
+
                 R.id.miOut -> {
-                    val intent = Intent(this, SearchTabActivity2::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+//                    val intent = Intent(this, SearchTabActivity2::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                    startActivity(intent)
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.flFragment, thirdFragment)
+                        commit()
+                    }
                 }
             }
 
@@ -235,90 +255,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-    @RequiresApi(Build.VERSION_CODES.N)
-    override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
 
-        mMap.uiSettings.isZoomControlsEnabled = true
-
-        // Add polygons to indicate areas on the map.
-        val polygon1 = googleMap.addPolygon(
-            PolygonOptions()
-                .clickable(true)
-                .add(
-                    LatLng(13.18315798008595, 74.93638211605136),
-                    LatLng(13.183936212408991, 74.93477010841427),
-                    LatLng(13.183951881491984, 74.93276113384267),
-                    LatLng(13.182200696515679, 74.93257012883282),
-                    LatLng(13.182248452235134, 74.93551740212783)
-                )
-        )
-        // Store a data object with the polygon, used here to indicate an arbitrary type.
-        polygon1.tag = "alpha"
-        // Style the polygon.
-        stylePolygon(polygon1)
-
-
-        if (intent.getIntExtra("viaIntent", 0) != 1) setUpMap()
-        else if (intent.getIntExtra("viaIntent", 0) == 1) {
-            var recievedLat = intent.getDoubleExtra("key-lat", 0.0)
-            var recievedLng = intent.getDoubleExtra("key-lng", 0.0)
-
-            val recievedTitle = intent.getStringExtra("title")
-            val recievedSnippet = intent.getStringExtra("snippet")
-//        recievedLatLng?.let { CameraUpdateFactory.newLatLngZoom(it, 5f) }
-//            ?.let { mMap.animateCamera(it) }
-            var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 18f))
-            mMap.addMarker(
-                MarkerOptions().position(recievedLatLng)
-                    .title(recievedTitle).snippet(recievedSnippet)
-            )
-
-            mMap.isMyLocationEnabled = true
-            fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
-
-                if (location != null) {
-                    lastLocation = location
-                    val currentLatLong = LatLng(location.latitude, location.longitude)
-//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 5f))
-                }
-            }
-
-            addMarkers(mMap)
-            mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
-        }
-
-        mMap.isMyLocationEnabled = true
-
-        googleMap.setMapStyle(
-            MapStyleOptions.loadRawResourceStyle(
-                this, R.raw.style_json
-            )
-        );
-
-//        val zoomLevel = 20f
-//        // Add a marker in Sydney and move the camera
-//        val sydney = LatLng(13.18332846270605, 74.93347943062099)
-//        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-////        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, zoomLevel))
-//        getLocationAccess()
-
-
-// Create a LatLngBounds that includes the city of Adelaide in Australia.
-        val adelaideBounds = LatLngBounds(
-            LatLng(13.182073899028802, 74.93021715948936),  // SW bounds
-            LatLng(13.189073551405391, 74.94063947402205) // NE bounds
-        )
-
-// Constrain the camera target to the Adelaide bounds.
-        mMap.setLatLngBoundsForCameraTarget(adelaideBounds)
-
-        mMap.setMinZoomPreference(16.0f)
-        mMap.setMaxZoomPreference(20.0f)
-
-    }
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun setUpMap() {
@@ -336,16 +273,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
     }
 
-
     private val places: List<Place> by lazy {
         PlacesReader(this).read()
     }
 
-    private val bicycleIcon: BitmapDescriptor by lazy {
-        val color =
-            ContextCompat.getColor(this, androidx.appcompat.R.color.primary_dark_material_dark)
-        BitmapHelper.vectorToBitmap(this, R.drawable.ic_directions_bike_black_24dp, color)
-    }
+//    private val bicycleIcon: BitmapDescriptor by lazy {
+//        val color =
+//            ContextCompat.getColor(this, androidx.appcompat.R.color.primary_dark_material_dark)
+//        BitmapHelper.vectorToBitmap(this, R.drawable.ic_directions_bike_black_24dp, color)
+//    }
 
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -459,6 +395,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val canvas = Canvas(bitmap)
         vectorDrawable.draw(canvas)
         return BitmapDescriptorFactory.fromBitmap(bitmap)
+    }
+
+    override fun onMapReady(p0: GoogleMap) {
+        TODO("Not yet implemented")
     }
 
 }

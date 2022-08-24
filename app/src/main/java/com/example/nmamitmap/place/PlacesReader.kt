@@ -22,6 +22,7 @@ import java.io.InputStreamReader
 
 class PlacesReader(private val context: Context) {
 
+    
     private val gson = Gson()
 
     private val inputStream: InputStream

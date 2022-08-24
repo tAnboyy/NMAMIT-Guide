@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchTabActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp"
+            app:chipSpacingVertical="-4dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <!-- Chips can be declared here, or added dynamically. -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFood"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Food"
+                app:chipIcon="@drawable/ic_burger"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHangout"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garden/Hangout"
+                app:chipIcon="@drawable/ic_park"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStore"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store"
+                app:chipIcon="@drawable/ic_store"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPrint"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xerox/Cyber"
+                app:chipIcon="@drawable/ic_print"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMedicine"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                app:chipIcon="@drawable/ic_medicine"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHostel"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostel"
+                app:chipIcon="@drawable/ic_building"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSport"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport/Ground"
+                app:chipIcon="@drawable/ic_stadium"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGarage"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuel/Garage"
+                app:chipIcon="@drawable/ic_fuel"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBusAuto"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus/Auto"
+                app:chipIcon="@drawable/ic_auto"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOthers"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                app:chipIcon="@drawable/ic_pie_chart"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <!--        <com.google.android.material.tabs.TabLayout-->
+        <!--            android:id="@+id/tabLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:tabMode="auto" />-->
+
+        <!--        <androidx.viewpager2.widget.ViewPager2-->
+        <!--            android:id="@+id/viewPager"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp" />
+
+    </LinearLayout>
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/flFragment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
+
+</RelativeLayout>

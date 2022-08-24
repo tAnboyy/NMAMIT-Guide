@@ -315,6 +315,5 @@ class SearchTabActivity : AppCompatActivity() {
             }
             true
         }
-
     }
 }
