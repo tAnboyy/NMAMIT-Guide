@@ -22,5 +22,7 @@ data class Place(
     val latLng: LatLng,
     val address: String,
     val rating: Float,
-    val cat: String
+    val cat: String,
+    val inout: String,
+    val index: Int
 )

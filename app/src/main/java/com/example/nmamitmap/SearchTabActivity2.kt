@@ -33,6 +33,7 @@
 
 package com.example.nmamitmap
 
+import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -288,17 +289,24 @@ class SearchTabActivity2 : AppCompatActivity() {
             when (it.itemId) {
                 R.id.miMap -> {
                     val intent = Intent(this, MapsActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 }
 //                R.id.miProfile -> setCurrentFragment(secondFragment)
 //                R.id.miProfile -> startActivity(intent)
                 R.id.miIn -> {
                     val intent = Intent(this, SearchTabActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 }
             }
             true
         }
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        binding.bottomNavigationView.selectedItemId = R.id.miMap
+
+        val intent = Intent(this, MapsActivity::class.java)
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 }

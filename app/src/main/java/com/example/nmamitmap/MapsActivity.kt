@@ -1,6 +1,7 @@
 package com.example.nmamitmap
 
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -11,9 +12,11 @@ import android.location.LocationRequest
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.nmamitmap.databinding.ActivityMapsBinding
@@ -43,6 +46,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationCallback: LocationCallback
 
     private lateinit var lastLocation: Location
+
+    private var backPressedTime = 0L
 
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
@@ -124,18 +129,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //                R.id.miProfile -> setCurrentFragment(secondFragment)
                 R.id.miIn -> {
                     val intent = Intent(this, SearchTabActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 }
                 R.id.miOut -> {
                     val intent = Intent(this, SearchTabActivity2::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 }
             }
 
             true
         }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            finishAffinity()
+        } else {
+            Toast.makeText(this, "Press back again to exit app", Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis()
     }
 
     /**

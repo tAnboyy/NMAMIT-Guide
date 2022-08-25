@@ -19,7 +19,9 @@
     "name": "Sanmathi Cafe",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "out",
+    "cat": "food",
+    "index": 1
   },
   {
     "geometry": {
@@ -41,7 +43,9 @@
     "name": "Shabari",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "out",
+    "cat": "food",
+    "index": 2
   },
   {
     "geometry": {
@@ -63,7 +67,9 @@
     "name": "Harshitha",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "out",
+    "cat": "food",
+    "index": 3
   },
   {
     "geometry": {
@@ -85,7 +91,9 @@
     "name": "Shisha Food Court",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "out",
+    "cat": "food",
+    "index": 4
   },
   {
     "geometry": {
@@ -107,7 +115,9 @@
     "name": "Oven Fresh",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "in",
+    "cat": "food",
+    "index": 1
   },
   {
     "geometry": {
@@ -129,7 +139,9 @@
     "name": "Maggi shop",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "in",
+    "cat": "food",
+    "index": 2
   },
   {
     "geometry": {
@@ -151,7 +163,9 @@
     "name": "Raghanna's",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "in",
+    "cat": "food",
+    "index": 3
   },
   {
     "geometry": {
@@ -173,7 +187,9 @@
     "name": "NMAMIT/Durga Canteen",
     "rating": 4.1,
     "vicinity": "",
-    "cat": "food"
+    "inout": "in",
+    "cat": "food",
+    "index": 4
   },
   {
     "geometry": {
@@ -195,7 +211,9 @@
     "name": "LC block",
     "rating": 4.1,
     "vicinity": "First years' block",
-    "cat": "block"
+    "inout": "NA",
+    "cat": "block",
+    "index": 1
   },
   {
     "geometry": {
@@ -217,7 +235,9 @@
     "name": "NC block",
     "rating": 4,
     "vicinity": "CIVIL/EE",
-    "cat": "block"
+    "inout": "NA",
+    "cat": "block",
+    "index": 2
   },
   {
     "geometry": {
@@ -239,7 +259,9 @@
     "name": "LH block",
     "rating": 4.1,
     "vicinity": "MECH/EC",
-    "cat": "block"
+    "inout": "NA",
+    "cat": "block",
+    "index": 3
   },
   {
     "geometry": {
@@ -261,7 +283,9 @@
     "name": "Admin block",
     "rating": 4.1,
     "vicinity": "CS/IS/BT",
-    "cat": "block"
+    "inout": "NA",
+    "cat": "block",
+    "index": 4
   },
   {
     "geometry": {
@@ -283,7 +307,9 @@
     "name": "Usha Divakarla",
     "rating": 4.7,
     "vicinity": "1st floor",
-    "cat": "teacher"
+    "inout": "NA",
+    "cat": "teacher",
+    "index": 1
   },
   {
     "geometry": {
@@ -305,7 +331,9 @@
     "name": "Sapna S",
     "rating": 4.5,
     "vicinity": "3rd floor",
-    "cat": "teacher"
+    "inout": "NA",
+    "cat": "teacher",
+    "index": 2
   },
   {
     "geometry": {
@@ -327,7 +355,9 @@
     "name": "Vasudeva Pai",
     "rating": 4.8,
     "vicinity": "3rd floor",
-    "cat": "teacher"
+    "inout": "NA",
+    "cat": "teacher",
+    "index": 3
   },
   {
     "geometry": {
@@ -349,7 +379,9 @@
     "name": "Sambhram hall",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "hall"
+    "inout": "NA",
+    "cat": "hall",
+    "index": 1
   },
   {
     "geometry": {
@@ -371,7 +403,9 @@
     "name": "Sadananda hall",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "hall"
+    "inout": "NA",
+    "cat": "hall",
+    "index": 2
   },
   {
     "geometry": {
@@ -393,7 +427,9 @@
     "name": "Main library",
     "rating": 4.8,
     "vicinity": "1st floor",
-    "cat": "study"
+    "inout": "NA",
+    "cat": "study",
+    "index": 1
   },
   {
     "geometry": {
@@ -412,10 +448,12 @@
         }
       }
     },
-    "name": "1",
+    "name": "Xerox 1",
     "rating": 4.8,
     "vicinity": "-1st floor",
-    "cat": "print"
+    "inout": "in",
+    "cat": "print",
+    "index": 1
   },
   {
     "geometry": {
@@ -434,10 +472,12 @@
         }
       }
     },
-    "name": "2",
+    "name": "Xerox 2",
     "rating": 4.8,
     "vicinity": "ground floor",
-    "cat": "print"
+    "inout": "in",
+    "cat": "print",
+    "index": 2
   },
   {
     "geometry": {
@@ -459,7 +499,9 @@
     "name": "Ground Zero cyber",
     "rating": 4.8,
     "vicinity": "print/xerox/gznitte@gmail.com",
-    "cat": "print"
+    "inout": "out",
+    "cat": "print",
+    "index": 1
   },
   {
     "geometry": {
@@ -481,7 +523,9 @@
     "name": "Sanmathi garden",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "hangout"
+    "inout": "NA",
+    "cat": "hangout",
+    "index": 1
   },
   {
     "geometry": {
@@ -503,7 +547,9 @@
     "name": "Clinic",
     "rating": 4.8,
     "vicinity": "ground floor",
-    "cat": "med"
+    "inout": "in",
+    "cat": "other",
+    "index": 1
   },
   {
     "geometry": {
@@ -525,7 +571,9 @@
     "name": "BC Alva Sports Complex",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "sport"
+    "inout": "NA",
+    "cat": "sport",
+    "index": 1
   },
   {
     "geometry": {
@@ -547,7 +595,9 @@
     "name": "BC Alva Memorial Indoor Stadium",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "sport"
+    "inout": "NA",
+    "cat": "sport",
+    "index": 2
   },
 
   {
@@ -570,7 +620,9 @@
     "name": "NET Gents Main Hostel- Block 3",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "block2"
+    "inout": "NA",
+    "cat": "block2",
+    "index": 1
   },
   {
     "geometry": {
@@ -592,7 +644,9 @@
     "name": "NET PG Girls Hostel",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "block2"
+    "inout": "NA",
+    "cat": "block2",
+    "index": 2
   },
   {
     "geometry": {
@@ -614,7 +668,9 @@
     "name": "Nitte Co-op store",
     "rating": 4.8,
     "vicinity": "-1st floor",
-    "cat": "store"
+    "inout": "NA",
+    "cat": "store",
+    "index": 1
   },
   {
     "geometry": {
@@ -636,6 +692,8 @@
     "name": "Shabari store",
     "rating": 4.8,
     "vicinity": "",
-    "cat": "store"
+    "inout": "NA",
+    "cat": "store",
+    "index": 2
   }
 ]
