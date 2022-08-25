@@ -46,11 +46,11 @@
 
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipStore"
+                android:id="@+id/chipShop"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Store"
+                android:text="Shop"
                 app:chipIcon="@drawable/ic_store"
                 app:chipIconEnabled="true"
 

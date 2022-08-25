@@ -115,9 +115,9 @@
     "name": "Oven Fresh",
     "rating": 4.1,
     "vicinity": "",
-    "inout": "in",
+    "inout": "out",
     "cat": "food",
-    "index": 1
+    "index": 5
   },
   {
     "geometry": {
@@ -141,7 +141,7 @@
     "vicinity": "",
     "inout": "in",
     "cat": "food",
-    "index": 2
+    "index": 1
   },
   {
     "geometry": {
@@ -165,7 +165,7 @@
     "vicinity": "",
     "inout": "in",
     "cat": "food",
-    "index": 3
+    "index": 2
   },
   {
     "geometry": {
@@ -189,7 +189,7 @@
     "vicinity": "",
     "inout": "in",
     "cat": "food",
-    "index": 4
+    "index": 3
   },
   {
     "geometry": {
@@ -693,7 +693,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "store",
+    "cat": "shop",
     "index": 2
   }
 ]
