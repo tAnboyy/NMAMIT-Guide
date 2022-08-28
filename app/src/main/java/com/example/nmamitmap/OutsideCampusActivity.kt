@@ -29,32 +29,30 @@ class SearchTabActivity2 : AppCompatActivity() {
 
         val listView = binding.listView;
 
-        val names = arrayListOf<String>();
+        val foods = arrayListOf<Place>();
         places.forEach { place ->
-            if (place.cat == "food" && place.inout == "out") names.add(place.name)
+            if (place.cat == "food" && place.inout == "out") foods.add(place)
         }
 
-        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-            this, android.R.layout.simple_list_item_1, names
-        )
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
 
-        listView.adapter = arrayAdapter
+        listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
-            places.forEach { place ->
-                if (place.cat == "food" && place.index == i + 1) {
-                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                    val intent = Intent(this, MapsActivity::class.java)
-                    val lat = place.latLng.latitude
-                    val lng = place.latLng.longitude
+//                    places.forEach { place ->
+//                        if (place.cat == "food" && place.index == i + 1) {
+            Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
+            val intent = Intent(this, MapsActivity::class.java)
+            val lat = foods[i].latLng.latitude
+            val lng = foods[i].latLng.longitude
 
-                    intent.putExtra("key-lat", lat);
-                    intent.putExtra("key-lng", lng);
-                    intent.putExtra("viaIntent", 1);
+            intent.putExtra("key-lat", lat);
+            intent.putExtra("key-lng", lng);
+            intent.putExtra("viaIntent", 1);
 
-                    this.startActivity(intent)
-                }
-            }
+            this.startActivity(intent)
         }
 
         binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
@@ -63,32 +61,24 @@ class SearchTabActivity2 : AppCompatActivity() {
             if (checkedId.contains(binding.chipFood.id)) {
                 val listView = binding.listView;
 
-                val names = arrayListOf<String>();
+                val foods = arrayListOf<Place>();
                 places.forEach { place ->
-                    if (place.cat == "food" && place.inout == "out") names.add(place.name)
+                    if (place.cat == "food" && place.inout == "out") foods.add(place)
                 }
 
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
-
-                listView.adapter = arrayAdapter
+                listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    places.forEach { place ->
-                        if (place.cat == "food" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
+                    Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = foods[i].latLng.latitude
+                    val lng = foods[i].latLng.longitude
 
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
 
-                            this.startActivity(intent)
-                        }
-                    }
+                    this.startActivity(intent)
                 }
             }
 
@@ -96,66 +86,58 @@ class SearchTabActivity2 : AppCompatActivity() {
             if (checkedId.contains(binding.chipHangout.id)) {
                 val listView = binding.listView;
 
-                val names = arrayListOf<String>();
+                val hangouts = arrayListOf<Place>();
                 places.forEach { place ->
-                    if (place.cat == "hangout") names.add(place.name)
+                    if (place.cat == "hangout") hangouts.add(place)
                 }
 
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
-
-                listView.adapter = arrayAdapter
+                listView.adapter = PlaceListAdapter(this, hangouts)
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
                     places.forEach { place ->
-                        if (place.cat == "hangout" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
+                        Toast.makeText(this, hangouts[i].name + " selected", Toast.LENGTH_SHORT)
+                            .show();
+                        val intent = Intent(this, MapsActivity::class.java)
+                        val lat = place.latLng.latitude
+                        val lng = place.latLng.longitude
 
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
+                        intent.putExtra("key-lat", lat);
+                        intent.putExtra("key-lng", lng);
+                        intent.putExtra("viaIntent", 1);
 
-                            this.startActivity(intent)
-                        }
+                        this.startActivity(intent)
                     }
                 }
+
             }
 
 //            3 SHOP
             if (checkedId.contains(binding.chipShop.id)) {
                 val listView = binding.listView;
 
-                val names = arrayListOf<String>();
+                val shops = arrayListOf<Place>();
                 places.forEach { place ->
-                    if (place.cat == "shop") names.add(place.name)
+                    if (place.cat == "hangout") shops.add(place)
                 }
 
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
-
-                listView.adapter = arrayAdapter
+                listView.adapter = PlaceListAdapter(this, shops)
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
                     places.forEach { place ->
-                        if (place.cat == "shop" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
+                        Toast.makeText(this, shops[i].name + " selected", Toast.LENGTH_SHORT)
+                            .show();
+                        val intent = Intent(this, MapsActivity::class.java)
+                        val lat = place.latLng.latitude
+                        val lng = place.latLng.longitude
 
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
+                        intent.putExtra("key-lat", lat);
+                        intent.putExtra("key-lng", lng);
+                        intent.putExtra("viaIntent", 1);
 
-                            this.startActivity(intent)
-                        }
+                        this.startActivity(intent)
                     }
                 }
+
             }
 
 //            4 XEROX/CYBER

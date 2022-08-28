@@ -14,15 +14,34 @@
 
 package com.example.nmamitmap
 
+import com.example.nmamitmap.teacher.Teacher
 import com.google.android.gms.maps.model.LatLng
 
-
-data class Place(
+data class TeacherResponse(
+    val geometry: PlaceResponse.Geometry,
     val name: String,
+    val branch: String,
     val latLng: LatLng,
     val vicinity: String,
-    val rating: Float,
-    val cat: String,
-    val inout: String,
+    val phone: String,
     val index: Int
+) {
+
+    data class Geometry(
+        val location: GeometryLocation
+    )
+
+    data class GeometryLocation(
+        val lat: Double,
+        val lng: Double
+    )
+}
+
+fun TeacherResponse.toTeacher(): Teacher = Teacher(
+    name = name,
+    latLng = LatLng(geometry.location.lat, geometry.location.lng),
+    vicinity = vicinity,
+    branch = branch,
+    phone = phone,
+    index = index
 )

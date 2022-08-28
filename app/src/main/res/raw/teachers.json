@@ -1,0 +1,38 @@
+[
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182725038004124,
+        "lng": 74.93351803675206
+      }
+    },
+    "name": "Usha Divakarla",
+    "phone": 8431439127,
+    "branch": "ISE",
+    "vicinity": "1st floor"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18290334253753,
+        "lng": 74.93327064991891
+      }
+    },
+    "name": "Sapna S",
+    "phone": 8431439127,
+    "branch": "ISE",
+    "vicinity": "3rd floor"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Vasudeva Pai",
+    "phone": 8431439127,
+    "branch": "ISE",
+    "vicinity": "3rd floor"
+  }
+  ]

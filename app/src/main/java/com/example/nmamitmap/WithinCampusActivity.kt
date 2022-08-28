@@ -10,6 +10,7 @@ import androidx.core.view.size
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.nmamitmap.databinding.ActivitySearchTabBinding
+import com.example.nmamitmap.teacher.Teacher
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -20,6 +21,10 @@ class SearchTabActivity : AppCompatActivity() {
         PlacesReader(this).read()
     }
 
+    private val teachers: List<Teacher> by lazy {
+        TeachersReader(this).read()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchTabBinding.inflate(layoutInflater)
@@ -28,24 +33,55 @@ class SearchTabActivity : AppCompatActivity() {
 
         val listView = binding.listView;
 
-        val names = arrayListOf<String>();
+        val foods = arrayListOf<Place>();
         places.forEach { place ->
-            if (place.cat == "food" && place.inout == "in") names.add(place.name)
+            if (place.cat == "food" && place.inout == "in") foods.add(place)
         }
 
-        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-            this, android.R.layout.simple_list_item_1, names
-        )
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
 
-        listView.adapter = arrayAdapter
+        listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
-            places.forEach { place ->
-                if (place.cat == "food" && place.index == i + 1) {
-                    Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+//                    places.forEach { place ->
+//                        if (place.cat == "food" && place.index == i + 1) {
+            Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
+            val intent = Intent(this, MapsActivity::class.java)
+            val lat = foods[i].latLng.latitude
+            val lng = foods[i].latLng.longitude
+
+            intent.putExtra("key-lat", lat);
+            intent.putExtra("key-lng", lng);
+            intent.putExtra("viaIntent", 1);
+
+            this.startActivity(intent)
+        }
+
+        binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
+//            1 FOOD
+            if (checkedId.contains(binding.chipFood.id)) {
+                val listView = binding.listView;
+
+                val foods = arrayListOf<Place>();
+                places.forEach { place ->
+                    if (place.cat == "food" && place.inout == "in") foods.add(place)
+                }
+
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
+
+                listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
+                listView.setOnItemClickListener { adapterView, view, i, l ->
+
+//                    places.forEach { place ->
+//                        if (place.cat == "food" && place.index == i + 1) {
+                    Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
                     val intent = Intent(this, MapsActivity::class.java)
-                    val lat = place.latLng.latitude
-                    val lng = place.latLng.longitude
+                    val lat = foods[i].latLng.latitude
+                    val lng = foods[i].latLng.longitude
 
                     intent.putExtra("key-lat", lat);
                     intent.putExtra("key-lng", lng);
@@ -55,74 +91,34 @@ class SearchTabActivity : AppCompatActivity() {
                 }
             }
 
-        }
-
-        binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
-//            1 FOOD
-            if (checkedId.contains(binding.chipFood.id)) {
-                val listView = binding.listView;
-
-                val names = arrayListOf<String>();
-                places.forEach { place ->
-                    if (place.cat == "food" && place.inout == "in") names.add(place.name)
-                }
-
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
-
-                listView.adapter = arrayAdapter
-                listView.setOnItemClickListener { adapterView, view, i, l ->
-
-                    places.forEach { place ->
-                        if (place.cat == "food" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
-
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
-
-                            this.startActivity(intent)
-                        }
-                    }
-
-                }
-            }
-
 //            2 BLOCK
             if (checkedId.contains(binding.chipBlock.id)) {
                 val listView = binding.listView;
 
-                val names = arrayListOf<String>();
+                val blocks = arrayListOf<Place>();
                 places.forEach { place ->
-                    if (place.cat == "block") names.add(place.name)
+                    if (place.cat == "block") blocks.add(place)
                 }
 
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
 
-                listView.adapter = arrayAdapter
+                listView.adapter = PlaceListAdapter(this, blocks as ArrayList<Place>)
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    places.forEach { place ->
-                        if (place.cat == "block" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
+//                    places.forEach { place ->
+//                        if (place.cat == "block" && place.index == i + 1) {
+                    Toast.makeText(this, blocks[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = blocks[i].latLng.latitude
+                    val lng = blocks[i].latLng.longitude
 
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
 
-                            this.startActivity(intent)
-                        }
-                    }
-
+                    this.startActivity(intent)
                 }
             }
 
@@ -130,37 +126,25 @@ class SearchTabActivity : AppCompatActivity() {
             if (checkedId.contains(binding.chipTeacher.id)) {
                 val listView = binding.listView;
 
-                val names = arrayListOf<String>();
-                places.forEach { place ->
-                    if (place.cat == "teacher") names.add(place.name)
-                }
-
-                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-                    this, android.R.layout.simple_list_item_1, names
-                )
-
-                listView.adapter = arrayAdapter
+                listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    places.forEach { place ->
-                        if (place.cat == "teacher" && place.index == i + 1) {
-                            Toast.makeText(this, names[i] + " selected", Toast.LENGTH_SHORT).show();
+                    teachers.forEach { teacher ->
+                            Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT).show();
                             val intent = Intent(this, MapsActivity::class.java)
-                            val lat = place.latLng.latitude
-                            val lng = place.latLng.longitude
+                            val lat = teachers[i].latLng.latitude
+                            val lng = teachers[i].latLng.longitude
 
                             intent.putExtra("key-lat", lat);
                             intent.putExtra("key-lng", lng);
                             intent.putExtra("viaIntent", 1);
-                            intent.putExtra("title", names[i]);
-                            intent.putExtra("snippet", "3rd floor");
+                            intent.putExtra("title", teacher.name);
+                            intent.putExtra("snippet", teacher.vicinity);
 
                             this.startActivity(intent)
                         }
                     }
-
                 }
-            }
 
 //            4 HALL
 //            5 LIBRARY/STUDY

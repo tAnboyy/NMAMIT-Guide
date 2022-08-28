@@ -117,16 +117,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
-        val firstFragment = FirstFragment()
-        val secondFragment = SecondFragment()
-
-//        setCurrentFragment(firstFragment)
-
         binding.bottomNavigationView.selectedItemId = R.id.miMap
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-//                R.id.miHome -> setCurrentFragment(firstFragment)
-//                R.id.miProfile -> setCurrentFragment(secondFragment)
                 R.id.miIn -> {
                     val intent = Intent(this, SearchTabActivity::class.java)
                     startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())

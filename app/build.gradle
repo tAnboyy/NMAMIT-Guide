@@ -61,4 +61,7 @@ dependencies {
 
 //    implementation 'com.github.mohammadatif:Animatoo:master'
 
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
 }
