@@ -12,16 +12,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginVertical="8dp"
+            android:layout_marginVertical="12dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/dp"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
                 android:src="@drawable/pass" />
 
             <LinearLayout
@@ -37,7 +37,6 @@
                     android:text="Sapna Kamath"
                     android:textSize="18sp" />
 
-
                 <TextView
                     android:id="@+id/tvBranch"
                     android:layout_width="wrap_content"
@@ -45,34 +44,28 @@
                     android:text="ISE"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tvPhone"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+91-9483932730"
-                    android:textSize="14sp" />
+                    android:layout_marginStart="0dp"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvBlock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LH block"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvFloor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Floor: 3"
+                        android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/tvBlock"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="LH block"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvFloor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Floor: 3"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
             </LinearLayout>
 

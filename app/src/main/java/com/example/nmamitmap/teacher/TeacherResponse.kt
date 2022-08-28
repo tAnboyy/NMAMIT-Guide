@@ -22,9 +22,11 @@ data class TeacherResponse(
     val name: String,
     val branch: String,
     val latLng: LatLng,
-    val vicinity: String,
+    val block: String,
+    val floor: String,
     val phone: String,
-    val index: Int
+    val index: Int,
+    val imgUrl: String
 ) {
 
     data class Geometry(
@@ -40,8 +42,10 @@ data class TeacherResponse(
 fun TeacherResponse.toTeacher(): Teacher = Teacher(
     name = name,
     latLng = LatLng(geometry.location.lat, geometry.location.lng),
-    vicinity = vicinity,
+    floor = floor,
+    block = block,
     branch = branch,
     phone = phone,
-    index = index
+    index = index,
+    imgUrl = imgUrl
 )

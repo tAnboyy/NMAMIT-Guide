@@ -6,7 +6,9 @@ data class Teacher(
     val name: String,
     val branch: String,
     val latLng: LatLng,
-    val vicinity: String,
+    val block: String,
+    val floor: String,
     val phone: String,
-    val index: Int
+    val index: Int,
+    val imgUrl: String
 )

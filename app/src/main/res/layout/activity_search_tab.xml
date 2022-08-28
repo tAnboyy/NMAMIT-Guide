@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
@@ -114,10 +115,11 @@
         <!--            android:layout_height="wrap_content" />-->
 
         <ListView
-            android:paddingHorizontal="15dp"
+            android:paddingBottom="57dp"
             android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:paddingHorizontal="0dp" />
 
     </LinearLayout>
 

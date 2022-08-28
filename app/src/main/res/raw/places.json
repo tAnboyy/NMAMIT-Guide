@@ -20,8 +20,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "out",
-    "cat": "food",
-    "index": 1
+    "cat": "food"
   },
   {
     "geometry": {
@@ -44,8 +43,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "out",
-    "cat": "food",
-    "index": 2
+    "cat": "food"
   },
   {
     "geometry": {
@@ -68,8 +66,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "out",
-    "cat": "food",
-    "index": 3
+    "cat": "food"
   },
   {
     "geometry": {
@@ -92,8 +89,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "out",
-    "cat": "food",
-    "index": 4
+    "cat": "food"
   },
   {
     "geometry": {
@@ -116,8 +112,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "out",
-    "cat": "food",
-    "index": 5
+    "cat": "food"
   },
   {
     "geometry": {
@@ -140,8 +135,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "in",
-    "cat": "food",
-    "index": 1
+    "cat": "food"
   },
   {
     "geometry": {
@@ -164,8 +158,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "in",
-    "cat": "food",
-    "index": 2
+    "cat": "food"
   },
   {
     "geometry": {
@@ -188,8 +181,7 @@
     "rating": 4.1,
     "vicinity": "",
     "inout": "in",
-    "cat": "food",
-    "index": 3
+    "cat": "food"
   },
   {
     "geometry": {
@@ -212,8 +204,7 @@
     "rating": 4.1,
     "vicinity": "First years' block",
     "inout": "NA",
-    "cat": "block",
-    "index": 1
+    "cat": "block"
   },
   {
     "geometry": {
@@ -236,8 +227,7 @@
     "rating": 4,
     "vicinity": "CIVIL/EE",
     "inout": "NA",
-    "cat": "block",
-    "index": 2
+    "cat": "block"
   },
   {
     "geometry": {
@@ -260,8 +250,7 @@
     "rating": 4.1,
     "vicinity": "MECH/EC",
     "inout": "NA",
-    "cat": "block",
-    "index": 3
+    "cat": "block"
   },
   {
     "geometry": {
@@ -284,81 +273,9 @@
     "rating": 4.1,
     "vicinity": "CS/IS/BT",
     "inout": "NA",
-    "cat": "block",
-    "index": 4
+    "cat": "block"
   },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.182725038004124,
-        "lng": 74.93351803675206
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7823185302915,
-          "lng": -122.4104349697085
-        },
-        "southwest": {
-          "lat": 37.7796205697085,
-          "lng": -122.4131329302915
-        }
-      }
-    },
-    "name": "Usha Divakarla",
-    "rating": 4.7,
-    "vicinity": "1st floor",
-    "inout": "NA",
-    "cat": "teacher",
-    "index": 1
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.18290334253753,
-        "lng": 74.93327064991891
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7678018302915,
-          "lng": -122.4518091697085
-        },
-        "southwest": {
-          "lat": 37.7651038697085,
-          "lng": -122.4545071302915
-        }
-      }
-    },
-    "name": "Sapna S",
-    "rating": 4.5,
-    "vicinity": "3rd floor",
-    "inout": "NA",
-    "cat": "teacher",
-    "index": 2
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.18331782186854,
-        "lng": 74.93365618783577
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "Vasudeva Pai",
-    "rating": 4.8,
-    "vicinity": "3rd floor",
-    "inout": "NA",
-    "cat": "teacher",
-    "index": 3
-  },
+
   {
     "geometry": {
       "location": {
@@ -380,8 +297,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "hall",
-    "index": 1
+    "cat": "hall"
   },
   {
     "geometry": {
@@ -404,8 +320,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "hall",
-    "index": 2
+    "cat": "hall"
   },
   {
     "geometry": {
@@ -428,8 +343,7 @@
     "rating": 4.8,
     "vicinity": "1st floor",
     "inout": "NA",
-    "cat": "study",
-    "index": 1
+    "cat": "study"
   },
   {
     "geometry": {
@@ -452,8 +366,7 @@
     "rating": 4.8,
     "vicinity": "-1st floor",
     "inout": "in",
-    "cat": "print",
-    "index": 1
+    "cat": "print"
   },
   {
     "geometry": {
@@ -476,8 +389,7 @@
     "rating": 4.8,
     "vicinity": "ground floor",
     "inout": "in",
-    "cat": "print",
-    "index": 2
+    "cat": "print"
   },
   {
     "geometry": {
@@ -500,8 +412,7 @@
     "rating": 4.8,
     "vicinity": "print/xerox/gznitte@gmail.com",
     "inout": "out",
-    "cat": "print",
-    "index": 1
+    "cat": "print"
   },
   {
     "geometry": {
@@ -524,8 +435,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "hangout",
-    "index": 1
+    "cat": "hangout"
   },
   {
     "geometry": {
@@ -548,8 +458,7 @@
     "rating": 4.8,
     "vicinity": "ground floor",
     "inout": "in",
-    "cat": "other",
-    "index": 1
+    "cat": "other"
   },
   {
     "geometry": {
@@ -572,8 +481,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "sport",
-    "index": 1
+    "cat": "sport"
   },
   {
     "geometry": {
@@ -596,8 +504,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "sport",
-    "index": 2
+    "cat": "sport"
   },
 
   {
@@ -621,8 +528,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "block2",
-    "index": 1
+    "cat": "block2"
   },
   {
     "geometry": {
@@ -645,8 +551,7 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "block2",
-    "index": 2
+    "cat": "block2"
   },
   {
     "geometry": {
@@ -669,8 +574,7 @@
     "rating": 4.8,
     "vicinity": "-1st floor",
     "inout": "NA",
-    "cat": "store",
-    "index": 1
+    "cat": "store"
   },
   {
     "geometry": {
@@ -693,7 +597,6 @@
     "rating": 4.8,
     "vicinity": "",
     "inout": "NA",
-    "cat": "shop",
-    "index": 2
+    "cat": "shop"
   }
 ]

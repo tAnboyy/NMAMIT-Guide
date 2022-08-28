@@ -23,6 +23,5 @@ data class Place(
     val vicinity: String,
     val rating: Float,
     val cat: String,
-    val inout: String,
-    val index: Int
+    val inout: String
 )

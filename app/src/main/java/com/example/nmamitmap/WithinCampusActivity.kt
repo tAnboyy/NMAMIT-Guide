@@ -2,17 +2,13 @@ package com.example.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.core.view.size
-import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
+import androidx.appcompat.app.AppCompatActivity
 import com.example.nmamitmap.databinding.ActivitySearchTabBinding
 import com.example.nmamitmap.teacher.Teacher
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
+import java.util.*
+import kotlin.collections.ArrayList
 
 class SearchTabActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchTabBinding
@@ -24,6 +20,7 @@ class SearchTabActivity : AppCompatActivity() {
     private val teachers: List<Teacher> by lazy {
         TeachersReader(this).read()
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,25 +123,28 @@ class SearchTabActivity : AppCompatActivity() {
             if (checkedId.contains(binding.chipTeacher.id)) {
                 val listView = binding.listView;
 
+//                val teachers = teachers.sortedBy { teacher -> teacher.name }
+//                val sortedTeachers : ArrayList<Teacher> = teachers.sortedBy { teacher -> teacher.name} as ArrayList<Teacher>
+
                 listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
+//                (listView.adapter as TeacherListAdapter).notifyDataSetChanged()
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    teachers.forEach { teacher ->
-                            Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT).show();
-                            val intent = Intent(this, MapsActivity::class.java)
-                            val lat = teachers[i].latLng.latitude
-                            val lng = teachers[i].latLng.longitude
+                    Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = teachers[i].latLng.latitude
+                    val lng = teachers[i].latLng.longitude
 
-                            intent.putExtra("key-lat", lat);
-                            intent.putExtra("key-lng", lng);
-                            intent.putExtra("viaIntent", 1);
-                            intent.putExtra("title", teacher.name);
-                            intent.putExtra("snippet", teacher.vicinity);
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
+                    intent.putExtra("title", teachers[i].name);
+                    intent.putExtra("snippet", teachers[i].block + " " + teachers[i].floor);
 
-                            this.startActivity(intent)
-                        }
-                    }
+                    this.startActivity(intent)
                 }
+
+            }
 
 //            4 HALL
 //            5 LIBRARY/STUDY

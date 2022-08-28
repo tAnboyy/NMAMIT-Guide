@@ -6,10 +6,12 @@
         "lng": 74.93351803675206
       }
     },
-    "name": "Usha Divakarla",
-    "phone": 8431439127,
-    "branch": "ISE",
-    "vicinity": "1st floor"
+    "name": "Karthik Pai B. H.",
+    "phone": "8431439127",
+    "branch": "ISE (HOD)",
+    "block": "LH",
+    "floor": "3",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/176.jpg"
   },
   {
     "geometry": {
@@ -18,10 +20,166 @@
         "lng": 74.93327064991891
       }
     },
-    "name": "Sapna S",
-    "phone": 8431439127,
+    "name": "Balasubramani R",
+    "phone": "8431439127",
     "branch": "ISE",
-    "vicinity": "3rd floor"
+    "block": "NC",
+    "floor": "2",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/177.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Karuna Pandit",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/178.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Vasudeva",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2268.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Ashwini B",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/186.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Ravi B",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/182.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Usha Divakarla",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/1829.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Manjula Gururaj Rao",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2192.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Sumathi Pawar",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2278.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Bola Sunil Kamath",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/183.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Devidas",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/189.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Manjunatha",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2193.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Jason Elroy Martis",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -31,8 +189,290 @@
       }
     },
     "name": "Vasudeva Pai",
-    "phone": 8431439127,
+    "phone": "8431439127",
     "branch": "ISE",
-    "vicinity": "3rd floor"
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/187.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Deepa",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/188.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Rashmi Naveen",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/190.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Abhishek S Rao",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/193.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Chinmai Shetty",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/192.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Abhir Bhandary",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2286.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Shrikanth Bhat K.",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/195.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Alaka Ananth",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/202.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Balaji N",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/206.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Santhosh S",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2201.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Preethi Salian K",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2202.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Krishnaraj Rao",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2297.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Anusha N",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/2579.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Prathyakshini",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/197.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Sapna S",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/201.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Tanzila Nargis",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/204.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Sandhya S",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/205.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Deepa Kumari",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/209.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Pratheeksha Hegde N",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nitte.edu.in/admin/photo/3/faculty/8/208.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Chethan Shetty",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nmamit.nitte.edu.in/img/dep/info-science/af/CHETHAN.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18331782186854,
+        "lng": 74.93365618783577
+      }
+    },
+    "name": "Harikrishna Rai",
+    "phone": "8431439127",
+    "branch": "ISE",
+    "block": "NW",
+    "floor": "0",
+    "imgUrl": "https://nmamit.nitte.edu.in/img/dep/info-science/af/hari.jpg"
   }
-  ]
+]
