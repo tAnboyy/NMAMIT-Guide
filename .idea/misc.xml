@@ -19,7 +19,7 @@
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_stadium.xml" value="0.1285" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/drawable/ic_stage.xml" value="0.1285" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_maps.xml" value="0.264" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_search_tab.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_search_tab.xml" value="0.264" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_search_tab2.xml" value="0.264" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/fragment_first.xml" value="0.264" />
@@ -27,7 +27,11 @@
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/fragment_third.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/item_view_pager.xml" value="0.1933876811594203" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/list.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/list_item.xml" value="0.22402736212056434" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/marker_info_contents.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/place_list_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/teacher_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/layout/teacher_list_item.xml" value="0.264" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/NMAMITMap/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
       </map>
     </option>
