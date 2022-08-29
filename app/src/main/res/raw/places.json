@@ -2,6 +2,29 @@
   {
     "geometry": {
       "location": {
+        "lat": 13.182003881272724,
+        "lng": 74.93546812529083
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "Hotel Shetty's",
+    "phone": 0,
+    "note": "",
+    "inout": "out",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
         "lat": 13.182198052773389,
         "lng": 74.93790481587347
       },
@@ -17,8 +40,8 @@
       }
     },
     "name": "Sanmathi Cafe",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "out",
     "cat": "food"
   },
@@ -40,8 +63,8 @@
       }
     },
     "name": "Shabari",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "out",
     "cat": "food"
   },
@@ -63,8 +86,8 @@
       }
     },
     "name": "Harshitha",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "out",
     "cat": "food"
   },
@@ -86,8 +109,8 @@
       }
     },
     "name": "Shisha Food Court",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "out",
     "cat": "food"
   },
@@ -109,8 +132,8 @@
       }
     },
     "name": "Oven Fresh",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "out",
     "cat": "food"
   },
@@ -132,8 +155,8 @@
       }
     },
     "name": "Maggi shop",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "in",
     "cat": "food"
   },
@@ -155,8 +178,8 @@
       }
     },
     "name": "Raghanna's",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "in",
     "cat": "food"
   },
@@ -178,8 +201,8 @@
       }
     },
     "name": "NMAMIT/Durga Canteen",
-    "rating": 4.1,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "in",
     "cat": "food"
   },
@@ -201,8 +224,8 @@
       }
     },
     "name": "LC block",
-    "rating": 4.1,
-    "vicinity": "First years' block",
+    "phone": 0,
+    "note": "First years' block",
     "inout": "NA",
     "cat": "block"
   },
@@ -225,7 +248,7 @@
     },
     "name": "NC block",
     "rating": 4,
-    "vicinity": "CIVIL/EE",
+    "note": "CIVIL/EE",
     "inout": "NA",
     "cat": "block"
   },
@@ -247,8 +270,8 @@
       }
     },
     "name": "LH block",
-    "rating": 4.1,
-    "vicinity": "MECH/EC",
+    "phone": 0,
+    "note": "MECH/EC",
     "inout": "NA",
     "cat": "block"
   },
@@ -270,12 +293,11 @@
       }
     },
     "name": "Admin block",
-    "rating": 4.1,
-    "vicinity": "CS/IS/BT",
+    "phone": 0,
+    "note": "CS/IS/BT",
     "inout": "NA",
     "cat": "block"
   },
-
   {
     "geometry": {
       "location": {
@@ -294,8 +316,8 @@
       }
     },
     "name": "Sambhram hall",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "hall"
   },
@@ -317,8 +339,8 @@
       }
     },
     "name": "Sadananda hall",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "hall"
   },
@@ -340,8 +362,8 @@
       }
     },
     "name": "Main library",
-    "rating": 4.8,
-    "vicinity": "1st floor",
+    "phone": 0,
+    "note": "1st floor",
     "inout": "NA",
     "cat": "library"
   },
@@ -363,8 +385,8 @@
       }
     },
     "name": "Xerox 1",
-    "rating": 4.8,
-    "vicinity": "-1st floor",
+    "phone": 0,
+    "note": "",
     "inout": "in",
     "cat": "print"
   },
@@ -386,8 +408,8 @@
       }
     },
     "name": "Xerox 2",
-    "rating": 4.8,
-    "vicinity": "ground floor",
+    "phone": 0,
+    "note": "ground floor",
     "inout": "in",
     "cat": "print"
   },
@@ -409,8 +431,8 @@
       }
     },
     "name": "Ground Zero cyber",
-    "rating": 4.8,
-    "vicinity": "print/xerox/gznitte@gmail.com",
+    "phone": 0,
+    "note": "print/xerox/gznitte@gmail.com",
     "inout": "out",
     "cat": "print"
   },
@@ -432,8 +454,8 @@
       }
     },
     "name": "Sanmathi garden",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "hangout"
   },
@@ -455,8 +477,8 @@
       }
     },
     "name": "Clinic",
-    "rating": 4.8,
-    "vicinity": "ground floor",
+    "phone": 0,
+    "note": "ground floor",
     "inout": "in",
     "cat": "other"
   },
@@ -478,8 +500,8 @@
       }
     },
     "name": "BC Alva Sports Complex",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "sport"
   },
@@ -501,17 +523,16 @@
       }
     },
     "name": "BC Alva Memorial Indoor Stadium",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "sport"
   },
-
   {
     "geometry": {
       "location": {
         "lat": 13.183714246391565,
-          "lng": 74.93881468320654
+        "lng": 74.93881468320654
       },
       "viewport": {
         "northeast": {
@@ -525,10 +546,10 @@
       }
     },
     "name": "NET Gents Main Hostel- Block 3",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
-    "cat": "block2"
+    "cat": "hostel"
   },
   {
     "geometry": {
@@ -548,10 +569,56 @@
       }
     },
     "name": "NET PG Girls Hostel",
-    "rating": 4.8,
-    "vicinity": "",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
-    "cat": "block2"
+    "cat": "hostel"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181762827367399,
+        "lng": 74.93537537747855
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sri Durga General Store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183175458490435,
+        "lng": 74.9366243020486
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Shabari store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
   },
   {
     "geometry": {
@@ -571,16 +638,16 @@
       }
     },
     "name": "Nitte Co-op store",
-    "rating": 4.8,
-    "vicinity": "-1st floor",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
-    "cat": "store"
+    "cat": "shop"
   },
   {
     "geometry": {
       "location": {
-        "lat":  13.183175458490435,
-        "lng": 74.9366243020486
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
       },
       "viewport": {
         "northeast": {
@@ -593,9 +660,1711 @@
         }
       }
     },
-    "name": "Shabari store",
-    "rating": 4.8,
-    "vicinity": "",
+    "name": "Rohan's canteen & shop",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184593786589378,
+        "lng": 74.93622441567683
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Hotel Sri Durga Prasad",
+    "phone": 0,
+    "note": "",
+    "inout": "out",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.1846694944095,
+        "lng":  74.93615776638838
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Pavi Digital Studio",
+    "phone": 0,
+    "note": "",
+    "inout": "out",
+    "cat": "other"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184730781675302,
+        "lng": 74.93614418968147
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sri Durga General Store",
+    "phone": 9980296832,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184652670451491,
+        "lng": 74.93615159515797
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte fancy",
+    "phone": 7349005978,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184542112984412,
+        "lng": 74.93615653214229
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Sri Durga Mens Parlour",
+    "phone": 8970242433,
+    "note": "",
+    "inout": "out",
+    "cat": "other"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Om Sai general store",
+    "phone": 8904297612,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184943156955994,
+        "lng": 74.93610666223769
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Malasa Footware",
+    "phone": 9740536587,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185334502056019,
+        "lng": 74.93690490204007
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Hedge corner",
+    "phone": 9449487548,
+    "note": "",
+    "inout": "out",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185794555753183,
+        "lng": 74.93892733754711
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Shrajan store",
+    "phone": 9844897804,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185821358584127,
+        "lng": 74.9390197550317
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Janani hairdresser",
+    "phone": 8943560193,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat":13.18583858897392,
+        "lng": 74.9390433509852
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Porlu collections",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18585199038735,
+        "lng": 74.93916919607061
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Kamath Store",
+    "phone": 9686967079,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185821448835814,
+        "lng": 74.93935135320416
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "NVS stores",
+    "phone": 9980437707,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.18544383739037,
+        "lng": 74.93847367097891
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Radha Krishna hotel",
+    "phone": 9845978044,
+    "note": "",
+    "inout": "out",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185391607433225,
+        "lng": 74.93839320470528
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Menz Addict",
+    "phone": 7353317316,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185454283380471,
+        "lng": 74.93827786971306
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Pingara hair dressers",
+    "phone": 9611080597,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185402053425552,
+        "lng": 74.93820545006679
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Kateeleshwari food corner",
+    "phone": 9164592601,
+    "note": "",
+    "inout": "out",
+    "cat": "food"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185409887919493,
+        "lng": 74.937966733455
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Kateeleshwari fruits",
+    "phone": 8722950038,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.186801172187524,
+        "lng": 74.9386888551022
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Government hospital",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "med"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184105972320099,
+        "lng": 74.93485273398908
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Bus stop",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "stop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.184265051066642,
+        "lng": 74.93515227367372
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Auto stand",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "stop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185381348884789,
+        "lng": 74.93934314490494
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Laxmi Fuels",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "vehicle"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185078393766826,
+        "lng": 74.94647507356672
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Om Sai Ram Auto Works",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "vehicle"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "shop"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Co-op store",
+    "phone": 0,
+    "note": "",
     "inout": "NA",
     "cat": "shop"
   }
