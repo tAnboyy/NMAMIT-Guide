@@ -22,7 +22,8 @@ data class PlaceResponse(
     val note: String,
     val phone: Long,
     val cat: String,
-    val inout: String
+    val inout: String,
+    val imgUrl: String
 ) {
 
     data class Geometry(
@@ -41,5 +42,6 @@ fun PlaceResponse.toPlace(): Place = Place(
     note = note,
     phone = phone,
     cat = cat,
-    inout = inout
+    inout = inout,
+    imgUrl = imgUrl
 )

@@ -23,5 +23,6 @@ data class Place(
     val note: String,
     val phone: Long,
     val cat: String,
-    val inout: String
+    val inout: String,
+    val imgUrl: String
 )

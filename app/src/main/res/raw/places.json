@@ -20,7 +20,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -43,7 +44,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -66,7 +68,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -89,7 +92,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -112,7 +116,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -135,7 +140,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -158,7 +164,8 @@
     "phone": 0,
     "note": "",
     "inout": "in",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -181,7 +188,8 @@
     "phone": 0,
     "note": "",
     "inout": "in",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -204,7 +212,8 @@
     "phone": 0,
     "note": "",
     "inout": "in",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -227,7 +236,8 @@
     "phone": 0,
     "note": "First years' block",
     "inout": "NA",
-    "cat": "block"
+    "cat": "block",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -250,7 +260,8 @@
     "rating": 4,
     "note": "CIVIL/EE",
     "inout": "NA",
-    "cat": "block"
+    "cat": "block",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -273,7 +284,8 @@
     "phone": 0,
     "note": "MECH/EC",
     "inout": "NA",
-    "cat": "block"
+    "cat": "block",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -296,7 +308,8 @@
     "phone": 0,
     "note": "CS/IS/BT",
     "inout": "NA",
-    "cat": "block"
+    "cat": "block",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -319,7 +332,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "hall"
+    "cat": "hall",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -342,7 +356,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "hall"
+    "cat": "hall",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -365,7 +380,8 @@
     "phone": 0,
     "note": "1st floor",
     "inout": "NA",
-    "cat": "library"
+    "cat": "library",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -388,7 +404,8 @@
     "phone": 0,
     "note": "",
     "inout": "in",
-    "cat": "print"
+    "cat": "print",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -411,7 +428,8 @@
     "phone": 0,
     "note": "ground floor",
     "inout": "in",
-    "cat": "print"
+    "cat": "print",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -434,7 +452,8 @@
     "phone": 0,
     "note": "print/xerox/gznitte@gmail.com",
     "inout": "out",
-    "cat": "print"
+    "cat": "print",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -457,7 +476,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "hangout"
+    "cat": "hangout",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -480,7 +500,8 @@
     "phone": 0,
     "note": "ground floor",
     "inout": "in",
-    "cat": "other"
+    "cat": "other",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -503,7 +524,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "sport"
+    "cat": "sport",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1661791780/NMAMIT-Map/bcalva_ifinzc.jpg"
   },
   {
     "geometry": {
@@ -526,7 +548,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "sport"
+    "cat": "sport",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -549,7 +572,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "hostel"
+    "cat": "hostel",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -572,7 +596,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "hostel"
+    "cat": "hostel",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -595,7 +620,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791868/NMAMIT-Map/durgastore2_jfqctj.jpg"
   },
   {
     "geometry": {
@@ -618,7 +644,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -641,7 +668,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -664,7 +692,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791871/NMAMIT-Map/rohan_uyznqy.jpg"
   },
   {
     "geometry": {
@@ -687,13 +716,14 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
       "location": {
         "lat": 13.1846694944095,
-        "lng":  74.93615776638838
+        "lng": 74.93615776638838
       },
       "viewport": {
         "northeast": {
@@ -710,7 +740,8 @@
     "phone": 0,
     "note": "",
     "inout": "out",
-    "cat": "other"
+    "cat": "other",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -733,7 +764,8 @@
     "phone": 9980296832,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -756,7 +788,8 @@
     "phone": 7349005978,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1661791861/NMAMIT-Map/fancy_nhkmeq.jpg"
   },
   {
     "geometry": {
@@ -779,7 +812,8 @@
     "phone": 8970242433,
     "note": "",
     "inout": "out",
-    "cat": "other"
+    "cat": "other",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1661791849/NMAMIT-Map/durgasalon_avdkcx.jpg"
   },
   {
     "geometry": {
@@ -802,7 +836,8 @@
     "phone": 8904297612,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661793069/NMAMIT-Map/om_sai_u0nuh9.jpg"
   },
   {
     "geometry": {
@@ -825,7 +860,8 @@
     "phone": 9740536587,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1661791946/NMAMIT-Map/malasa_xkc2h6.jpg"
   },
   {
     "geometry": {
@@ -844,11 +880,12 @@
         }
       }
     },
-    "name": "Hedge corner",
+    "name": "Hegde corner",
     "phone": 9449487548,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -871,7 +908,8 @@
     "phone": 9844897804,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1661791945/NMAMIT-Map/shrajan_oaqrh0.jpg"
   },
   {
     "geometry": {
@@ -894,12 +932,13 @@
     "phone": 8943560193,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
       "location": {
-        "lat":13.18583858897392,
+        "lat": 13.18583858897392,
         "lng": 74.9390433509852
       },
       "viewport": {
@@ -917,7 +956,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661793670/NMAMIT-Map/porlu_gthm2t.jpg"
   },
   {
     "geometry": {
@@ -940,7 +980,8 @@
     "phone": 9686967079,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791814/NMAMIT-Map/kamath_etfyqr.jpg"
   },
   {
     "geometry": {
@@ -963,7 +1004,8 @@
     "phone": 9980437707,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791762/NMAMIT-Map/NVS_png1ig.jpg"
   },
   {
     "geometry": {
@@ -986,7 +1028,8 @@
     "phone": 9845978044,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661792466/NMAMIT-Map/radhakr_e4ouxu.jpg"
   },
   {
     "geometry": {
@@ -1009,7 +1052,8 @@
     "phone": 7353317316,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791929/NMAMIT-Map/menzaddict_wywetv.jpg"
   },
   {
     "geometry": {
@@ -1032,7 +1076,8 @@
     "phone": 9611080597,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "other",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791924/NMAMIT-Map/pingara_iyg3dd.jpg"
   },
   {
     "geometry": {
@@ -1055,7 +1100,8 @@
     "phone": 9164592601,
     "note": "",
     "inout": "out",
-    "cat": "food"
+    "cat": "food",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1078,7 +1124,8 @@
     "phone": 8722950038,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1101,7 +1148,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "med"
+    "cat": "med",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791792/NMAMIT-Map/govthosp_ztsqbo.jpg"
   },
   {
     "geometry": {
@@ -1124,7 +1172,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "stop"
+    "cat": "stop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1147,13 +1196,14 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "stop"
+    "cat": "stop",
+    "imgUrl": ""
   },
   {
     "geometry": {
       "location": {
-        "lat": 13.181531205381601,
-        "lng": 74.93419937327566
+        "lat": 13.184536402085053,
+        "lng": 74.9361746375335
       },
       "viewport": {
         "northeast": {
@@ -1166,11 +1216,12 @@
         }
       }
     },
-    "name": "Nitte Co-op store",
+    "name": "Iyengar bakery",
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1661791942/NMAMIT-Map/iyengar_qlwbga.jpg"
   },
   {
     "geometry": {
@@ -1193,7 +1244,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "vehicle"
+    "cat": "vehicle",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1216,7 +1268,56 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "vehicle"
+    "cat": "vehicle",
+    "imgUrl": ""
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.181531205381601,
+        "lng": 74.93419937327566
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 13.180790219864152,
+          "lng": 74.9361773676821
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Boys PG",
+    "phone": 0,
+    "note": "",
+    "inout": "NA",
+    "cat": "hostel",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661791792/NMAMIT-Map/boyspg_amisd7.jpg"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.1854215966964,
+        "lng": 74.93971189647219
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Ratna's",
+    "phone": 0,
+    "note": "",
+    "inout": "out",
+    "cat": "food",
+    "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661793536/NMAMIT-Map/ratnas_ndh5rv.jpg"
   },
   {
     "geometry": {
@@ -1239,7 +1340,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1262,7 +1364,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1285,7 +1388,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1308,7 +1412,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1331,7 +1436,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1354,7 +1460,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1377,7 +1484,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1400,7 +1508,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1423,7 +1532,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1446,7 +1556,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1469,7 +1580,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1492,7 +1604,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1515,7 +1628,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1538,7 +1652,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1561,7 +1676,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1584,7 +1700,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1607,7 +1724,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1630,7 +1748,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1653,7 +1772,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1676,7 +1796,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1699,7 +1820,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1722,7 +1844,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1745,7 +1868,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1768,7 +1892,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1791,7 +1916,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1814,7 +1940,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1837,7 +1964,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1860,7 +1988,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1883,7 +2012,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1906,7 +2036,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1929,7 +2060,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1952,7 +2084,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1975,7 +2108,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1998,7 +2132,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2021,7 +2156,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2044,7 +2180,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2067,7 +2204,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2090,7 +2228,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2113,7 +2252,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2136,7 +2276,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2159,7 +2300,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2182,7 +2324,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2205,7 +2348,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2228,7 +2372,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2251,7 +2396,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2274,7 +2420,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2297,7 +2444,8 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -2320,52 +2468,7 @@
     "phone": 0,
     "note": "",
     "inout": "NA",
-    "cat": "shop"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.181531205381601,
-        "lng": 74.93419937327566
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "Nitte Co-op store",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "shop"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.181531205381601,
-        "lng": 74.93419937327566
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "Nitte Co-op store",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "shop"
+    "cat": "shop",
+    "imgUrl": ""
   }
 ]

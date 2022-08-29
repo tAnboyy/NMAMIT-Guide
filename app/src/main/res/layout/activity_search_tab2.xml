@@ -61,7 +61,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xerox/Cyber"
+                android:text="Xerox"
                 app:chipIcon="@drawable/ic_print"
                 app:chipIconEnabled="true"
 
@@ -95,7 +95,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport/Ground"
+                android:text="Sport/Gym"
                 app:chipIcon="@drawable/ic_stadium"
                 app:chipIconEnabled="true"
 
