@@ -729,30 +729,84 @@ class SearchTabActivity2 : AppCompatActivity() {
                 }
             }
 
+            //            7 GLOBAL SEARCH
+            if (checkedId.contains(binding.chipGlobal.id)) {
 
-            binding.bottomNavigationView.selectedItemId = R.id.miOut
-            binding.bottomNavigationView.setOnNavigationItemSelectedListener {
-                when (it.itemId) {
-                    R.id.miMap -> {
-                        val intent = Intent(this, MapsActivity::class.java)
-                        startActivity(
-                            intent,
-                            ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+                listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
+
+                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                    override fun onQueryTextSubmit(query: String?): Boolean {
+                        binding.searchView.clearFocus()
+                        val searchResult = arrayListOf<Place>();
+                        places.forEach { place ->
+                            if (place.name.lowercase()
+                                    .contains(query.toString().lowercase())
+                            ) searchResult.add(place)
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity2,
+                            searchResult as ArrayList<Place>
                         )
+                        return false
                     }
-                    R.id.miIn -> {
-                        val intent = Intent(this, SearchTabActivity::class.java)
-                        startActivity(
-                            intent,
-                            ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+
+                    override fun onQueryTextChange(newText: String?): Boolean {
+                        val searchResult = arrayListOf<Place>();
+                        places.forEach { place ->
+                            if (newText != null) {
+                                if (place.name.lowercase()
+                                        .contains(newText.lowercase())
+                                ) searchResult.add(place)
+                            }
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity2,
+                            searchResult as ArrayList<Place>
                         )
+                        return false
                     }
+                })
+
+                listView.setOnItemClickListener { adapterView, view, i, l ->
+
+                    Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = places[i].latLng.latitude
+                    val lng = places[i].latLng.longitude
+
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
+
+                    this.startActivity(intent)
                 }
-                true
             }
         }
 
+
+        binding.bottomNavigationView.selectedItemId = R.id.miOut
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.miMap -> {
+                    val intent = Intent(this, MapsActivity::class.java)
+                    startActivity(
+                        intent,
+                        ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+                    )
+                }
+                R.id.miIn -> {
+                    val intent = Intent(this, SearchTabActivity::class.java)
+                    startActivity(
+                        intent,
+                        ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+                    )
+                }
+            }
+            true
+
+        }
     }
+
 
     override fun onBackPressed() {
         super.onBackPressed()

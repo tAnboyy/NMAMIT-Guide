@@ -106,7 +106,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fuel/Garage"
+                android:text="Vehicle"
                 app:chipIcon="@drawable/ic_fuel"
                 app:chipIconEnabled="true"
 
@@ -132,6 +132,17 @@
                 app:chipIcon="@drawable/ic_pie_chart"
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGlobal"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Global search"
+                app:chipIcon="@drawable/ic_search_black"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp" />
+
         </com.google.android.material.chip.ChipGroup>
 
 
@@ -164,18 +175,6 @@
             android:paddingHorizontal="0dp" />
 
     </LinearLayout>
-
-
-    <!--    <FrameLayout-->
-    <!--        android:id="@+id/flFragment"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.0" />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

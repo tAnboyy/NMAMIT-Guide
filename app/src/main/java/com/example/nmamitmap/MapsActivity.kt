@@ -127,7 +127,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         binding.bottomNavigationView.selectedItemId = R.id.miMap
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+        binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.miIn -> {
                     val intent = Intent(this, SearchTabActivity::class.java)
@@ -138,7 +138,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                 }
             }
-
             true
         }
     }

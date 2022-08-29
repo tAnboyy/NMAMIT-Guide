@@ -548,10 +548,63 @@ class SearchTabActivity : AppCompatActivity() {
                     this.startActivity(intent)
                 }
             }
+
+            //            7 GLOBAL SEARCH
+            if (checkedId.contains(binding.chipGlobal.id)) {
+
+                listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
+
+                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                    override fun onQueryTextSubmit(query: String?): Boolean {
+                        binding.searchView.clearFocus()
+                        val searchResult = arrayListOf<Place>();
+                        places.forEach { place ->
+                            if (place.name.lowercase()
+                                    .contains(query.toString().lowercase())
+                            ) searchResult.add(place)
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity,
+                            searchResult as ArrayList<Place>
+                        )
+                        return false
+                    }
+
+                    override fun onQueryTextChange(newText: String?): Boolean {
+                        val searchResult = arrayListOf<Place>();
+                        places.forEach { place ->
+                            if (newText != null) {
+                                if (place.name.lowercase()
+                                        .contains(newText.lowercase())
+                                ) searchResult.add(place)
+                            }
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity,
+                            searchResult as ArrayList<Place>
+                        )
+                        return false
+                    }
+                })
+
+                listView.setOnItemClickListener { adapterView, view, i, l ->
+
+                    Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = places[i].latLng.latitude
+                    val lng = places[i].latLng.longitude
+
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
+
+                    this.startActivity(intent)
+                }
+            }
         }
 
         binding.bottomNavigationView.selectedItemId = R.id.miIn
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+        binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.miMap -> {
                     val intent = Intent(this, MapsActivity::class.java)
