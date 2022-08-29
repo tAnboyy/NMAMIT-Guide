@@ -19,8 +19,8 @@ import com.google.android.gms.maps.model.LatLng
 data class PlaceResponse(
     val geometry: Geometry,
     val name: String,
-    val vicinity: String,
-    val rating: Float,
+    val note: String,
+    val phone: Long,
     val cat: String,
     val inout: String
 ) {
@@ -38,8 +38,8 @@ data class PlaceResponse(
 fun PlaceResponse.toPlace(): Place = Place(
     name = name,
     latLng = LatLng(geometry.location.lat, geometry.location.lng),
-    vicinity = vicinity,
-    rating = rating,
+    note = note,
+    phone = phone,
     cat = cat,
     inout = inout
 )

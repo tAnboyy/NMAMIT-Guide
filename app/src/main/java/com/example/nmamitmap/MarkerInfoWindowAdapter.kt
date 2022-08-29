@@ -16,7 +16,7 @@ class MarkerInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWind
         // 2. Inflate view and set title, address and rating
         val view = LayoutInflater.from(context).inflate(R.layout.marker_info_contents, null)
         view.findViewById<TextView>(R.id.text_view_title).text = place.name
-        view.findViewById<TextView>(R.id.text_view_address).text = place.vicinity
+        view.findViewById<TextView>(R.id.text_view_address).text = place.note
 //        view.findViewById<TextView>(R.id.text_view_rating).text = "Rating: %.2f".format(place.rating)
 
         return view

@@ -20,8 +20,8 @@ import com.google.android.gms.maps.model.LatLng
 data class Place(
     val name: String,
     val latLng: LatLng,
-    val vicinity: String,
-    val rating: Float,
+    val note: String,
+    val phone: Long,
     val cat: String,
     val inout: String
 )

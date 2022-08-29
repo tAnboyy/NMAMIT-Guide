@@ -69,11 +69,11 @@
                 app:iconStartPadding="5dp" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipStudy"
+                android:id="@+id/chipLibrary"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Library/Study"
+                android:text="Library"
                 app:chipIcon="@drawable/ic_books"
                 app:chipIconEnabled="true"
 
@@ -123,7 +123,7 @@
             android:background="@drawable/searchview_background" />
 
         <ListView
-            android:background="@drawable/searchview_background"
+            android:background="@drawable/listview_background"
             android:layout_marginTop="10dp"
             android:paddingBottom="57dp"
             android:id="@+id/listView"

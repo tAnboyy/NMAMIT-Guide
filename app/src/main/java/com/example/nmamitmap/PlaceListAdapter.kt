@@ -21,7 +21,7 @@ class PlaceListAdapter(private val context: Activity, private val arrayList: Arr
 
 //        imageView.setImageResource(arrayList[position].imageId)
         name.text = arrayList[position].name
-        altNames.text = arrayList[position].vicinity
+        altNames.text = arrayList[position].note
 
         return view
     }

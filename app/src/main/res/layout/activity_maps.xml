@@ -7,21 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".SearchTabActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/ic_search"
+        android:contentDescription="GLOBAL SEARCH"
+        app:fabSize="mini"
+        android:focusable="true" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="1dp"
+        tools:context=".MapsActivity" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_menu" />
-
-    <fragment
-        android:id="@+id/map"
-        android:layout_marginBottom="1dp"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        tools:context=".MapsActivity" />
-
 
     <!--    <FrameLayout-->
     <!--        android:id="@+id/flFragment"-->
@@ -33,8 +47,6 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toTopOf="parent"-->
     <!--        app:layout_constraintVertical_bias="0.0"/>-->
-
-
 
 </RelativeLayout>
 

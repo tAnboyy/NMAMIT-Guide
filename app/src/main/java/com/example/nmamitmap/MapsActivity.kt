@@ -34,6 +34,7 @@ import com.google.android.gms.maps.model.*
 import com.google.android.gms.maps.model.Dash
 import com.google.android.gms.maps.model.Dot
 import com.google.android.gms.maps.model.Gap
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -109,6 +110,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        val fab: FloatingActionButton = binding.floatingActionButton
+//        fab.setOnClickListener { it ->
+//            Toast.makeText(this, "HIHIH", Toast.LENGTH_LONG).show()
+//            val intent = Intent(this, SearchTabActivity2::class.java)
+//            intent.putExtra("viaIntent", 0)
+//            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+//        }
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -245,7 +254,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        mMap.uiSettings.isZoomControlsEnabled = true
+//        mMap.uiSettings.isZoomControlsEnabled = true
 
         // Add polygons to indicate areas on the map.
         val polygon1 = googleMap.addPolygon(
@@ -272,10 +281,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
             val recievedTitle = intent.getStringExtra("title")
             val recievedSnippet = intent.getStringExtra("snippet")
-//        recievedLatLng?.let { CameraUpdateFactory.newLatLngZoom(it, 5f) }
-//            ?.let { mMap.animateCamera(it) }
+
             var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 18f))
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
             mMap.addMarker(
                 MarkerOptions().position(recievedLatLng)
                     .title(recievedTitle).snippet(recievedSnippet)
@@ -334,7 +342,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             if (location != null) {
                 lastLocation = location
                 val currentLatLong = LatLng(location.latitude, location.longitude)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 5f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 20f))
             }
         }
 
@@ -379,7 +387,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 )
                 marker?.tag = place
             }
-            if (place.cat == "block2") {
+            if (place.cat == "hostel") {
                 val marker = googleMap.addMarker(
                     MarkerOptions().position(place.latLng).title("LC block")
                         .icon(bitmapDescriptorFromVector(this, R.drawable.ic_building2))
@@ -422,10 +430,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 marker?.tag = place
             }
 
-            if (place.cat == "store") {
+            if (place.cat == "shop") {
                 val marker = googleMap.addMarker(
                     MarkerOptions().position(place.latLng).title("LC block")
                         .icon(bitmapDescriptorFromVector(this, R.drawable.ic_store))
+                )
+                marker?.tag = place
+            }
+
+            if (place.cat == "other") {
+                val marker = googleMap.addMarker(
+                    MarkerOptions().position(place.latLng).title("LC block")
+                        .icon(bitmapDescriptorFromVector(this,
+                            R.drawable.ic_directions_bike_black_24dp
+                        ))
                 )
                 marker?.tag = place
             }
