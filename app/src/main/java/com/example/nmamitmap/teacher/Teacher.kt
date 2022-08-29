@@ -12,3 +12,8 @@ data class Teacher(
     val index: Int,
     val imgUrl: String
 )
+//    : Comparable<Any> {
+//    override fun compareTo(other: Any): Int {
+//        TODO("Not yet implemented")
+//    }
+//}

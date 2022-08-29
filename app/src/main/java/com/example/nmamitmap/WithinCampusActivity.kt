@@ -3,14 +3,15 @@ package com.example.nmamitmap
 import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nmamitmap.databinding.ActivitySearchTabBinding
 import com.example.nmamitmap.teacher.Teacher
-import java.util.*
 import kotlin.collections.ArrayList
 
 class SearchTabActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivitySearchTabBinding
 
     private val places: List<Place> by lazy {
@@ -20,7 +21,6 @@ class SearchTabActivity : AppCompatActivity() {
     private val teachers: List<Teacher> by lazy {
         TeachersReader(this).read()
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +40,28 @@ class SearchTabActivity : AppCompatActivity() {
 //                )
 
         listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                binding.searchView.clearFocus()
+                val searchResult = arrayListOf<Place>();
+                places.forEach { place ->
+                    if (place.name == query) searchResult.add(place)
+                }
+                listView.adapter = PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                val searchResult = arrayListOf<Place>();
+                places.forEach { place ->
+                    if (newText?.let { place.name.contains(it) } == true) searchResult.add(place)
+                }
+                listView.adapter = PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+                return false
+            }
+        })
+
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
 //                    places.forEach { place ->
@@ -59,9 +81,6 @@ class SearchTabActivity : AppCompatActivity() {
         binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
 //            1 FOOD
             if (checkedId.contains(binding.chipFood.id)) {
-                val listView = binding.listView;
-
-                val foods = arrayListOf<Place>();
                 places.forEach { place ->
                     if (place.cat == "food" && place.inout == "in") foods.add(place)
                 }
@@ -90,7 +109,6 @@ class SearchTabActivity : AppCompatActivity() {
 
 //            2 BLOCK
             if (checkedId.contains(binding.chipBlock.id)) {
-                val listView = binding.listView;
 
                 val blocks = arrayListOf<Place>();
                 places.forEach { place ->
@@ -121,13 +139,46 @@ class SearchTabActivity : AppCompatActivity() {
 
 //            3 TEACHER
             if (checkedId.contains(binding.chipTeacher.id)) {
-                val listView = binding.listView;
+
+//                var sortedList = teachers.sortedWith(compareBy({
+//                    it.firstName
+//                }))
+//                teachers.sortedWith(Comparator { x, y -> x.name.compareTo(y.name)})
+
+//                teachers.sortBy { it.name }
+                Toast.makeText(this, teachers[0].name + " selected", Toast.LENGTH_SHORT).show();
+
+//                val sortedTeachers = teachers.sortedWith(Comparator.naturalOrder<>())
+
+//                Collections.sort(teachers)
 
 //                val teachers = teachers.sortedBy { teacher -> teacher.name }
 //                val sortedTeachers : ArrayList<Teacher> = teachers.sortedBy { teacher -> teacher.name} as ArrayList<Teacher>
 
                 listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
 //                (listView.adapter as TeacherListAdapter).notifyDataSetChanged()
+
+                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                    override fun onQueryTextSubmit(query: String?): Boolean {
+                        binding.searchView.clearFocus()
+                        val searchResult = arrayListOf<Teacher>();
+                        teachers.forEach { teacher ->
+                            if (teacher.name == query) searchResult.add(teacher)
+                        }
+                        listView.adapter = TeacherListAdapter(this@SearchTabActivity, searchResult as ArrayList<Teacher>)
+                        return false
+                    }
+
+                    override fun onQueryTextChange(newText: String?): Boolean {
+                        val searchResult = arrayListOf<Teacher>();
+                        teachers.forEach { teacher ->
+                            if (newText?.let { teacher.name.contains(it) } == true) searchResult.add(teacher)
+                        }
+                        listView.adapter = TeacherListAdapter(this@SearchTabActivity, searchResult as ArrayList<Teacher>)
+                        return false
+                    }
+                })
+
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
                     Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT).show();
@@ -184,3 +235,5 @@ class SearchTabActivity : AppCompatActivity() {
         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 }
+
+
