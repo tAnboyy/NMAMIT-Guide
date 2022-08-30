@@ -13,13 +13,18 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.araujo.jordan.excuseme.ExcuseMe
 import com.example.nmamitmap.databinding.ActivityMapsBinding
+import com.fondesa.kpermissions.extension.permissionsBuilder
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -35,8 +40,11 @@ import com.google.android.gms.maps.model.Dash
 import com.google.android.gms.maps.model.Dot
 import com.google.android.gms.maps.model.Gap
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.vmadalin.easypermissions.EasyPermissions
+import com.vmadalin.easypermissions.dialogs.SettingsDialog
+import java.util.jar.Manifest
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -50,6 +58,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private var backPressedTime = 0L
 
+    private lateinit var permissionLauncher: ActivityResultLauncher<Array<String>>
+    private var isLocationPermissionGranted = false
+//    private var isLocationPermissionGranted2 = false
+//    private var isLocationPermissionGranted3 = false
+
+
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
 //            replace(R.id.flFragment, fragment)
@@ -57,59 +71,113 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    @SuppressLint("MissingPermission")
-    private fun getLocationAccess() {
-        if (ContextCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.ACCESS_COARSE_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
-            && ContextCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-            mMap.isMyLocationEnabled = true
-            getLocationUpdates()
-            startLocationUpdates()
-        } else
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION
-                ),
-                LOCATION_PERMISSION_REQUEST
-            )
+    private fun handlePermissions() {
+        EasyPermissions.hasPermissions(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
     }
 
-    @SuppressLint("MissingPermission")
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == LOCATION_PERMISSION_REQUEST) {
-            if (grantResults.contains(PackageManager.PERMISSION_GRANTED)) {
-                mMap.isMyLocationEnabled = true
-                getLocationAccess()
-            } else {
-                Toast.makeText(
-                    this,
-                    "User has not granted location access permission",
-                    Toast.LENGTH_LONG
-                ).show()
-                finish()
-            }
-        }
+    private fun requestPermissions() {
+        EasyPermissions.requestPermissions(this, "App cannot work without this permission :)", LOCATION_PERMISSION_REQUEST, android.Manifest.permission.ACCESS_FINE_LOCATION)
     }
 
+//    @SuppressLint("MissingPermission")
+//    private fun getLocationAccess() {
+//        if (ContextCompat.checkSelfPermission(
+//                this,
+//                android.Manifest.permission.ACCESS_COARSE_LOCATION
+//            ) == PackageManager.PERMISSION_GRANTED
+//            && ContextCompat.checkSelfPermission(
+//                this,
+//                android.Manifest.permission.ACCESS_FINE_LOCATION
+//            ) == PackageManager.PERMISSION_GRANTED
+//        ) {
+//            mMap.isMyLocationEnabled = true
+//            getLocationUpdates()
+//            startLocationUpdates()
+//        } else
+//            ActivityCompat.requestPermissions(
+//                this,
+//                arrayOf(
+//                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+//                    android.Manifest.permission.ACCESS_COARSE_LOCATION
+//                ),
+//                LOCATION_PERMISSION_REQUEST
+//            )
+//    }
 
+//    @SuppressLint("MissingPermission")
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<String>,
+//        grantResults: IntArray
+//    ) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//        if (requestCode == LOCATION_PERMISSION_REQUEST) {
+//            if (grantResults.contains(PackageManager.PERMISSION_GRANTED)) {
+//                mMap.isMyLocationEnabled = true
+//                getLocationAccess()
+//            } else {
+//                Toast.makeText(
+//                    this,
+//                    "User has not granted location access permission",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//                finish()
+//            }
+//        }
+//    }
+
+
+//// 권한 허용
+//int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+//
+//if(permissionCheck == PackageManager.PERMISSION_DENIED){ //포그라운드 위치 권한 확인
+//
+//    //위치 권한 요청
+//    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 0);
+//}
+//
+//
+//int permissionCheck2 = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION);
+//
+//if(permissionCheck == PackageManager.PERMISSION_DENIED){ //백그라운드 위치 권한 확인
+//    //위치 권한 요청
+//    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_BACKGROUND_LOCATION}, 0);
+//}
+
+
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//        permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
+//            isLocationPermissionGranted = permissions[android.Manifest.permission.ACCESS_FINE_LOCATION] ?: isLocationPermissionGranted
+////            isLocationPermissionGranted2 = permissions[android.Manifest.permission.ACCESS_COARSE_LOCATION] ?: isLocationPermissionGranted2
+////            isLocationPermissionGranted3 = permissions[android.Manifest.permission.ACCESS_BACKGROUND_LOCATION] ?: isLocationPermissionGranted3
+//        }
+
+//        requestPermissions()
+
+//        var permissionCheck =
+//            ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION);
+
+//        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
+//            ActivityCompat.requestPermissions(this, Array<String>
+//        }
+
+//        requestPermission()
+//        handlePermissions()
+
+        // Build the request with the permissions you would like to request and send it.
+//        permissionsBuilder(android.Manifest.permission.CAMERA, android.Manifest.permission.SEND_SMS).build().send { result ->
+//            // Handle the result, for example check if all the requested permissions are granted.
+//            if (result.allGranted()) {
+//                // All the permissions are granted.
+//            }
+//        }
+
 
 //        val fab: FloatingActionButton = binding.floatingActionButton
 //        fab.setOnClickListener { it ->
@@ -466,6 +534,31 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
+    private fun requestPermission() {
+        isLocationPermissionGranted = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+//        isLocationPermissionGranted2 = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+//        isLocationPermissionGranted3 = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED
+
+        val permissionRequest : MutableList<String> = ArrayList()
+
+        if (!isLocationPermissionGranted) {
+            permissionRequest.add(android.Manifest.permission.ACCESS_FINE_LOCATION)
+        }
+
+//        if (!isLocationPermissionGranted2) {
+//            permissionRequest.add(android.Manifest.permission.ACCESS_COARSE_LOCATION)
+//        }
+//
+//        if (!isLocationPermissionGranted3) {
+//            permissionRequest.add(android.Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+//        }
+
+        if (permissionRequest.isNotEmpty()) {
+            permissionLauncher.launch(permissionRequest.toTypedArray())
+        }
+    }
+
     private fun bitmapDescriptorFromVector(context: Context, vectorResId: Int): BitmapDescriptor {
         val vectorDrawable = ContextCompat.getDrawable(context, vectorResId)
         vectorDrawable!!.setBounds(
@@ -482,6 +575,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val canvas = Canvas(bitmap)
         vectorDrawable.draw(canvas)
         return BitmapDescriptorFactory.fromBitmap(bitmap)
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions,grantResults, this)
+    }
+
+    override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
+    }
+
+    override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
+        Toast.makeText(this, "yay enjoy the app", Toast.LENGTH_LONG).show()
     }
 
 }
