@@ -8,13 +8,57 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 
 import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
-
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 class SearchTabActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivitySearchTab2Binding
 
+    public var LOCATION_PERMISSION_REQUEST = 0
+
     private val places: List<Place> by lazy {
         PlacesReader(this).read()
+    }
+
+    fun getPermissions() {
+        Dexter.withActivity(this)
+            .withPermissions(
+//                android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.CAMERA,
+                android.Manifest.permission.READ_CONTACTS
+            )
+            .withListener(object : MultiplePermissionsListener {
+                override fun onPermissionsChecked(multiplePermissionsReport: MultiplePermissionsReport) {
+                    if (multiplePermissionsReport.areAllPermissionsGranted()) {
+                        Toast.makeText(
+                            this@SearchTabActivity2,
+                            "All the permissions are granted...",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied) {
+                        Toast.makeText(
+                            this@SearchTabActivity2,
+                            "All the permissions are permanently denied...",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+                override fun onPermissionRationaleShouldBeShown(
+                    list: List<PermissionRequest?>?,
+                    permissionToken: PermissionToken
+                ) {
+                    permissionToken.continuePermissionRequest()
+                }
+            }).withErrorListener {
+                Toast.makeText(applicationContext, "Error occurred! ", Toast.LENGTH_SHORT).show()
+            }
+            .onSameThread().check()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +68,8 @@ class SearchTabActivity2 : AppCompatActivity() {
         setContentView(view)
 
         val listView = binding.listView;
+
+        getPermissions()
 
         val foods = arrayListOf<Place>();
         places.forEach { place ->
