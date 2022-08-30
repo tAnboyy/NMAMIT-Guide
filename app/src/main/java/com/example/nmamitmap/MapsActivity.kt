@@ -7,41 +7,32 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.location.Location
+import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import com.araujo.jordan.excuseme.ExcuseMe
 import com.example.nmamitmap.databinding.ActivityMapsBinding
-import com.fondesa.kpermissions.extension.permissionsBuilder
-
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
-
-import com.google.android.gms.maps.model.Dash
-import com.google.android.gms.maps.model.Dot
-import com.google.android.gms.maps.model.Gap
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.vmadalin.easypermissions.EasyPermissions
-import com.vmadalin.easypermissions.dialogs.SettingsDialog
 import java.util.jar.Manifest
-import com.example.nmamitmap.GlobalVariables
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks {
 
@@ -58,7 +49,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     private lateinit var permissionLauncher: ActivityResultLauncher<Array<String>>
     private var isLocationPermissionGranted = false
 
-    var LOCATION_PERMISSION_REQUEST = -1
+    private var locationPermissionGranted = false
+
 
 //    override fun onRestart() {
 //        super.onRestart()
@@ -79,6 +71,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
             .withPermissions(
 //                android.Manifest.permission.ACCESS_COARSE_LOCATION,
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
+//                android.Manifest.permission.ACCESS_BACKGROUND_LOCATION
 //                android.Manifest.permission.CAMERA,
 //                android.Manifest.permission.READ_CONTACTS
             )
@@ -87,17 +80,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                     if (multiplePermissionsReport.areAllPermissionsGranted()) {
                         Toast.makeText(
                             this@MapsActivity,
-                            "All the permissions are granted...",
+                            "Enjoy the app!",
                             Toast.LENGTH_SHORT
                         ).show()
                         finish()
                         startActivity(intent)
                         overridePendingTransition(0, 1)
                     }
+
                     if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied) {
                         Toast.makeText(
                             this@MapsActivity,
-                            "All the permissions are permanently denied...",
+                            "App won't work without this permission :)",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -115,14 +109,27 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
             .onSameThread().check()
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (LOCATION_PERMISSION_REQUEST == -1) getPermissions()
+        // Calling Location Manager
+        val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        // Checking GPS is enabled
+        val mGPS = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        if (!mGPS) {
+            Toast.makeText(this, "Please turn on Location, App won't work without it", Toast.LENGTH_LONG).show()
+
+        }
+
+        if (ContextCompat.checkSelfPermission(
+                this.applicationContext,
+                android.Manifest.permission.ACCESS_FINE_LOCATION
+            )
+            != PackageManager.PERMISSION_GRANTED
+        ) getPermissions()
 
 //        val fab: FloatingActionButton = binding.floatingActionButton
 //        fab.setOnClickListener { it ->
@@ -270,7 +277,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onMapReady(googleMap: GoogleMap) {
-        if (LOCATION_PERMISSION_REQUEST == 1) {
+        if (ContextCompat.checkSelfPermission(
+                this.applicationContext,
+                android.Manifest.permission.ACCESS_FINE_LOCATION
+            )
+            == PackageManager.PERMISSION_GRANTED
+        ) {
             mMap = googleMap
 
 //        mMap.uiSettings.isZoomControlsEnabled = true
@@ -350,10 +362,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
             mMap.setMinZoomPreference(16.0f)
             mMap.setMaxZoomPreference(20.0f)
-        } else {
-//            onPause()
         }
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

@@ -39,8 +39,8 @@ class TeacherListAdapter(private val context: Activity, private val arrayList: A
 
         Glide.with(getContext())
             .load(arrayList[position].imgUrl)
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
+//            .skipMemoryCache(true)
+//            .diskCacheStrategy(DiskCacheStrategy.NONE)
             .placeholder(R.drawable.placeholderdp)
             .into(imageView)
 
