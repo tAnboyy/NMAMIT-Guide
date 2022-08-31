@@ -4,8 +4,12 @@ import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 
 import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
 import com.karumi.dexter.Dexter
@@ -23,11 +27,41 @@ class SearchTabActivity2 : AppCompatActivity() {
         PlacesReader(this).read()
     }
 
+    private lateinit var toolbar: Toolbar
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.navSearch) {
+//            Toast.makeText(this, "clicked Search", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, SearchTabActivity::class.java)
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
+        } else if (item.itemId == R.id.navInfo) {
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+//        //hide Toolbar
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        supportActionBar?.hide()
+
         binding = ActivitySearchTab2Binding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        toolbar = findViewById(R.id.toolbar)
+        toolbar.setTitle("")
+        setSupportActionBar(toolbar)
 
         val listView = binding.listView;
 

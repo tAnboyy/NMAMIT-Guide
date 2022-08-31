@@ -6,18 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".SearchTabActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingBottom="0dp">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#232323"
+                android:elevation="0dp"
+                app:logo="@drawable/ic_auto"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/Theme.AppCompat.DayNight">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="NMAMIT Map"
+                        app:fontFamily="@font/notoseriftc"
+                        android:textColor="@color/white"
+                        android:textSize="12.5sp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="15dp"
-            android:paddingVertical="10dp"
+            android:paddingVertical="5dp"
             app:chipSpacingVertical="-5dp"
             app:selectionRequired="true"
             app:singleSelection="true">
@@ -144,7 +181,7 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12.5dp"
             android:background="@drawable/listview_background"
             android:paddingHorizontal="0dp"
             android:paddingBottom="57dp" />

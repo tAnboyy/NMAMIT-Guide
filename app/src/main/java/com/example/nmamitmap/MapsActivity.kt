@@ -10,10 +10,14 @@ import android.location.Location
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.Window
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.nmamitmap.databinding.ActivityMapsBinding
@@ -35,6 +39,8 @@ import com.vmadalin.easypermissions.EasyPermissions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks {
 
+    private lateinit var toolbar: Toolbar
+
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
 
@@ -51,7 +57,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     private var locationPermissionGranted = false
 
     companion object {
-//        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
+        //        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
         private const val DEFAULT_ZOOM = 15
         private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
 
@@ -171,11 +177,42 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
             .onSameThread().check()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.navSearch) {
+//            Toast.makeText(this, "clicked Search", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, SearchTabActivity::class.java)
+            startActivity(
+                intent,
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+            )
+        } else if (item.itemId == R.id.navInfo) {
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+//        //hide Toolbar
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        supportActionBar?.hide()
+
+
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        //add functionality to toolbar
+//        toolbar = binding.toolbar
+        toolbar = findViewById(R.id.toolbar)
+        toolbar.setTitle("")
+        setSupportActionBar(toolbar)
 
         // Calling Location Manager
         val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -369,66 +406,66 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
             != PackageManager.PERMISSION_GRANTED
         ) getPermissions()
         else {
-        mMap = googleMap
-        // Prompt the user for permission.
+            mMap = googleMap
+            // Prompt the user for permission.
 
 
-        mMap.uiSettings.isZoomControlsEnabled = true
+//            mMap.uiSettings.isZoomControlsEnabled = true
 
-        // Add polygons to indicate areas on the map.
-        val polygon1 = googleMap.addPolygon(
-            PolygonOptions()
-                .clickable(true)
-                .add(
-                    LatLng(13.18315798008595, 74.93638211605136),
-                    LatLng(13.183936212408991, 74.93477010841427),
-                    LatLng(13.183951881491984, 74.93276113384267),
-                    LatLng(13.182200696515679, 74.93257012883282),
-                    LatLng(13.182248452235134, 74.93551740212783)
-                )
-        )
-        // Store a data object with the polygon, used here to indicate an arbitrary type.
-        polygon1.tag = "alpha"
-        // Style the polygon.
-        stylePolygon(polygon1)
-
-
-        if (intent.getIntExtra("viaIntent", 0) != 1) setUpMap()
-        else if (intent.getIntExtra("viaIntent", 0) == 1) {
-            var recievedLat = intent.getDoubleExtra("key-lat", 0.0)
-            var recievedLng = intent.getDoubleExtra("key-lng", 0.0)
-
-            val recievedTitle = intent.getStringExtra("title")
-            val recievedSnippet = intent.getStringExtra("snippet")
-
-            var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
-            mMap.addMarker(
-                MarkerOptions().position(recievedLatLng)
-                    .title(recievedTitle).snippet(recievedSnippet)
+            // Add polygons to indicate areas on the map.
+            val polygon1 = googleMap.addPolygon(
+                PolygonOptions()
+                    .clickable(true)
+                    .add(
+                        LatLng(13.18315798008595, 74.93638211605136),
+                        LatLng(13.183936212408991, 74.93477010841427),
+                        LatLng(13.183951881491984, 74.93276113384267),
+                        LatLng(13.182200696515679, 74.93257012883282),
+                        LatLng(13.182248452235134, 74.93551740212783)
+                    )
             )
+            // Store a data object with the polygon, used here to indicate an arbitrary type.
+            polygon1.tag = "alpha"
+            // Style the polygon.
+            stylePolygon(polygon1)
 
-            mMap.isMyLocationEnabled = true
-            fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
 
-                if (location != null) {
-                    lastLocation = location
-                    val currentLatLong = LatLng(location.latitude, location.longitude)
+            if (intent.getIntExtra("viaIntent", 0) != 1) setUpMap()
+            else if (intent.getIntExtra("viaIntent", 0) == 1) {
+                var recievedLat = intent.getDoubleExtra("key-lat", 0.0)
+                var recievedLng = intent.getDoubleExtra("key-lng", 0.0)
+
+                val recievedTitle = intent.getStringExtra("title")
+                val recievedSnippet = intent.getStringExtra("snippet")
+
+                var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
+                mMap.addMarker(
+                    MarkerOptions().position(recievedLatLng)
+                        .title(recievedTitle).snippet(recievedSnippet)
+                )
+
+                mMap.isMyLocationEnabled = true
+                fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
+
+                    if (location != null) {
+                        lastLocation = location
+                        val currentLatLong = LatLng(location.latitude, location.longitude)
 //                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 5f))
+                    }
                 }
+
+                addMarkers(mMap)
+                mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
             }
 
-            addMarkers(mMap)
-            mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
-        }
+            mMap.isMyLocationEnabled = true
 
-        mMap.isMyLocationEnabled = true
-
-        googleMap.setMapStyle(
-            MapStyleOptions.loadRawResourceStyle(
-                this, R.raw.style_json
-            )
-        );
+            googleMap.setMapStyle(
+                MapStyleOptions.loadRawResourceStyle(
+                    this, R.raw.style_json
+                )
+            );
 
 //        val zoomLevel = 20f
 //        // Add a marker in Sydney and move the camera
@@ -440,16 +477,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
 
 // Create a LatLngBounds that includes the city of Adelaide in Australia.
-        val adelaideBounds = LatLngBounds(
-            LatLng(13.182391738987944, 74.93161059407278),  // SW bounds
-            LatLng(13.18709580345644, 74.94304549580805) // NE bounds
-        )
+            val adelaideBounds = LatLngBounds(
+                LatLng(13.182391738987944, 74.93161059407278),  // SW bounds
+                LatLng(13.18709580345644, 74.94304549580805) // NE bounds
+            )
 
 // Constrain the camera target to the Adelaide bounds.
-        mMap.setLatLngBoundsForCameraTarget(adelaideBounds)
+            mMap.setLatLngBoundsForCameraTarget(adelaideBounds)
 
-        mMap.setMinZoomPreference(16.0f)
-        mMap.setMaxZoomPreference(20.0f)
+            mMap.setMinZoomPreference(16.0f)
+            mMap.setMaxZoomPreference(20.0f)
         }
     }
 
