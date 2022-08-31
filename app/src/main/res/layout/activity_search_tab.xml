@@ -23,7 +23,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#232323"
+                android:background="#000"
                 android:elevation="0dp"
                 app:logo="@drawable/ic_auto"
                 android:minHeight="?attr/actionBarSize"

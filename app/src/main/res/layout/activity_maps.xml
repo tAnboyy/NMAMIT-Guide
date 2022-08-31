@@ -7,45 +7,45 @@
     android:layout_height="match_parent"
     tools:context="com.tandev.nmamitmap.SearchTabActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:elevation="0dp">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:elevation="0dp">-->
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#232323"
-            android:elevation="0dp"
-            app:logo="@drawable/ic_auto"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/Theme.AppCompat.DayNight">
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#232323"-->
+<!--            android:elevation="0dp"-->
+<!--            app:logo="@drawable/ic_auto"-->
+<!--            android:minHeight="?attr/actionBarSize"-->
+<!--            android:theme="@style/Theme.AppCompat.DayNight">-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="NMAMIT Map"
-                    app:fontFamily="@font/notoseriftc"
-                    android:textColor="@color/white"
-                    android:textSize="12.5sp"
-                    android:layout_centerVertical="true"/>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    android:text="NMAMIT Map"-->
+<!--                    app:fontFamily="@font/notoseriftc"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12.5sp"-->
+<!--                    android:layout_centerVertical="true"/>-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
-        </androidx.appcompat.widget.Toolbar>
+<!--        </androidx.appcompat.widget.Toolbar>-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         tools:context="com.tandev.nmamitmap.MapsActivity" />

@@ -20,11 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.bumptech.glide.Glide
-import com.example.nmamitmap.Place
-import com.example.nmamitmap.PlacesReader
-import com.example.nmamitmap.R
-import com.example.nmamitmap.databinding.ActivityMapsBinding
+import com.tandev.nmamitmap.databinding.ActivityMapsBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
@@ -220,9 +216,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
         //add functionality to toolbar
 //        toolbar = binding.toolbar
-        toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("")
-        setSupportActionBar(toolbar)
+//        toolbar = findViewById(R.id.toolbar)
+//        toolbar.setTitle("")
+//        setSupportActionBar(toolbar)
 
         // Calling Location Manager
         val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager

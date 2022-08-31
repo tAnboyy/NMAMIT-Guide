@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import android.content.Context
+import com.tandev.nmamitmap.R
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "79103112903",
+    "project_id": "academic-script-312305",
+    "storage_bucket": "academic-script-312305.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79103112903:android:d04bc63f214b81ee8970e2",
+        "android_client_info": {
+          "package_name": "com.tandev.nmamitmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79103112903-5mvv5uh8rrvps1gfjaqhh86vvb20ahju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tandev.nmamitmap",
+            "certificate_hash": "a7949653a8d304c634189137783084c8a3a937b9"
+          }
+        },
+        {
+          "client_id": "79103112903-u8km5cbpnqaaf905kvmbbthhg4sq1bme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqPt3-zGfvXWK6g9ZbxIH01yFTfv9DiK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79103112903-u8km5cbpnqaaf905kvmbbthhg4sq1bme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

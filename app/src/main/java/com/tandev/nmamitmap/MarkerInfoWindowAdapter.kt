@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.example.nmamitmap.Place
-import com.example.nmamitmap.PlacesReader
-import com.example.nmamitmap.R
+import com.tandev.nmamitmap.Place
+import com.tandev.nmamitmap.PlacesReader
+import com.tandev.nmamitmap.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 

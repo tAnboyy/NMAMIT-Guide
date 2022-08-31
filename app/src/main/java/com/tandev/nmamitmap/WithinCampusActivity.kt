@@ -12,11 +12,11 @@ import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.example.nmamitmap.Place
-import com.example.nmamitmap.PlacesReader
-import com.example.nmamitmap.R
-import com.example.nmamitmap.TeachersReader
-import com.example.nmamitmap.databinding.ActivitySearchTabBinding
+import com.tandev.nmamitmap.Place
+import com.tandev.nmamitmap.PlacesReader
+import com.tandev.nmamitmap.R
+import com.tandev.nmamitmap.TeachersReader
+import com.tandev.nmamitmap.databinding.ActivitySearchTabBinding
 import com.tandev.nmamitmap.teacher.Teacher
 import kotlin.collections.ArrayList
 
