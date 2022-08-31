@@ -50,11 +50,11 @@ class SearchTabActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
 //        //hide Toolbar
 //        requestWindowFeature(Window.FEATURE_NO_TITLE)
 //        supportActionBar?.hide()
-        
+
         binding = ActivitySearchTabBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -63,64 +63,107 @@ class SearchTabActivity : AppCompatActivity() {
         toolbar.setTitle("")
         setSupportActionBar(toolbar)
 
-        val listView = binding.listView;
-
-        val foods = arrayListOf<Place>();
-        places.forEach { place ->
-            if (place.cat == "food" && place.inout == "in") foods.add(place)
-        }
-
-//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-//                    this, android.R.layout.simple_list_item_1, names
-//                )
-
-        listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
+        var searchView: SearchView
 
         if (this.resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
         ) {
             binding.searchView.visibility = View.GONE
             binding.searchViewDark.visibility = View.VISIBLE
+            searchView = binding.searchViewDark
+        } else {
+            binding.searchView.visibility = View.VISIBLE
+            binding.searchViewDark.visibility = View.GONE
+            searchView = binding.searchView
         }
 
+//        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                binding.searchView.clearFocus()
+//                val searchResult = arrayListOf<Place>();
+//                foods.forEach { food ->
+//                    if (food.name.lowercase()
+//                            .contains(query.toString().lowercase())
+//                    ) searchResult.add(food)
+//                }
+//                listView.adapter =
+//                    PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                val searchResult = arrayListOf<Place>();
+//                foods.forEach { food ->
+//                    if (newText != null) {
+//                        if (food.name.lowercase().contains(newText.lowercase())) searchResult.add(
+//                            food
+//                        )
+//                    }
+//                }
+//                listView.adapter =
+//                    PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+//                return false
+//            }
+//        })
+//
+//        listView.setOnItemClickListener { adapterView, view, i, l ->
+//
+////                    places.forEach { place ->
+////                        if (place.cat == "food" && place.index == i + 1) {
+//            Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
+//            val intent = Intent(this, MapsActivity::class.java)
+//            val lat = foods[i].latLng.latitude
+//            val lng = foods[i].latLng.longitude
+//
+//            intent.putExtra("key-lat", lat);
+//            intent.putExtra("key-lng", lng);
+//            intent.putExtra("viaIntent", 1);
+//
+//            this.startActivity(intent)
+//        }
 
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        val listView = binding.listView;
+        listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
+        searchView.hasFocus()
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 binding.searchView.clearFocus()
                 val searchResult = arrayListOf<Place>();
-                foods.forEach { food ->
-                    if (food.name.lowercase()
+                places.forEach { place ->
+                    if (place.name.lowercase()
                             .contains(query.toString().lowercase())
-                    ) searchResult.add(food)
+                    ) searchResult.add(place)
                 }
-                listView.adapter =
-                    PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+                listView.adapter = PlaceListAdapter(
+                    this@SearchTabActivity,
+                    searchResult as ArrayList<Place>
+                )
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 val searchResult = arrayListOf<Place>();
-                foods.forEach { food ->
+                places.forEach { place ->
                     if (newText != null) {
-                        if (food.name.lowercase().contains(newText.lowercase())) searchResult.add(
-                            food
-                        )
+                        if (place.name.lowercase()
+                                .contains(newText.lowercase())
+                        ) searchResult.add(place)
                     }
                 }
-                listView.adapter =
-                    PlaceListAdapter(this@SearchTabActivity, searchResult as ArrayList<Place>)
+                listView.adapter = PlaceListAdapter(
+                    this@SearchTabActivity,
+                    searchResult as ArrayList<Place>
+                )
                 return false
             }
         })
 
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
-//                    places.forEach { place ->
-//                        if (place.cat == "food" && place.index == i + 1) {
-            Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
             val intent = Intent(this, MapsActivity::class.java)
-            val lat = foods[i].latLng.latitude
-            val lng = foods[i].latLng.longitude
+            val lat = places[i].latLng.latitude
+            val lng = places[i].latLng.longitude
 
             intent.putExtra("key-lat", lat);
             intent.putExtra("key-lng", lng);
@@ -129,9 +172,15 @@ class SearchTabActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
 
+
         binding.chipGroup.setOnCheckedStateChangeListener { group, checkedId ->
 
 //            1 FOOD
+            val foods = arrayListOf<Place>();
+            places.forEach { place ->
+                if (place.cat == "food" && place.inout == "in") foods.add(place)
+            }
+
             foods.removeAll(foods.toSet())
             if (checkedId.contains(binding.chipFood.id)) {
                 places.forEach { place ->
@@ -596,8 +645,8 @@ class SearchTabActivity : AppCompatActivity() {
             if (checkedId.contains(binding.chipGlobal.id)) {
 
                 listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
-
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.hasFocus()
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
                         binding.searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
