@@ -810,7 +810,7 @@
     },
     "name": "Sri Durga Mens Parlour",
     "phone": 8970242433,
-    "note": "",
+    "note": "Closed on Tuesdays",
     "inout": "out",
     "cat": "other",
     "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1661791849/NMAMIT-Map/durgasalon_avdkcx.jpg"
@@ -1250,8 +1250,8 @@
   {
     "geometry": {
       "location": {
-        "lat": 13.185078393766826,
-        "lng": 74.94647507356672
+        "lat": 13.18514886627743,
+        "lng": 74.94646191872299
       },
       "viewport": {
         "northeast": {

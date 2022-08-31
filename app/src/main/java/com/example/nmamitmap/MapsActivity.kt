@@ -32,7 +32,6 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.vmadalin.easypermissions.EasyPermissions
-import java.util.jar.Manifest
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks {
 
@@ -51,6 +50,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
     private var locationPermissionGranted = false
 
+    companion object {
+//        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
+        private const val DEFAULT_ZOOM = 15
+        private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
+
+        // Keys for storing activity state.
+        // [START maps_current_place_state_keys]
+        private const val KEY_CAMERA_POSITION = "camera_position"
+        private const val KEY_LOCATION = "location"
+        // [END maps_current_place_state_keys]
+
+        // Used for selecting the current place.
+        private const val M_MAX_ENTRIES = 5
+    }
 
 //    override fun onRestart() {
 //        super.onRestart()
@@ -65,6 +78,55 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 //    override fun onPause() {
 //        super.onPause()
 //    }
+
+    // [START maps_current_place_location_permission]
+    private fun getLocationPermission() {
+        /*
+         * Request location permission, so that we can get the location of the
+         * device. The result of the permission request is handled by a callback,
+         * onRequestPermissionsResult.
+         */
+        if (ContextCompat.checkSelfPermission(
+                this.applicationContext,
+                android.Manifest.permission.ACCESS_FINE_LOCATION
+            )
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            locationPermissionGranted = true
+        } else {
+            ActivityCompat.requestPermissions(
+                this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION
+            )
+        }
+    }
+    // [END maps_current_place_location_permission]
+
+    /**
+     * Handles the result of the request for location permissions.
+     */
+    // [START maps_current_place_on_request_permissions_result]
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        locationPermissionGranted = false
+        when (requestCode) {
+            PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION -> {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.isNotEmpty() &&
+                    grantResults[0] == PackageManager.PERMISSION_GRANTED
+                ) {
+                    locationPermissionGranted = true
+                }
+            }
+            else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        }
+        finish()
+        startActivity(intent)
+    }
 
     fun getPermissions() {
         Dexter.withActivity(this)
@@ -119,17 +181,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         // Checking GPS is enabled
         val mGPS = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-        if (!mGPS) {
-            Toast.makeText(this, "Please turn on Location, App won't work without it", Toast.LENGTH_LONG).show()
-
+        if (mGPS) {
+//            Toast.makeText(this, "please restart app", Toast.LENGTH_SHORT).show()
         }
 
-        if (ContextCompat.checkSelfPermission(
-                this.applicationContext,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            )
-            != PackageManager.PERMISSION_GRANTED
-        ) getPermissions()
+//        if (ContextCompat.checkSelfPermission(
+//                this.applicationContext,
+//                android.Manifest.permission.ACCESS_FINE_LOCATION
+//            )
+//            != PackageManager.PERMISSION_GRANTED
+//        ) getPermissions()
 
 //        val fab: FloatingActionButton = binding.floatingActionButton
 //        fab.setOnClickListener { it ->
@@ -277,70 +338,97 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onMapReady(googleMap: GoogleMap) {
+//        if (ContextCompat.checkSelfPermission(
+//                this.applicationContext,
+//                android.Manifest.permission.ACCESS_FINE_LOCATION
+//            )
+//            == PackageManager.PERMISSION_GRANTED
+//        ) {
+
+//        getLocationPermission()
+
+        // Calling Location Manager
+        val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        // Checking GPS is enabled
+        val mGPS = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        if (!mGPS) {
+            Toast.makeText(
+                this,
+                "Please turn on Location, App won't work without it",
+                5000
+            ).show()
+            GpsUtils.showLocationPrompt(this)
+        }
+
+
+
         if (ContextCompat.checkSelfPermission(
                 this.applicationContext,
                 android.Manifest.permission.ACCESS_FINE_LOCATION
             )
-            == PackageManager.PERMISSION_GRANTED
-        ) {
-            mMap = googleMap
-
-//        mMap.uiSettings.isZoomControlsEnabled = true
-
-            // Add polygons to indicate areas on the map.
-            val polygon1 = googleMap.addPolygon(
-                PolygonOptions()
-                    .clickable(true)
-                    .add(
-                        LatLng(13.18315798008595, 74.93638211605136),
-                        LatLng(13.183936212408991, 74.93477010841427),
-                        LatLng(13.183951881491984, 74.93276113384267),
-                        LatLng(13.182200696515679, 74.93257012883282),
-                        LatLng(13.182248452235134, 74.93551740212783)
-                    )
-            )
-            // Store a data object with the polygon, used here to indicate an arbitrary type.
-            polygon1.tag = "alpha"
-            // Style the polygon.
-            stylePolygon(polygon1)
+            != PackageManager.PERMISSION_GRANTED
+        ) getPermissions()
+        else {
+        mMap = googleMap
+        // Prompt the user for permission.
 
 
-            if (intent.getIntExtra("viaIntent", 0) != 1) setUpMap()
-            else if (intent.getIntExtra("viaIntent", 0) == 1) {
-                var recievedLat = intent.getDoubleExtra("key-lat", 0.0)
-                var recievedLng = intent.getDoubleExtra("key-lng", 0.0)
+        mMap.uiSettings.isZoomControlsEnabled = true
 
-                val recievedTitle = intent.getStringExtra("title")
-                val recievedSnippet = intent.getStringExtra("snippet")
-
-                var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
-                mMap.addMarker(
-                    MarkerOptions().position(recievedLatLng)
-                        .title(recievedTitle).snippet(recievedSnippet)
+        // Add polygons to indicate areas on the map.
+        val polygon1 = googleMap.addPolygon(
+            PolygonOptions()
+                .clickable(true)
+                .add(
+                    LatLng(13.18315798008595, 74.93638211605136),
+                    LatLng(13.183936212408991, 74.93477010841427),
+                    LatLng(13.183951881491984, 74.93276113384267),
+                    LatLng(13.182200696515679, 74.93257012883282),
+                    LatLng(13.182248452235134, 74.93551740212783)
                 )
+        )
+        // Store a data object with the polygon, used here to indicate an arbitrary type.
+        polygon1.tag = "alpha"
+        // Style the polygon.
+        stylePolygon(polygon1)
 
-                mMap.isMyLocationEnabled = true
-                fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
 
-                    if (location != null) {
-                        lastLocation = location
-                        val currentLatLong = LatLng(location.latitude, location.longitude)
-//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 5f))
-                    }
-                }
+        if (intent.getIntExtra("viaIntent", 0) != 1) setUpMap()
+        else if (intent.getIntExtra("viaIntent", 0) == 1) {
+            var recievedLat = intent.getDoubleExtra("key-lat", 0.0)
+            var recievedLng = intent.getDoubleExtra("key-lng", 0.0)
 
-                addMarkers(mMap)
-                mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
-            }
+            val recievedTitle = intent.getStringExtra("title")
+            val recievedSnippet = intent.getStringExtra("snippet")
+
+            var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
+            mMap.addMarker(
+                MarkerOptions().position(recievedLatLng)
+                    .title(recievedTitle).snippet(recievedSnippet)
+            )
 
             mMap.isMyLocationEnabled = true
+            fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
 
-            googleMap.setMapStyle(
-                MapStyleOptions.loadRawResourceStyle(
-                    this, R.raw.style_json
-                )
-            );
+                if (location != null) {
+                    lastLocation = location
+                    val currentLatLong = LatLng(location.latitude, location.longitude)
+//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 5f))
+                }
+            }
+
+            addMarkers(mMap)
+            mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
+        }
+
+        mMap.isMyLocationEnabled = true
+
+        googleMap.setMapStyle(
+            MapStyleOptions.loadRawResourceStyle(
+                this, R.raw.style_json
+            )
+        );
 
 //        val zoomLevel = 20f
 //        // Add a marker in Sydney and move the camera
@@ -352,16 +440,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
 
 // Create a LatLngBounds that includes the city of Adelaide in Australia.
-            val adelaideBounds = LatLngBounds(
-                LatLng(13.182073899028802, 74.93021715948936),  // SW bounds
-                LatLng(13.189073551405391, 74.94063947402205) // NE bounds
-            )
+        val adelaideBounds = LatLngBounds(
+            LatLng(13.182391738987944, 74.93161059407278),  // SW bounds
+            LatLng(13.18709580345644, 74.94304549580805) // NE bounds
+        )
 
 // Constrain the camera target to the Adelaide bounds.
-            mMap.setLatLngBoundsForCameraTarget(adelaideBounds)
+        mMap.setLatLngBoundsForCameraTarget(adelaideBounds)
 
-            mMap.setMinZoomPreference(16.0f)
-            mMap.setMaxZoomPreference(20.0f)
+        mMap.setMinZoomPreference(16.0f)
+        mMap.setMaxZoomPreference(20.0f)
         }
     }
 
@@ -380,6 +468,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         addMarkers(mMap)
         mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
     }
+
+//    override fun onInfoWindowClick(marker: Marker) {
+//
+//        Toast.makeText(
+//            this, "Info window clicked",
+//            Toast.LENGTH_SHORT
+//        ).show()
+//    }
 
 
     private val places: List<Place> by lazy {
@@ -469,6 +565,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                 marker?.tag = place
             }
 
+            if (place.cat == "vehicle") {
+                val marker = googleMap.addMarker(
+                    MarkerOptions().position(place.latLng).title("LC block")
+                        .icon(
+                            bitmapDescriptorFromVector(
+                                this,
+                                R.drawable.ic_directions_bike_black_24dp
+                            )
+                        )
+                )
+                marker?.tag = place
+            }
+
             if (place.cat == "other") {
                 val marker = googleMap.addMarker(
                     MarkerOptions().position(place.latLng).title("LC block")
@@ -547,14 +656,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
-    }
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
+//    }
 
     override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
     }

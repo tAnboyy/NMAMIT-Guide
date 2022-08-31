@@ -12,7 +12,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="56dp"
         tools:context=".MapsActivity" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

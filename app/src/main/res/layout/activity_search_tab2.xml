@@ -15,34 +15,36 @@
             android:id="@+id/chipGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="15dp"
-            app:chipSpacingVertical="-4dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            app:chipSpacingVertical="-5dp"
             app:selectionRequired="true"
             app:singleSelection="true">
 
             <!-- Chips can be declared here, or added dynamically. -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGlobal"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Global search"
+                android:checked="true"
+                app:chipIcon="@drawable/ic_search_black"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFood"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="Food"
                 app:chipIcon="@drawable/ic_burger"
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipHangout"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Garden/Hangout"
-                app:chipIcon="@drawable/ic_park"
-                app:chipIconEnabled="true"
 
-                app:iconStartPadding="5dp" />
 
 
             <com.google.android.material.chip.Chip
@@ -78,14 +80,13 @@
 
                 app:iconStartPadding="5dp" />
 
-
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHostel"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hostel"
-                app:chipIcon="@drawable/ic_building"
+                android:text="Hostel/PG"
+                app:chipIcon="@drawable/ic_building2"
                 app:chipIconEnabled="true"
 
                 app:iconStartPadding="5dp" />
@@ -98,7 +99,6 @@
                 android:text="Sport/Gym"
                 app:chipIcon="@drawable/ic_stadium"
                 app:chipIconEnabled="true"
-
                 app:iconStartPadding="5dp" />
 
             <com.google.android.material.chip.Chip
@@ -123,6 +123,18 @@
 
                 app:iconStartPadding="5dp" />
 
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHangout"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hangout"
+                app:chipIcon="@drawable/ic_park"
+                app:chipIconEnabled="true"
+
+                app:iconStartPadding="5dp" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipOthers"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
@@ -133,15 +145,7 @@
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipGlobal"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Global search"
-                app:chipIcon="@drawable/ic_search_black"
-                app:chipIconEnabled="true"
-                app:iconStartPadding="5dp" />
+
 
         </com.google.android.material.chip.ChipGroup>
 

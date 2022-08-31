@@ -23,44 +23,6 @@ class SearchTabActivity2 : AppCompatActivity() {
         PlacesReader(this).read()
     }
 
-    fun getPermissions() {
-        Dexter.withActivity(this)
-            .withPermissions(
-//                android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                android.Manifest.permission.ACCESS_FINE_LOCATION,
-                android.Manifest.permission.CAMERA,
-                android.Manifest.permission.READ_CONTACTS
-            )
-            .withListener(object : MultiplePermissionsListener {
-                override fun onPermissionsChecked(multiplePermissionsReport: MultiplePermissionsReport) {
-                    if (multiplePermissionsReport.areAllPermissionsGranted()) {
-                        Toast.makeText(
-                            this@SearchTabActivity2,
-                            "All the permissions are granted...",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                    if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied) {
-                        Toast.makeText(
-                            this@SearchTabActivity2,
-                            "All the permissions are permanently denied...",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-
-                override fun onPermissionRationaleShouldBeShown(
-                    list: List<PermissionRequest?>?,
-                    permissionToken: PermissionToken
-                ) {
-                    permissionToken.continuePermissionRequest()
-                }
-            }).withErrorListener {
-                Toast.makeText(applicationContext, "Error occurred! ", Toast.LENGTH_SHORT).show()
-            }
-            .onSameThread().check()
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchTab2Binding.inflate(layoutInflater)
@@ -68,8 +30,6 @@ class SearchTabActivity2 : AppCompatActivity() {
         setContentView(view)
 
         val listView = binding.listView;
-
-        getPermissions()
 
         val foods = arrayListOf<Place>();
         places.forEach { place ->
