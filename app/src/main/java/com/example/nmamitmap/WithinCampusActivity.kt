@@ -2,9 +2,11 @@ package com.example.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.Window
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
@@ -73,6 +75,14 @@ class SearchTabActivity : AppCompatActivity() {
 //                )
 
         listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
+
+        if (this.resources.configuration.uiMode and
+            Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+        ) {
+            binding.searchView.visibility = View.GONE
+            binding.searchViewDark.visibility = View.VISIBLE
+        }
+
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {

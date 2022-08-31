@@ -2,21 +2,17 @@ package com.example.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.Window
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-
 import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import java.security.AccessController.getContext
 
 class SearchTabActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivitySearchTab2Binding
@@ -75,6 +71,22 @@ class SearchTabActivity2 : AppCompatActivity() {
 //                )
 
         listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
+
+
+//        val nightModeFlags: Int = getContext().getResources().getConfiguration().uiMode and
+//                Configuration.UI_MODE_NIGHT_MASK
+//        when (nightModeFlags) {
+//            Configuration.UI_MODE_NIGHT_YES -> doStuff()
+//            Configuration.UI_MODE_NIGHT_NO -> doStuff()
+//            Configuration.UI_MODE_NIGHT_UNDEFINED -> doStuff()
+//        }
+
+        if (this.resources.configuration.uiMode and
+            Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+        ) {
+            binding.searchView.visibility = View.GONE
+            binding.searchViewDark.visibility = View.VISIBLE
+        }
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
