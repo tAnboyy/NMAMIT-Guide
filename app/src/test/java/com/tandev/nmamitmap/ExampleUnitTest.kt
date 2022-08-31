@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import org.junit.Test
 

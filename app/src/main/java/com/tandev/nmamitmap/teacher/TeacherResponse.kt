@@ -14,7 +14,7 @@
 
 package com.example.nmamitmap
 
-import com.example.nmamitmap.teacher.Teacher
+import com.tandev.nmamitmap.teacher.Teacher
 import com.google.android.gms.maps.model.LatLng
 
 data class TeacherResponse(

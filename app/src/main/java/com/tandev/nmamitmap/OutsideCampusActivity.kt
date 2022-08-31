@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -11,6 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import com.example.nmamitmap.Place
+import com.example.nmamitmap.PlacesReader
+import com.example.nmamitmap.R
 import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
 import java.security.AccessController.getContext
 

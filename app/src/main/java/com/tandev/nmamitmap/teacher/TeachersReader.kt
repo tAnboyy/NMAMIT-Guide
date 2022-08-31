@@ -15,7 +15,7 @@
 package com.example.nmamitmap
 
 import android.content.Context
-import com.example.nmamitmap.teacher.Teacher
+import com.tandev.nmamitmap.teacher.Teacher
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream

@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -9,9 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.example.nmamitmap.teacher.Teacher
+import com.example.nmamitmap.Place
+import com.example.nmamitmap.R
+import com.tandev.nmamitmap.teacher.Teacher
 
-class PlaceListAdapter(private val context: Activity, private val arrayList: ArrayList<Place>): ArrayAdapter<Place>(context, R.layout.place_list_item, arrayList) {
+class PlaceListAdapter(private val context: Activity, private val arrayList: ArrayList<Place>): ArrayAdapter<Place>(context,
+    R.layout.place_list_item, arrayList) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -23,8 +26,8 @@ class PlaceListAdapter(private val context: Activity, private val arrayList: Arr
 
         Glide.with(getContext())
             .load(arrayList[position].imgUrl)
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
+//            .skipMemoryCache(true)
+//            .diskCacheStrategy(DiskCacheStrategy.NONE)
             .placeholder(R.drawable.placeholder_place)
             .into(imageView)
 

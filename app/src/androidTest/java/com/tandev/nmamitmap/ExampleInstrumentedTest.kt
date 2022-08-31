@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

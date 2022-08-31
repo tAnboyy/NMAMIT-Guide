@@ -1,4 +1,4 @@
-package com.example.nmamitmap.teacher
+package com.tandev.nmamitmap.teacher
 
 import com.google.android.gms.maps.model.LatLng
 

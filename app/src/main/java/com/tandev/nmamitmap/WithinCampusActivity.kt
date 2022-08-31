@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -12,8 +12,12 @@ import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.nmamitmap.Place
+import com.example.nmamitmap.PlacesReader
+import com.example.nmamitmap.R
+import com.example.nmamitmap.TeachersReader
 import com.example.nmamitmap.databinding.ActivitySearchTabBinding
-import com.example.nmamitmap.teacher.Teacher
+import com.tandev.nmamitmap.teacher.Teacher
 import kotlin.collections.ArrayList
 
 class SearchTabActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import android.app.Activity
 import android.content.ContentResolver.EXTRA_SIZE
@@ -12,9 +12,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.example.nmamitmap.teacher.Teacher
+import com.example.nmamitmap.R
+import com.tandev.nmamitmap.teacher.Teacher
 
-class TeacherListAdapter(private val context: Activity, private val arrayList: ArrayList<Teacher>): ArrayAdapter<Teacher>(context, R.layout.teacher_list_item, arrayList) {
+class TeacherListAdapter(private val context: Activity, private val arrayList: ArrayList<Teacher>): ArrayAdapter<Teacher>(context,
+    R.layout.teacher_list_item, arrayList) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         val inflater: LayoutInflater = LayoutInflater.from(context)
