@@ -84,16 +84,23 @@ class SearchTabActivity2 : AppCompatActivity() {
 //            Configuration.UI_MODE_NIGHT_UNDEFINED -> doStuff()
 //        }
 
+        var searchView: SearchView
+        
         if (this.resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
         ) {
             binding.searchView.visibility = View.GONE
             binding.searchViewDark.visibility = View.VISIBLE
+            searchView = binding.searchViewDark
+        } else {
+            binding.searchView.visibility = View.VISIBLE
+            binding.searchViewDark.visibility = View.GONE
+            searchView = binding.searchView
         }
 
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.searchView.clearFocus()
+                searchView.clearFocus()
                 val searchResult = arrayListOf<Place>();
                 foods.forEach { food ->
                     if (food.name.lowercase()
@@ -151,10 +158,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         foods.forEach { food ->
                             if (food.name.lowercase()
@@ -212,10 +219,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, hangouts)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         hangouts.forEach { hangout ->
                             if (hangout.name.lowercase()
@@ -276,10 +283,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, shops)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         shops.forEach { shop ->
                             if (shop.name.lowercase()
@@ -343,10 +350,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, prints as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         prints.forEach { print ->
                             if (print.name.lowercase()
@@ -408,10 +415,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, meds as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         meds.forEach { stop ->
                             if (stop.name.lowercase()
@@ -472,10 +479,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, hostels as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         hostels.forEach { stop ->
                             if (stop.name.lowercase()
@@ -537,10 +544,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, sports as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         sports.forEach { stop ->
                             if (stop.name.lowercase()
@@ -602,10 +609,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, vehicles as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         vehicles.forEach { stop ->
                             if (stop.name.lowercase()
@@ -667,10 +674,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, stops as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         stops.forEach { stop ->
                             if (stop.name.lowercase()
@@ -732,10 +739,10 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, others as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object :
+                searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         others.forEach { other ->
                             if (other.name.lowercase()
@@ -789,9 +796,9 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         places.forEach { place ->
                             if (place.name.lowercase()

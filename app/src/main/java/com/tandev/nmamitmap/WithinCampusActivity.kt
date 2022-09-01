@@ -63,9 +63,7 @@ class SearchTabActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("")
-        setSupportActionBar(toolbar)
+
 
         var searchView: SearchView
 
@@ -75,15 +73,23 @@ class SearchTabActivity : AppCompatActivity() {
             binding.searchView.visibility = View.GONE
             binding.searchViewDark.visibility = View.VISIBLE
             searchView = binding.searchViewDark
+
+            toolbar = findViewById(R.id.toolbar)
+            toolbar.setTitle("")
+            setSupportActionBar(toolbar)
         } else {
             binding.searchView.visibility = View.VISIBLE
             binding.searchViewDark.visibility = View.GONE
             searchView = binding.searchView
+
+            toolbar = findViewById(R.id.toolbarLight)
+            toolbar.setTitle("")
+            setSupportActionBar(toolbar)
         }
 
-//        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 //            override fun onQueryTextSubmit(query: String?): Boolean {
-//                binding.searchView.clearFocus()
+//                searchView.clearFocus()
 //                val searchResult = arrayListOf<Place>();
 //                foods.forEach { food ->
 //                    if (food.name.lowercase()
@@ -131,7 +137,7 @@ class SearchTabActivity : AppCompatActivity() {
         searchView.hasFocus()
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.searchView.clearFocus()
+                searchView.clearFocus()
                 val searchResult = arrayListOf<Place>();
                 places.forEach { place ->
                     if (place.name.lowercase()
@@ -197,9 +203,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         foods.forEach { food ->
                             if (food.name.lowercase()
@@ -261,9 +267,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, blocks as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         blocks.forEach { block ->
                             if (block.name.lowercase()
@@ -332,9 +338,9 @@ class SearchTabActivity : AppCompatActivity() {
                 listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
 //                (listView.adapter as TeacherListAdapter).notifyDataSetChanged()
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Teacher>();
                         teachers.forEach { teacher ->
                             if (teacher.name.lowercase()
@@ -404,9 +410,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, halls as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         halls.forEach { hall ->
                             if (hall.name.lowercase()
@@ -468,9 +474,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, libraries as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         libraries.forEach { library ->
                             if (library.name.lowercase()
@@ -532,9 +538,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, prints as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         prints.forEach { print ->
                             if (print.name.lowercase()
@@ -595,9 +601,9 @@ class SearchTabActivity : AppCompatActivity() {
 
                 listView.adapter = PlaceListAdapter(this, others as ArrayList<Place>)
 
-                binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         others.forEach { other ->
                             if (other.name.lowercase()
@@ -652,7 +658,7 @@ class SearchTabActivity : AppCompatActivity() {
                 searchView.hasFocus()
                 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        binding.searchView.clearFocus()
+                        searchView.clearFocus()
                         val searchResult = arrayListOf<Place>();
                         places.forEach { place ->
                             if (place.name.lowercase()

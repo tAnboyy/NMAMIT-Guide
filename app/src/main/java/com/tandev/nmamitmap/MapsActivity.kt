@@ -13,6 +13,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.annotation.RequiresApi
@@ -37,7 +38,9 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.vmadalin.easypermissions.EasyPermissions
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks,
+    GoogleMap.OnMarkerClickListener,
+    GoogleMap.OnInfoWindowClickListener {
 
     private lateinit var toolbar: Toolbar
 
@@ -204,7 +207,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         super.onCreate(savedInstanceState)
 
 
-
 //        //hide Toolbar
 //        requestWindowFeature(Window.FEATURE_NO_TITLE)
 //        supportActionBar?.hide()
@@ -214,11 +216,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         setContentView(binding.root)
 
 
-        //add functionality to toolbar
-//        toolbar = binding.toolbar
-//        toolbar = findViewById(R.id.toolbar)
-//        toolbar.setTitle("")
-//        setSupportActionBar(toolbar)
+//        add functionality to toolbar
+        toolbar = binding.toolbar
+        toolbar = findViewById(R.id.toolbar)
+        toolbar.setTitle("")
+        setSupportActionBar(toolbar)
 
         // Calling Location Manager
         val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -444,7 +446,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                 val recievedTitle = intent.getStringExtra("title")
                 val recievedSnippet = intent.getStringExtra("snippet")
 
-                var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
+                var recievedLatLng = LatLng(recievedLat + 0.0000003, recievedLng)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
                 mMap.addMarker(
                     MarkerOptions().position(recievedLatLng)
@@ -484,8 +486,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
 // Create a LatLngBounds that includes the city of Adelaide in Australia.
             val adelaideBounds = LatLngBounds(
-                LatLng(13.182391738987944, 74.93161059407278),  // SW bounds
-                LatLng(13.18709580345644, 74.94304549580805) // NE bounds
+                LatLng(13.178486646662275, 74.92788860964154),  // SW bounds
+                LatLng(13.192267251423408, 74.9485056863402) // NE bounds
             )
 
 // Constrain the camera target to the Adelaide bounds.
@@ -510,6 +512,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
         addMarkers(mMap)
         mMap.setInfoWindowAdapter(MarkerInfoWindowAdapter(this))
+        mMap.setOnInfoWindowClickListener(this);
+        mMap.setOnMarkerClickListener(this);
     }
 
 //    override fun onInfoWindowClick(marker: Marker) {
@@ -519,8 +523,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 //            Toast.LENGTH_SHORT
 //        ).show()
 //    }
-
-
 
 
     private val bicycleIcon: BitmapDescriptor by lazy {
@@ -621,7 +623,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
             if (place.cat == "other") {
                 val marker = googleMap.addMarker(
-                    MarkerOptions().position(place.latLng).title("LC block")
+                    MarkerOptions().position(place.latLng).title(place.name)
                         .icon(
                             bitmapDescriptorFromVector(
                                 this,
@@ -712,5 +714,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
         Toast.makeText(this, "yay enjoy the app", Toast.LENGTH_LONG).show()
     }
+
+    override fun onMarkerClick(p0: Marker): Boolean {
+        p0.showInfoWindow()
+        var currTime = System.currentTimeMillis()
+        while(true) {
+            if (System.currentTimeMillis() == currTime + 0) {
+                p0.showInfoWindow()
+                break
+            }
+        }
+        currTime = System.currentTimeMillis()
+        return false
+    }
+
+    override fun onInfoWindowClick(p0: Marker) {
+        p0.hideInfoWindow()
+    }
+
 
 }

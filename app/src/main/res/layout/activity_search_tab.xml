@@ -25,7 +25,6 @@
                 android:layout_height="wrap_content"
                 android:background="#000"
                 android:elevation="0dp"
-                app:logo="@drawable/ic_auto"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="@style/Theme.AppCompat.DayNight">
 
@@ -37,11 +36,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
+                        android:gravity="center"
                         android:text="NMAMIT Map"
-                        app:fontFamily="@font/notoseriftc"
                         android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:layout_centerVertical="true"/>
+                        app:fontFamily="@font/notoseriftc" />
+
 
                 </RelativeLayout>
 
@@ -213,6 +213,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_menu" />

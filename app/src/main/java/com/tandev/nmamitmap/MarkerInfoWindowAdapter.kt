@@ -1,22 +1,28 @@
 package com.tandev.nmamitmap
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.tandev.nmamitmap.Place
 import com.tandev.nmamitmap.PlacesReader
 import com.tandev.nmamitmap.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
+import com.google.firebase.storage.FirebaseStorage
+import java.io.File
 
 class MarkerInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWindowAdapter {
 
     private val places: List<Place> by lazy {
         PlacesReader(context).read()
     }
+
 
     override fun getInfoContents(marker: Marker): View? {
         // 1. Get tag
@@ -40,9 +46,17 @@ class MarkerInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWind
         Glide.with(context)
             .load(place.imgUrl)
 //            .skipMemoryCache(true)
-//            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
             .placeholder(R.drawable.placeholder_place)
             .into(iv)
+
+//        val storageRef = FirebaseStorage.getInstance().reference.child("/IMG20220831141724.jpg")
+//        val localFile = File.createTempFile("tempImg", "jpg")
+//
+//        storageRef.getFile(localFile).addOnSuccessListener {
+//            val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+//            iv.setImageBitmap(bitmap)
+//        }
 
         return view
     }

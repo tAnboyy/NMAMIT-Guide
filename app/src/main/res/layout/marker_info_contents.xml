@@ -5,8 +5,8 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:padding="5dp">
+    android:gravity="center"
+    android:padding="0dp">
 
     <TextView
         android:id="@+id/text_view_title"
@@ -15,6 +15,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginTop="10dp"
         tools:text="Title"/>
 
     <TextView
@@ -35,8 +36,9 @@
 
     <ImageView
         android:id="@+id/ivIW"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_marginVertical="0dp"
         app:srcCompat="@drawable/placeholder_place"
         />
 

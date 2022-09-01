@@ -1,5 +1,5 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="Theme.NMAMITMap" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#34DCEE</item>
@@ -15,20 +15,13 @@
         <!-- Status bar color. -->
         <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <item name="windowActionBar">false</item>
+        // to disable Action Bar
 
         <!--        <item name="android:windowTranslucentStatus">true</item>-->
         <!--        <item name="android:statusBarColor">@color/black</item>-->
         <!--        <item name="android:windowTranslucentStatus">true</item>-->
 
-<!--        <item name="android:statusBarColor">@color/colorPrimaryDark</item>-->
-<!--        <item name="android:windowLightStatusBar">false</item>-->
-    </style>
-
-    <!-- Disabling elevation overlays because when chip's default background/surface
-     composite are combined with elevation overlays in a highly elevated dialog,
-     the resulting color becomes too light and causes contrast
-     issues. -->
-    <style name="ThemeOverlay.MyApp.Chip.Choice" parent="">
-        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>
