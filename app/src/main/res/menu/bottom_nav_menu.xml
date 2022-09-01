@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/miIn"
+        android:icon="@drawable/ic_in"
+        android:title="Within Campus" />
+
+    <item
+        android:id="@+id/miMap"
+        android:icon="@drawable/ic_map_marker"
+        android:title="Map"
+        />
+
+    <item
+        android:id="@+id/miOut"
+        android:icon="@drawable/ic_out"
+        android:title="Outside Campus" />
+
+</menu>
