@@ -138,16 +138,28 @@ class SearchTabActivity : AppCompatActivity() {
 //            this.startActivity(intent)
 //        }
 
-        listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
+        val foods = arrayListOf<Place>();
+
+        places.forEach { place ->
+            if (place.cat == "food" && place.inout == "in") foods.add(place)
+        }
+
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
+
+        listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
         searchView.queryHint = ""
+
+
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 searchView.clearFocus()
                 val searchResult = arrayListOf<Place>();
-                places.forEach { place ->
-                    if (place.name.lowercase()
+                foods.forEach { food ->
+                    if (food.name.lowercase()
                             .contains(query.toString().lowercase())
-                    ) searchResult.add(place)
+                    ) searchResult.add(food)
                 }
                 listView.adapter = PlaceListAdapter(
                     this@SearchTabActivity,
@@ -158,11 +170,11 @@ class SearchTabActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 val searchResult = arrayListOf<Place>();
-                places.forEach { place ->
+                foods.forEach { food ->
                     if (newText != null) {
-                        if (place.name.lowercase()
+                        if (food.name.lowercase()
                                 .contains(newText.lowercase())
-                        ) searchResult.add(place)
+                        ) searchResult.add(food)
                     }
                 }
                 listView.adapter = PlaceListAdapter(
@@ -175,10 +187,12 @@ class SearchTabActivity : AppCompatActivity() {
 
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
-            Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
+//                    places.forEach { place ->
+//                        if (place.cat == "food" && place.index == i + 1) {
+            Toast.makeText(this, foods[i].name + " selected", Toast.LENGTH_SHORT).show();
             val intent = Intent(this, MapsActivity::class.java)
-            val lat = places[i].latLng.latitude
-            val lng = places[i].latLng.longitude
+            val lat = foods[i].latLng.latitude
+            val lng = foods[i].latLng.longitude
 
             intent.putExtra("key-lat", lat);
             intent.putExtra("key-lng", lng);
@@ -345,7 +359,7 @@ class SearchTabActivity : AppCompatActivity() {
                 listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
 //                (listView.adapter as TeacherListAdapter).notifyDataSetChanged()
 
-                searchView.queryHint = "name/branch/block/floor"
+                searchView.queryHint = "name / branch / block / floor"
 
                 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
@@ -672,7 +686,7 @@ class SearchTabActivity : AppCompatActivity() {
             if (checkedId.contains(binding.chipGlobal.id)) {
 
                 listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
-                searchView.queryHint = ""
+                searchView.queryHint = "for teachers, select Teacher"
                 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                     override fun onQueryTextSubmit(query: String?): Boolean {
                         searchView.clearFocus()

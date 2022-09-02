@@ -62,15 +62,10 @@ class SearchTabActivity2 : AppCompatActivity() {
         toolbar.setTitle("")
         setSupportActionBar(toolbar)
 
-        val foods = arrayListOf<Place>();
-        places.forEach { place ->
-            if (place.cat == "food" && place.inout == "out") foods.add(place)
-        }
 
 //                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
 //                    this, android.R.layout.simple_list_item_1, names
 //                )
-
 
 
 //        val nightModeFlags: Int = getContext().getResources().getConfiguration().uiMode and
@@ -83,7 +78,7 @@ class SearchTabActivity2 : AppCompatActivity() {
 
         var searchView: SearchView
 
-        val listView : ListView
+        var listView: ListView = binding.listView
 
 
         if (this.resources.configuration.uiMode and
@@ -107,6 +102,11 @@ class SearchTabActivity2 : AppCompatActivity() {
             binding.listViewDark.visibility = View.GONE
         }
 
+
+        val foods = arrayListOf<Place>();
+        places.forEach { place ->
+            if (place.cat == "food" && place.inout == "out") foods.add(place)
+        }
         listView.adapter = PlaceListAdapter(this, foods as ArrayList<Place>)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -160,7 +160,7 @@ class SearchTabActivity2 : AppCompatActivity() {
 
 //            1 FOOD
             if (checkedId.contains(binding.chipFood.id)) {
-                val listView = binding.listView;
+//                val listView = binding.listView;
 
                 val foods = arrayListOf<Place>();
                 places.forEach { place ->
@@ -221,14 +221,17 @@ class SearchTabActivity2 : AppCompatActivity() {
 
 //            2 GARDEN/HANGOUT
             if (checkedId.contains(binding.chipHangout.id)) {
-                val listView = binding.listView;
+//                val listView = binding.listView;
 
                 val hangouts = arrayListOf<Place>();
                 places.forEach { place ->
                     if (place.cat == "hangout") hangouts.add(place)
                 }
 
-                listView.adapter = PlaceListAdapter(this, hangouts)
+                listView.adapter = PlaceListAdapter(
+                    this,
+                    hangouts as ArrayList<Place> /* = java.util.ArrayList<com.example.nmamitmap.Place> */
+                )
 
                 searchView.setOnQueryTextListener(object :
                     SearchView.OnQueryTextListener {
@@ -266,7 +269,7 @@ class SearchTabActivity2 : AppCompatActivity() {
 
                 listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    places.forEach { place ->
+                    hangouts.forEach { place ->
                         Toast.makeText(this, hangouts[i].name + " selected", Toast.LENGTH_SHORT)
                             .show();
                         val intent = Intent(this, MapsActivity::class.java)
@@ -285,7 +288,7 @@ class SearchTabActivity2 : AppCompatActivity() {
 
 //            3 SHOP
             if (checkedId.contains(binding.chipShop.id)) {
-                val listView = binding.listView;
+//                val listView = binding.listView;
 
                 val shops = arrayListOf<Place>();
                 places.forEach { place ->
@@ -841,7 +844,6 @@ class SearchTabActivity2 : AppCompatActivity() {
                 })
 
                 listView.setOnItemClickListener { adapterView, view, i, l ->
-
                     Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
                     val intent = Intent(this, MapsActivity::class.java)
                     val lat = places[i].latLng.latitude
@@ -876,7 +878,6 @@ class SearchTabActivity2 : AppCompatActivity() {
                 }
             }
             true
-
         }
     }
 

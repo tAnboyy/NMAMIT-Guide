@@ -61,17 +61,7 @@
 
             <!-- Chips can be declared here, or added dynamically. -->
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipGlobal"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:checked="true"
-                android:text="Global search"
-                app:chipIcon="@drawable/ic_search_grey"
-                app:chipIconEnabled="true"
-                app:iconStartPadding="5dp" />
+
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFood"
@@ -79,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
+                android:checked="true"
                 android:text="Food"
                 app:chipIcon="@drawable/ic_burger"
                 app:chipIconEnabled="true"
@@ -152,6 +143,17 @@
                 android:layout_marginStart="0dp"
                 android:text="Others"
                 app:chipIcon="@drawable/ic_pie_chart"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGlobal"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:text="Global search"
+                app:chipIcon="@drawable/ic_search_grey"
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
 
