@@ -32,10 +32,10 @@ class MarkerInfoWindowAdapter(private val context: Context) : GoogleMap.InfoWind
 
         val iv: ImageView = view.findViewById<ImageView>(R.id.ivIW)
 
-        places.forEach { place ->
-            Glide.with(context)
-                .load(place.imgUrl)
-        }
+//        places.forEach { place ->
+//            Glide.with(context)
+//                .load(place.imgUrl)
+//        }
 
         Glide.with(context)
             .load(place.imgUrl)

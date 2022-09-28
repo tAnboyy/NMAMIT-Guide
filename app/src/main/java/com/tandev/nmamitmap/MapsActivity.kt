@@ -12,7 +12,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.Window
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.annotation.RequiresApi
@@ -20,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.bumptech.glide.Glide
 import com.example.nmamitmap.Place
 import com.example.nmamitmap.PlacesReader
 import com.example.nmamitmap.R
@@ -34,12 +32,15 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.vmadalin.easypermissions.EasyPermissions
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks,
     GoogleMap.OnMarkerClickListener,
@@ -67,6 +68,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     private val places: List<Place> by lazy {
         PlacesReader(this).read()
     }
+
+    private var mStorageRef: StorageReference? = null
 
     companion object {
         //        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
@@ -210,6 +213,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        mStorageRef = FirebaseStorage.getInstance().getReference();
 
 //        //hide Toolbar
 //        requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -222,9 +226,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
         //add functionality to toolbar
 //        toolbar = binding.toolbar
-        toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("")
-        setSupportActionBar(toolbar)
+//        toolbar = findViewById(R.id.toolbar)
+//        toolbar.setTitle("")
+//        setSupportActionBar(toolbar)
 
         // Calling Location Manager
         val mLocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager

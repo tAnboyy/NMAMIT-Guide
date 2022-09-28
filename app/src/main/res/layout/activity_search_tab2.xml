@@ -11,40 +11,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:elevation="0dp">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:elevation="0dp">-->
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#232323"
-                android:elevation="0dp"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="@style/Theme.AppCompat.DayNight"
-                app:logo="@drawable/ic_location_on_logo">
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#232323"-->
+<!--                android:elevation="0dp"-->
+<!--                android:minHeight="?attr/actionBarSize"-->
+<!--                android:theme="@style/Theme.AppCompat.DayNight"-->
+<!--                app:logo="@drawable/ic_location_on_logo">-->
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="NMAMIT Map"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        app:fontFamily="@font/notoseriftc" />
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="NMAMIT Map"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="14sp"-->
+<!--                        app:fontFamily="@font/notoseriftc" />-->
+<!--                </RelativeLayout>-->
 
-            </androidx.appcompat.widget.Toolbar>
+<!--            </androidx.appcompat.widget.Toolbar>-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
@@ -170,15 +170,15 @@
                 app:iconStartPadding="5dp" />
 
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipGlobal"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Global search"
-                app:chipIcon="@drawable/ic_search_grey"
-                app:chipIconEnabled="true"
-                app:iconStartPadding="5dp" />
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chipGlobal"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Global search"-->
+<!--                app:chipIcon="@drawable/ic_search_grey"-->
+<!--                app:chipIconEnabled="true"-->
+<!--                app:iconStartPadding="5dp" />-->
 
 
         </com.google.android.material.chip.ChipGroup>

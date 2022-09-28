@@ -63,13 +63,13 @@ class SearchTabActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("")
-        setSupportActionBar(toolbar)
+//        toolbar = findViewById(R.id.toolbar)
+//        toolbar.setTitle("")
+//        setSupportActionBar(toolbar)
 
         var searchView: SearchView
 
-        val listView : ListView
+        val listView: ListView
 
 
         if (this.resources.configuration.uiMode and
@@ -683,57 +683,57 @@ class SearchTabActivity : AppCompatActivity() {
             }
 
             //            7 GLOBAL SEARCH
-            if (checkedId.contains(binding.chipGlobal.id)) {
-
-                listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
-                searchView.queryHint = "for teachers, select Teacher"
-                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-                    override fun onQueryTextSubmit(query: String?): Boolean {
-                        searchView.clearFocus()
-                        val searchResult = arrayListOf<Place>();
-                        places.forEach { place ->
-                            if (place.name.lowercase()
-                                    .contains(query.toString().lowercase())
-                            ) searchResult.add(place)
-                        }
-                        listView.adapter = PlaceListAdapter(
-                            this@SearchTabActivity,
-                            searchResult as ArrayList<Place>
-                        )
-                        return false
-                    }
-
-                    override fun onQueryTextChange(newText: String?): Boolean {
-                        val searchResult = arrayListOf<Place>();
-                        places.forEach { place ->
-                            if (newText != null) {
-                                if (place.name.lowercase()
-                                        .contains(newText.lowercase())
-                                ) searchResult.add(place)
-                            }
-                        }
-                        listView.adapter = PlaceListAdapter(
-                            this@SearchTabActivity,
-                            searchResult as ArrayList<Place>
-                        )
-                        return false
-                    }
-                })
-
-                listView.setOnItemClickListener { adapterView, view, i, l ->
-
-                    Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
-                    val intent = Intent(this, MapsActivity::class.java)
-                    val lat = places[i].latLng.latitude
-                    val lng = places[i].latLng.longitude
-
-                    intent.putExtra("key-lat", lat);
-                    intent.putExtra("key-lng", lng);
-                    intent.putExtra("viaIntent", 1);
-
-                    this.startActivity(intent)
-                }
-            }
+//            if (checkedId.contains(binding.chipGlobal.id)) {
+//
+//                listView.adapter = PlaceListAdapter(this, places as ArrayList<Place>)
+//                searchView.queryHint = "for teachers, select Teacher"
+//                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+//                    override fun onQueryTextSubmit(query: String?): Boolean {
+//                        searchView.clearFocus()
+//                        val searchResult = arrayListOf<Place>();
+//                        places.forEach { place ->
+//                            if (place.name.lowercase()
+//                                    .contains(query.toString().lowercase())
+//                            ) searchResult.add(place)
+//                        }
+//                        listView.adapter = PlaceListAdapter(
+//                            this@SearchTabActivity,
+//                            searchResult as ArrayList<Place>
+//                        )
+//                        return false
+//                    }
+//
+//                    override fun onQueryTextChange(newText: String?): Boolean {
+//                        val searchResult = arrayListOf<Place>();
+//                        places.forEach { place ->
+//                            if (newText != null) {
+//                                if (place.name.lowercase()
+//                                        .contains(newText.lowercase())
+//                                ) searchResult.add(place)
+//                            }
+//                        }
+//                        listView.adapter = PlaceListAdapter(
+//                            this@SearchTabActivity,
+//                            searchResult as ArrayList<Place>
+//                        )
+//                        return false
+//                    }
+//                })
+//
+//                listView.setOnItemClickListener { adapterView, view, i, l ->
+//
+//                    Toast.makeText(this, places[i].name + " selected", Toast.LENGTH_SHORT).show();
+//                    val intent = Intent(this, MapsActivity::class.java)
+//                    val lat = places[i].latLng.latitude
+//                    val lng = places[i].latLng.longitude
+//
+//                    intent.putExtra("key-lat", lat);
+//                    intent.putExtra("key-lng", lng);
+//                    intent.putExtra("viaIntent", 1);
+//
+//                    this.startActivity(intent)
+//                }
+//            }
         }
 
         binding.bottomNavigationView.selectedItemId = R.id.miIn
@@ -756,8 +756,8 @@ class SearchTabActivity : AppCompatActivity() {
             }
             true
         }
-
     }
+
 
     override fun onBackPressed() {
         super.onBackPressed()

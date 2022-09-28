@@ -13,41 +13,47 @@
         android:orientation="vertical"
         android:paddingBottom="0dp">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:elevation="0dp">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:elevation="0dp">-->
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#232323"
-                android:elevation="0dp"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="@style/Theme.AppCompat.DayNight"
-                app:logo="@drawable/ic_location_on_logo">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#232323"-->
+<!--                android:elevation="0dp"-->
+<!--                android:minHeight="?attr/actionBarSize"-->
+<!--                android:theme="@style/Theme.AppCompat.DayNight">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="NMAMIT Map"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        app:fontFamily="@font/notoseriftc" />
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="2dp"-->
+<!--                    android:src="@drawable/burh" />-->
 
-                </RelativeLayout>
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
 
-            </androidx.appcompat.widget.Toolbar>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="NMAMIT Map"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="14sp"-->
+<!--                        app:fontFamily="@font/notoseriftc" />-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.appcompat.widget.Toolbar>-->
+
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
@@ -60,7 +66,6 @@
             app:singleSelection="true">
 
             <!-- Chips can be declared here, or added dynamically. -->
-
 
 
             <com.google.android.material.chip.Chip
@@ -146,16 +151,16 @@
                 app:chipIconEnabled="true"
                 app:iconStartPadding="5dp" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipGlobal"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:text="Global search"
-                app:chipIcon="@drawable/ic_search_grey"
-                app:chipIconEnabled="true"
-                app:iconStartPadding="5dp" />
+            <!--            <com.google.android.material.chip.Chip-->
+            <!--                android:id="@+id/chipGlobal"-->
+            <!--                style="@style/Widget.MaterialComponents.Chip.Choice"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="0dp"-->
+            <!--                android:text="Global search"-->
+            <!--                app:chipIcon="@drawable/ic_search_grey"-->
+            <!--                app:chipIconEnabled="true"-->
+            <!--                app:iconStartPadding="5dp" />-->
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -196,18 +201,18 @@
             android:layout_marginTop="12.5dp"
             android:background="@drawable/searchview_background"
             android:paddingHorizontal="0dp"
-            android:visibility="gone"
-            android:paddingBottom="57dp" />
+            android:paddingBottom="57dp"
+            android:visibility="gone" />
 
         <ListView
             android:id="@+id/listViewDark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="12.5dp"
-            android:visibility="gone"
             android:background="@drawable/searchview_background_darkmode"
             android:paddingHorizontal="0dp"
-            android:paddingBottom="57dp" />
+            android:paddingBottom="57dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 
