@@ -414,7 +414,7 @@ class SearchTabActivity : AppCompatActivity() {
                     intent.putExtra("title", teachers[i].name);
                     intent.putExtra("snippet", teachers[i].block + " " + teachers[i].floor);
 
-                    this.startActivity(intent)
+//                    this.startActivity(intent)
                 }
 
             }
@@ -622,6 +622,72 @@ class SearchTabActivity : AppCompatActivity() {
                 val others = arrayListOf<Place>();
                 places.forEach { place ->
                     if (place.cat == "other" && place.inout == "in") others.add(place)
+                }
+
+//                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
+//                    this, android.R.layout.simple_list_item_1, names
+//                )
+
+                listView.adapter = PlaceListAdapter(this, others as ArrayList<Place>)
+
+                searchView.queryHint = ""
+
+                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                    override fun onQueryTextSubmit(query: String?): Boolean {
+                        searchView.clearFocus()
+                        val searchResult = arrayListOf<Place>();
+                        others.forEach { other ->
+                            if (other.name.lowercase()
+                                    .contains(query.toString().lowercase())
+                            ) searchResult.add(other)
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity,
+                            searchResult as ArrayList<Place>
+                        )
+                        return false
+                    }
+
+                    override fun onQueryTextChange(newText: String?): Boolean {
+                        val searchResult = arrayListOf<Place>();
+                        others.forEach { other ->
+                            if (newText != null) {
+                                if (other.name.lowercase()
+                                        .contains(newText.lowercase())
+                                ) searchResult.add(other)
+                            }
+                        }
+                        listView.adapter = PlaceListAdapter(
+                            this@SearchTabActivity,
+                            searchResult as ArrayList<Place>
+                        )
+                        return false
+                    }
+                })
+
+                listView.setOnItemClickListener { adapterView, view, i, l ->
+
+//                    places.forEach { place ->
+//                        if (place.cat == "block" && place.index == i + 1) {
+                    Toast.makeText(this, others[i].name + " selected", Toast.LENGTH_SHORT).show();
+                    val intent = Intent(this, MapsActivity::class.java)
+                    val lat = others[i].latLng.latitude
+                    val lng = others[i].latLng.longitude
+
+                    intent.putExtra("key-lat", lat);
+                    intent.putExtra("key-lng", lng);
+                    intent.putExtra("viaIntent", 1);
+
+                    this.startActivity(intent)
+                }
+            }
+
+            //            8 LABS
+            if (checkedId.contains(binding.chipLab.id)) {
+
+                val others = arrayListOf<Place>();
+                places.forEach { place ->
+                    if (place.cat == "lab") others.add(place)
                 }
 
 //                val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(

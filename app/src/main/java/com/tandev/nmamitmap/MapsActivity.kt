@@ -554,7 +554,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
             if (place.cat == "food") {
                 val marker = googleMap.addMarker(
                     MarkerOptions().position(place.latLng).title("Marker in Sydney")
-                        .icon(bitmapDescriptorFromVector(this, R.drawable.ic_burger))
+                        .icon(bitmapDescriptorFromVector(this, R.drawable.ic_food_location))
                 )
                 marker?.tag = place
             }
@@ -622,7 +622,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                         .icon(
                             bitmapDescriptorFromVector(
                                 this,
-                                R.drawable.ic_directions_bike_black_24dp
+                                R.drawable.ic_wrench
                             )
                         )
                 )
@@ -635,7 +635,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                         .icon(
                             bitmapDescriptorFromVector(
                                 this,
-                                R.drawable.ic_directions_bike_black_24dp
+                                R.drawable.ic_misc
                             )
                         )
                 )
