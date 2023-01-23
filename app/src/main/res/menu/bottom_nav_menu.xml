@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/miMap"
-        android:icon="@drawable/ic_map_marker"
+        android:icon="@drawable/ic_location_on_logo"
         android:title="Map"
         />
 

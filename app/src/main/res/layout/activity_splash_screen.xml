@@ -10,7 +10,7 @@
         android:id="@+id/iv_splash_logo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/temp_logo"
+        android:src="@drawable/ic_map_marker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
