@@ -8,8 +8,11 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.location.Location
 import android.location.LocationManager
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -40,6 +43,11 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.vmadalin.easypermissions.EasyPermissions
+import okhttp3.*
+import java.io.IOException
+import java.net.URL
+import javax.net.ssl.HttpsURLConnection
+import kotlin.concurrent.thread
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.PermissionCallbacks,
@@ -71,7 +79,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
     private var mStorageRef: StorageReference? = null
 
+    private val tagLog = javaClass.simpleName as String
+
     companion object {
+        var RES_BODY: String = ""
+        var CAN_FETCH: Boolean = false
         //        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
         private const val DEFAULT_ZOOM = 15
         private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
@@ -215,10 +227,50 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
+        thread {
+            while (true) {
+//                typeOfNetwork(this.applicationContext)
+
+                val deviceOnline = isDeviceOnline(this.applicationContext)
+                val internetAvailable = isInternetAvailable()
+                Log.d(tagLog, "deviceOnline $deviceOnline")
+                Log.d(tagLog, "internetAvailable $internetAvailable")
+                if (deviceOnline && internetAvailable) CAN_FETCH = true
+//                else CAN_FETCH = false
+                Thread.sleep(1000)
+            }
+        }
+
+
+        val URL = "https://tanboyy.github.io/NMAMIT-Map-Server/teachers.json"
+        //create HTTP client
+        val jsonFetch = OkHttpClient()
+        //build request
+        val request = Request.Builder().url(URL).build()
+        //enqueue request and handle callbacks
+        jsonFetch.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                Log.i("Response", "onResponse: received response from server...")
+                response.use {
+                    if (!response.isSuccessful) {
+                        Log.e("HTTP error", "onResponse: something went wrong...")
+//                        Toast.makeText(this@MapsActivity, "please turn on data/wifi", Toast.LENGTH_SHORT).show()
+                    } else {
+                        //fetch body of response
+                        RES_BODY = response.body?.string().toString()
+//                        Toast.makeText(this@MapsActivity, "response received", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+
 //        //hide Toolbar
 //        requestWindowFeature(Window.FEATURE_NO_TITLE)
 //        supportActionBar?.hide()
-
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -279,6 +331,57 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                 }
             }
             true
+        }
+    }
+
+
+    private fun isDeviceOnline(context: Context): Boolean {
+        val connManager = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val networkCapabilities = connManager.getNetworkCapabilities(connManager.activeNetwork)
+            if (networkCapabilities == null) {
+                Log.d(tagLog, "Device Offline")
+                return false
+            } else {
+                Log.d(tagLog, "Device Online")
+
+                if (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                    Log.d(tagLog, "Wifi")
+                } else if (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                    Log.d(tagLog, "Cellular")
+                } else {
+                    Log.d(tagLog, "Unknown network")
+                }
+
+                if (networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                    networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED) &&
+                    networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_NOT_SUSPENDED)
+                ) {
+                    Log.d(tagLog, "Connected to Internet")
+                    return true
+                } else {
+                    Log.d(tagLog, "Not connected to Internet")
+                    return false
+                }
+            }
+        } else {
+            // below Marshmallow
+            val activeNetwork = connManager.activeNetworkInfo
+            return activeNetwork?.isConnectedOrConnecting == true && activeNetwork.isAvailable
+        }
+    }
+
+    fun isInternetAvailable(): Boolean {
+        val urlConnection =
+            URL("https://clients3.google.com/generate_204").openConnection() as HttpsURLConnection
+        return try {
+            urlConnection.setRequestProperty("User-Agent", "Android")
+            urlConnection.setRequestProperty("Connection", "close")
+            urlConnection.connectTimeout = 1000
+            urlConnection.connect()
+            urlConnection.responseCode == 204
+        } catch (e: Exception) {
+            false
         }
     }
 
@@ -726,7 +829,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     override fun onMarkerClick(p0: Marker): Boolean {
         p0.showInfoWindow()
         var currTime = System.currentTimeMillis()
-        while(true) {
+        while (true) {
             if (System.currentTimeMillis() == currTime + 0) {
                 p0.showInfoWindow()
                 break

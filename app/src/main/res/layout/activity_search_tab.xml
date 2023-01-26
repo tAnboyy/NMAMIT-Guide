@@ -205,6 +205,12 @@
             android:visibility="gone"
             app:iconifiedByDefault="false" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please turn on wifi/mobile data and restart app to get latest info"
+            android:visibility="gone" />
+
         <ListView
             android:id="@+id/listView"
             android:layout_width="match_parent"

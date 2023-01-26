@@ -341,6 +341,14 @@ class SearchTabActivity : AppCompatActivity() {
 //            3 TEACHER
             if (checkedId.contains(binding.chipTeacher.id)) {
 
+                if (teachers.isEmpty()) {
+                    Toast.makeText(
+                        this,
+                        "Please check your internet connection...",
+                        Toast.LENGTH_SHORT
+                    ).show();
+                    listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
+                } else {
 //                var sortedList = teachers.sortedWith(compareBy({
 //                    it.firstName
 //                }))
@@ -356,67 +364,69 @@ class SearchTabActivity : AppCompatActivity() {
 //                val teachers = teachers.sortedBy { teacher -> teacher.name }
 //                val sortedTeachers : ArrayList<Teacher> = teachers.sortedBy { teacher -> teacher.name} as ArrayList<Teacher>
 
-                listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
+                    listView.adapter = TeacherListAdapter(this, teachers as ArrayList<Teacher>)
 //                (listView.adapter as TeacherListAdapter).notifyDataSetChanged()
 
-                searchView.queryHint = "name / branch / block / floor"
+                    searchView.queryHint = "name / branch / block / floor"
 
-                searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-                    override fun onQueryTextSubmit(query: String?): Boolean {
-                        searchView.clearFocus()
-                        val searchResult = arrayListOf<Teacher>();
-                        teachers.forEach { teacher ->
-                            if (teacher.name.lowercase()
-                                    .contains(query.toString().lowercase())
-                            ) searchResult.add(teacher)
+                    searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                        override fun onQueryTextSubmit(query: String?): Boolean {
+                            searchView.clearFocus()
+                            val searchResult = arrayListOf<Teacher>();
+                            teachers.forEach { teacher ->
+                                if (teacher.name.lowercase()
+                                        .contains(query.toString().lowercase())
+                                ) searchResult.add(teacher)
+                            }
+                            listView.adapter = TeacherListAdapter(
+                                this@SearchTabActivity,
+                                searchResult as ArrayList<Teacher>
+                            )
+                            return false
                         }
-                        listView.adapter = TeacherListAdapter(
-                            this@SearchTabActivity,
-                            searchResult as ArrayList<Teacher>
-                        )
-                        return false
-                    }
 
-                    override fun onQueryTextChange(newText: String?): Boolean {
-                        val searchResult = arrayListOf<Teacher>();
-                        teachers.forEach { teacher ->
-                            if (newText?.let {
-                                    teacher.name.lowercase().contains(it.lowercase())
-                                } == true) searchResult.add(teacher)
-                            else if (newText?.let {
-                                    teacher.branch.lowercase().contains(it.lowercase())
-                                } == true) searchResult.add(teacher)
-                            else if (newText?.let {
-                                    teacher.block.lowercase().contains(it.lowercase())
-                                } == true) searchResult.add(teacher)
-                            else if (newText?.let {
-                                    teacher.floor.lowercase().contains(it.lowercase())
-                                } == true) searchResult.add(teacher)
+                        override fun onQueryTextChange(newText: String?): Boolean {
+                            val searchResult = arrayListOf<Teacher>();
+                            teachers.forEach { teacher ->
+                                if (newText?.let {
+                                        teacher.name.lowercase().contains(it.lowercase())
+                                    } == true) searchResult.add(teacher)
+                                else if (newText?.let {
+                                        teacher.branch.lowercase().contains(it.lowercase())
+                                    } == true) searchResult.add(teacher)
+                                else if (newText?.let {
+                                        teacher.block.lowercase().contains(it.lowercase())
+                                    } == true) searchResult.add(teacher)
+                                else if (newText?.let {
+                                        teacher.floor.lowercase().contains(it.lowercase())
+                                    } == true) searchResult.add(teacher)
+                            }
+                            listView.adapter = TeacherListAdapter(
+                                this@SearchTabActivity,
+                                searchResult as ArrayList<Teacher>
+                            )
+                            return false
                         }
-                        listView.adapter = TeacherListAdapter(
-                            this@SearchTabActivity,
-                            searchResult as ArrayList<Teacher>
-                        )
-                        return false
-                    }
-                })
+                    })
 
-                listView.setOnItemClickListener { adapterView, view, i, l ->
+                    listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                    Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT).show();
-                    val intent = Intent(this, MapsActivity::class.java)
-                    val lat = teachers[i].latLng.latitude
-                    val lng = teachers[i].latLng.longitude
+                        Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT)
+                            .show();
+                        val intent = Intent(this, MapsActivity::class.java)
+                        val lat = teachers[i].latLng.latitude
+                        val lng = teachers[i].latLng.longitude
 
-                    intent.putExtra("key-lat", lat);
-                    intent.putExtra("key-lng", lng);
-                    intent.putExtra("viaIntent", 1);
-                    intent.putExtra("title", teachers[i].name);
-                    intent.putExtra("snippet", teachers[i].block + " " + teachers[i].floor);
+                        intent.putExtra("key-lat", lat);
+                        intent.putExtra("key-lng", lng);
+                        intent.putExtra("viaIntent", 1);
+                        intent.putExtra("title", teachers[i].name);
+                        intent.putExtra("snippet", teachers[i].block + " " + teachers[i].floor);
 
 //                    this.startActivity(intent)
-                }
+                    }
 
+                }
             }
 
 //            4 HALL
