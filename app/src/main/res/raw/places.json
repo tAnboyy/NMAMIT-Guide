@@ -282,7 +282,7 @@
     },
     "name": "ATREYA",
     "phone": 0,
-    "note": "idk :/",
+    "note": "",
     "inout": "NA",
     "cat": "block",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150033.jpg?alt=media&token=72d651e2-1498-471a-a8a2-6598642a964c"
@@ -328,9 +328,9 @@
         }
       }
     },
-    "name": "",
+    "name": "CV Raman/CVR",
     "phone": 0,
-    "note": "First years' block",
+    "note": "First years'",
     "inout": "NA",
     "cat": "block",
     "imgUrl": ""
@@ -570,7 +570,7 @@
     },
     "name": "Central library",
     "phone": 0,
-    "note": "1st floor",
+    "note": "1st floor, RAM",
     "inout": "NA",
     "cat": "library",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142304.jpg?alt=media&token=10cbae22-c241-4b3b-991c-409d62576187"
@@ -1154,8 +1154,8 @@
   {
     "geometry": {
       "location": {
-        "lat": 13.182496882119352,
-        "lng": 74.9347749109605
+        "lat": 13.182565880410381,
+        "lng": 74.93491849229366
       },
       "viewport": {
         "northeast": {
@@ -1178,8 +1178,8 @@
   {
     "geometry": {
       "location": {
-        "lat": 13.182496882119352,
-        "lng": 74.9347749109605
+        "lat": 13.18251887289634,
+        "lng": 74.9347005628287
       },
       "viewport": {
         "northeast": {

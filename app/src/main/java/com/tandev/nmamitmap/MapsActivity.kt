@@ -82,7 +82,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
     private val tagLog = javaClass.simpleName as String
 
     companion object {
-        var RES_BODY: String = ""
+        var RES_BODY1: String = ""
+        var RES_BODY2: String = ""
         var CAN_FETCH: Boolean = false
         //        private val TAG = MapsActivityCurrentPlace::class.java.simpleName
         private const val DEFAULT_ZOOM = 15
@@ -242,11 +243,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
         }
 
 
-        val URL = "https://tanboyy.github.io/NMAMIT-Map-Server/teachers.json"
+        val URL1 = "https://tanboyy.github.io/NMAMIT-Map-Server/teachers.json"
+        val URL2 = "https://tanboyy.github.io/NMAMIT-Map-Server/places.json"
         //create HTTP client
         val jsonFetch = OkHttpClient()
-        //build request
-        val request = Request.Builder().url(URL).build()
+        //build request for teachers.json
+        var request = Request.Builder().url(URL1).build()
         //enqueue request and handle callbacks
         jsonFetch.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -261,7 +263,30 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 //                        Toast.makeText(this@MapsActivity, "please turn on data/wifi", Toast.LENGTH_SHORT).show()
                     } else {
                         //fetch body of response
-                        RES_BODY = response.body?.string().toString()
+                        RES_BODY1 = response.body?.string().toString()
+//                        Toast.makeText(this@MapsActivity, "response received", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+
+        //build request for places.json
+        request = Request.Builder().url(URL2).build()
+        //enqueue request and handle callbacks
+        jsonFetch.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                Log.i("Response", "onResponse: received response from server...")
+                response.use {
+                    if (!response.isSuccessful) {
+                        Log.e("HTTP error", "onResponse: something went wrong...")
+//                        Toast.makeText(this@MapsActivity, "please turn on data/wifi", Toast.LENGTH_SHORT).show()
+                    } else {
+                        //fetch body of response
+                        RES_BODY2 = response.body?.string().toString()
 //                        Toast.makeText(this@MapsActivity, "response received", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -557,12 +582,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
                 val recievedTitle = intent.getStringExtra("title")
                 val recievedSnippet = intent.getStringExtra("snippet")
 
-                var recievedLatLng = LatLng(recievedLat + 0.00007, recievedLng)
+                var recievedLatLng = LatLng(recievedLat + 0.00003, recievedLng)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(recievedLatLng, 20f))
                 mMap.addMarker(
                     MarkerOptions().position(recievedLatLng)
                         .title(recievedTitle).snippet(recievedSnippet)
                 )
+
+                mMap.setOnInfoWindowClickListener(this);
+//                mMap.setOnMarkerClickListener(this);
 
                 mMap.isMyLocationEnabled = true
                 fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
@@ -828,6 +856,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, EasyPermissions.Pe
 
     override fun onMarkerClick(p0: Marker): Boolean {
         p0.showInfoWindow()
+
+        //refreshing the info window, since it wont load image sometimes
         var currTime = System.currentTimeMillis()
         while (true) {
             if (System.currentTimeMillis() == currTime + 0) {

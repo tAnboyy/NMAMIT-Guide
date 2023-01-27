@@ -27,7 +27,7 @@ class TeachersReader(private val context: Context) {
 
     private val gson = Gson()
 
-    val body = MapsActivity.RES_BODY
+    val body = MapsActivity.RES_BODY1
 
     private lateinit var binding: ActivitySearchTabBinding
 
