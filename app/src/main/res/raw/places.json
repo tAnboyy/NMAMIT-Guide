@@ -16,9 +16,9 @@
         }
       }
     },
-    "name": "Hotel Shetty's",
+    "name": "Shetty's",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": ""
@@ -42,7 +42,7 @@
     },
     "name": "Sanmathi Cafe",
     "phone": 0,
-    "note": "",
+    "note": "9620673070",
     "inout": "out",
     "cat": "food",
     "imgUrl": ""
@@ -66,7 +66,7 @@
     },
     "name": "Shabari",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": ""
@@ -90,7 +90,7 @@
     },
     "name": "Harshitha",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": ""
@@ -114,7 +114,7 @@
     },
     "name": "Shisha Food Court",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831154314.jpg?alt=media&token=1d83e991-ef57-4100-ba19-7998329c9798"
@@ -138,7 +138,7 @@
     },
     "name": "Oven Fresh",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831154034.jpg?alt=media&token=85382676-0611-485d-a9b9-f6db9fe01925"
@@ -162,7 +162,7 @@
     },
     "name": "Kitchen Bells",
     "phone": 0,
-    "note": "",
+    "note": "rip",
     "inout": "in",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150830.jpg?alt=media&token=8a118236-2ca9-40e6-9658-f1326417a421"
@@ -186,7 +186,7 @@
     },
     "name": "Maggi shop",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144546.jpg?alt=media&token=09507c68-dc0d-44f1-9302-91e3f2b60ea7"
@@ -210,7 +210,7 @@
     },
     "name": "Raghanna's",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150115.jpg?alt=media&token=4fcb2935-ad0a-4bae-ad1f-906214073572"
@@ -234,7 +234,7 @@
     },
     "name": "NMAMIT/Shri Durga Canteen",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145941.jpg?alt=media&token=16acb972-e3cb-4336-acd4-ef60c677b1c6"
@@ -258,58 +258,10 @@
     },
     "name": "Suprabha",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144347.jpg?alt=media&token=b3dbf03a-ca6f-4c73-8a69-bfe9ff32447a"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.182671553442159,
-        "lng": 74.93412563404472
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.8074053802915,
-          "lng": -122.4191828197085
-        },
-        "southwest": {
-          "lat": 37.80470741970851,
-          "lng": -122.4218807802915
-        }
-      }
-    },
-    "name": "ATREYA",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "block",
-    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150033.jpg?alt=media&token=72d651e2-1498-471a-a8a2-6598642a964c"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.182581468576208,
-        "lng": 74.93483497724327
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.8090395802915,
-          "lng": -122.4181850697085
-        },
-        "southwest": {
-          "lat": 37.8063416197085,
-          "lng": -122.4208830302915
-        }
-      }
-    },
-    "name": "ATAL",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "block",
-    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144535.jpg?alt=media&token=64ba8a91-4e0f-4428-952d-cadc16bdf81c"
   },
   {
     "geometry": {
@@ -328,7 +280,7 @@
         }
       }
     },
-    "name": "CV Raman/CVR",
+    "name": "CV Raman (CVR)",
     "phone": 0,
     "note": "First years'",
     "inout": "NA",
@@ -352,9 +304,9 @@
         }
       }
     },
-    "name": "SIR M VISVESVARAYA/VIS",
-    "rating": 4,
-    "note": "CIVIL/EE",
+    "name": "SIR M VISVESVARAYA (VIS)",
+    "phone": 0,
+    "note": "CIVIL  |  EE",
     "inout": "NA",
     "cat": "block",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/blcVIS.jpg?alt=media&token=d49e4b16-331d-4401-9ad1-cf9b2957cca3"
@@ -376,9 +328,9 @@
         }
       }
     },
-    "name": "S RAMANUJAN/RAM",
+    "name": "S RAMANUJAN (RAM)",
     "phone": 0,
-    "note": "MECH/EC",
+    "note": "MECH  |  EC",
     "inout": "NA",
     "cat": "block",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831141739.jpg?alt=media&token=8aacfa95-2ea6-4eb9-84f9-75e94e3e8a05"
@@ -400,12 +352,60 @@
         }
       }
     },
-    "name": "APJ KALAM/APJ",
+    "name": "APJ KALAM (APJ)",
     "phone": 0,
-    "note": "CS/IS/BT",
+    "note": "CS  |  IS  |  BT",
     "inout": "NA",
     "cat": "block",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831141639.jpg?alt=media&token=408edcfa-8ca1-4e4b-92fc-cadce45faf05"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182671553442159,
+        "lng": 74.93412563404472
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8074053802915,
+          "lng": -122.4191828197085
+        },
+        "southwest": {
+          "lat": 37.80470741970851,
+          "lng": -122.4218807802915
+        }
+      }
+    },
+    "name": "ATREYA",
+    "phone": 0,
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
+    "inout": "NA",
+    "cat": "block",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150033.jpg?alt=media&token=72d651e2-1498-471a-a8a2-6598642a964c"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182581468576208,
+        "lng": 74.93483497724327
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.8090395802915,
+          "lng": -122.4181850697085
+        },
+        "southwest": {
+          "lat": 37.8063416197085,
+          "lng": -122.4208830302915
+        }
+      }
+    },
+    "name": "ATAL",
+    "phone": 0,
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
+    "inout": "NA",
+    "cat": "block",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144535.jpg?alt=media&token=64ba8a91-4e0f-4428-952d-cadc16bdf81c"
   },
   {
     "geometry": {
@@ -424,12 +424,12 @@
         }
       }
     },
-    "name": "Shambhavi hall",
+    "name": "Shambhavi",
     "phone": 0,
-    "note": "",
+    "note": "Block: APJ  |  Floor: 1",
     "inout": "NA",
     "cat": "hall",
-    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831141949.jpg?alt=media&token=8adea179-2072-464b-8bc8-8bf3150917a9"
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -450,7 +450,7 @@
     },
     "name": "Phalguni",
     "phone": 0,
-    "note": "",
+    "note": "Block: RAM  |  Floor: 2",
     "inout": "NA",
     "cat": "hall",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142841.jpg?alt=media&token=249c48d6-33ca-4b6b-8567-910475b1e8e6"
@@ -474,7 +474,7 @@
     },
     "name": "Sowparnika",
     "phone": 0,
-    "note": "",
+    "note": "Block: RAM  |  Floor: 1",
     "inout": "NA",
     "cat": "hall",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142200.jpg?alt=media&token=73cbf431-d8ee-4e9b-a4eb-16f518e270f4"
@@ -496,9 +496,9 @@
         }
       }
     },
-    "name": "Sambhram hall",
+    "name": "Sambhram",
     "phone": 0,
-    "note": "",
+    "note": "Block: RAM  |  Floor: 0",
     "inout": "NA",
     "cat": "hall",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831141949.jpg?alt=media&token=7c0a88a5-4e69-4282-9cc6-ead6ac11bb06"
@@ -520,9 +520,9 @@
         }
       }
     },
-    "name": "Sadananda hall",
+    "name": "Sadananda",
     "phone": 0,
-    "note": "",
+    "note": "eazy",
     "inout": "NA",
     "cat": "hall",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145655.jpg?alt=media&token=79c55b57-86a8-4f90-98aa-f0263fb43ccd"
@@ -546,7 +546,7 @@
     },
     "name": "MCA Seminar hall",
     "phone": 0,
-    "note": "",
+    "note": "Block:  |  RAM Floor: ",
     "inout": "NA",
     "cat": "hall",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831143821.jpg?alt=media&token=727a720b-5f5b-4198-a31a-039dd2d7b570"
@@ -570,7 +570,7 @@
     },
     "name": "Central library",
     "phone": 0,
-    "note": "1st floor, RAM",
+    "note": "Block: RAM  |  Floor: 1",
     "inout": "NA",
     "cat": "library",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142304.jpg?alt=media&token=10cbae22-c241-4b3b-991c-409d62576187"
@@ -594,7 +594,7 @@
     },
     "name": "Research Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144659.jpg?alt=media&token=08b03d37-9517-48b7-9e6c-478a2a60d014"
@@ -618,7 +618,7 @@
     },
     "name": "Metallurgy Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144726.jpg?alt=media&token=7aadb517-8a72-419e-a390-cf25e4d9c0b9"
@@ -642,7 +642,7 @@
     },
     "name": "Chemistry Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142450.jpg?alt=media&token=a950970e-d350-421b-afe4-2e1f6ce6951d"
@@ -666,7 +666,7 @@
     },
     "name": "CAD/CAE/CFD Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142646.jpg?alt=media&token=eaa3bc78-6929-4ff1-aec3-ece1ba3d82bd"
@@ -690,7 +690,7 @@
     },
     "name": "Physics Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142435.jpg?alt=media&token=e0331a89-b9e7-48d9-a072-34900e9af8e8"
@@ -714,7 +714,7 @@
     },
     "name": "VLSI Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831142746.jpg?alt=media&token=f4852a82-2e4a-4dec-bf45-153b966d1b82"
@@ -834,7 +834,7 @@
     },
     "name": "Project Lab 1",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831143233.jpg?alt=media&token=2b0bdc7e-0699-444f-92e8-d6c58d9fd821"
@@ -882,7 +882,7 @@
     },
     "name": "DSA Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145030.jpg?alt=media&token=3b2f80da-4cef-42bd-b87d-fc7f986251a4"
@@ -906,7 +906,7 @@
     },
     "name": "Network Security Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145047.jpg?alt=media&token=a6239c9f-5f68-48df-84a7-3b051e6fe847"
@@ -930,7 +930,7 @@
     },
     "name": "Web/Unix Programming Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145055.jpg?alt=media&token=960c7f7b-d19c-49c3-a07d-2fff49408ced"
@@ -954,7 +954,7 @@
     },
     "name": "FAB Lab",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145219.jpg?alt=media&token=197bca43-10b7-4c28-8c38-4c0246836000"
@@ -978,7 +978,7 @@
     },
     "name": "MCA Computer Lab-4",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831143427.jpg?alt=media&token=9ee92dc3-a98c-4e4c-b96c-9d868ebbd033"
@@ -1002,7 +1002,7 @@
     },
     "name": "MCA Computer Lab-1",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "lab",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831143432.jpg?alt=media&token=4add5794-1706-4a14-b205-05058ac1fad7"
@@ -1026,7 +1026,7 @@
     },
     "name": "Canara Bank",
     "phone": 0,
-    "note": "",
+    "note": "₹ rules everything",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831151644.jpg?alt=media&token=05a964f2-1a87-4a88-b174-bffad1339b77"
@@ -1050,7 +1050,7 @@
     },
     "name": "Research and Innovation Centre",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831151509.jpg?alt=media&token=766f9c0d-cf3b-4a62-b656-2b75f284719f"
@@ -1074,7 +1074,7 @@
     },
     "name": "Resident Engineer's Office",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145920.jpg?alt=media&token=ca379039-8f17-474c-a280-b63295c3f493"
@@ -1098,7 +1098,7 @@
     },
     "name": "Post Office",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831151413.jpg?alt=media&token=ab0a993a-2df6-4775-b68b-f197f85f64ea"
@@ -1122,34 +1122,10 @@
     },
     "name": "SAC",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150103.jpg?alt=media&token=ccec9d20-cf7a-494f-bc06-bea557351d6b"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 13.183322933777333,
-        "lng": 74.93360736294888
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "CFSD",
-    "phone": 0,
-    "note": "",
-    "inout": "in",
-    "cat": "other",
-    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831150254.jpg?alt=media&token=56c1e1e6-ee2b-4665-9be1-1e4b498e7090"
   },
   {
     "geometry": {
@@ -1170,7 +1146,7 @@
     },
     "name": "NAIN",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144907.jpg?alt=media&token=efd5ec2a-04fd-418d-81e1-867ec116dc03"
@@ -1194,7 +1170,7 @@
     },
     "name": "Entrepreneurship Development Cell",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144932.jpg?alt=media&token=119a66ea-167a-48e4-99c4-19a6097472a1"
@@ -1218,7 +1194,7 @@
     },
     "name": "Atal Incubation Centre",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831145302.jpg?alt=media&token=8c781389-e768-4421-9f46-683132369317"
@@ -1242,7 +1218,7 @@
     },
     "name": "Xerox 1",
     "phone": 0,
-    "note": "",
+    "note": "Block: APJ  |  Floor: B",
     "inout": "in",
     "cat": "print",
     "imgUrl": ""
@@ -1266,7 +1242,7 @@
     },
     "name": "Xerox 2",
     "phone": 0,
-    "note": "ground floor",
+    "note": "Block: CVR  |  Floor: 0",
     "inout": "in",
     "cat": "print",
     "imgUrl": ""
@@ -1290,7 +1266,7 @@
     },
     "name": "Ground Zero cyber",
     "phone": 0,
-    "note": "print/xerox/gznitte@gmail.com",
+    "note": "print/xerox | gznitte@gmail.com",
     "inout": "out",
     "cat": "print",
     "imgUrl": ""
@@ -1314,7 +1290,7 @@
     },
     "name": "Sanmathi garden",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "hangout",
     "imgUrl": ""
@@ -1338,7 +1314,7 @@
     },
     "name": "Clinic",
     "phone": 0,
-    "note": "ground floor",
+    "note": "💊",
     "inout": "in",
     "cat": "other",
     "imgUrl": ""
@@ -1362,7 +1338,7 @@
     },
     "name": "BC Alva Sports Complex",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "sport",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/bcalva.jpg?alt=media&token=4394e978-805e-4f62-bfce-c5e5c1be3a68"
@@ -1386,7 +1362,31 @@
     },
     "name": "BC Alva Memorial Indoor Stadium",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
+    "inout": "out",
+    "cat": "sport",
+    "imgUrl": ""
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.182909452934977,
+        "lng": 74.93907560257749
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "NET Campus GYM",
+    "phone": 0,
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "sport",
     "imgUrl": ""
@@ -1408,9 +1408,9 @@
         }
       }
     },
-    "name": "NET Gents Main Hostel- Block 3",
+    "name": "NET Gents Main Hostel",
     "phone": 0,
-    "note": "",
+    "note": "GOATED",
     "inout": "NA",
     "cat": "hostel",
     "imgUrl": ""
@@ -1434,7 +1434,7 @@
     },
     "name": "NET PG Girls Hostel",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "hostel",
     "imgUrl": ""
@@ -1458,10 +1458,10 @@
     },
     "name": "Sri Durga General Store",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "shop",
-    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/rohan.jpg?alt=media&token=9c1479df-2bc4-403b-a210-4620bea37b32"
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1482,7 +1482,7 @@
     },
     "name": "Shabari store",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": ""
@@ -1506,7 +1506,7 @@
     },
     "name": "Nitte Co-op store",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "in",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831144414.jpg?alt=media&token=27f11a80-456d-4fed-a169-a13bf9c67934"
@@ -1530,7 +1530,7 @@
     },
     "name": "Rohan's canteen & shop",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/rohan.jpg?alt=media&token=9c1479df-2bc4-403b-a210-4620bea37b32"
@@ -1552,9 +1552,9 @@
         }
       }
     },
-    "name": "Hotel Sri Durga Prasad",
+    "name": "Sri Durga Prasad",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": ""
@@ -1578,7 +1578,7 @@
     },
     "name": "Pavi Digital Studio",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "other",
     "imgUrl": ""
@@ -1601,8 +1601,8 @@
       }
     },
     "name": "Nitte fancy",
-    "phone": 7349005978,
-    "note": "",
+    "phone": 0,
+    "note": "7349005978",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/fancy.jpg?alt=media&token=0b6415ba-fdd7-42b7-80de-252401649936"
@@ -1624,9 +1624,9 @@
         }
       }
     },
-    "name": "Sri Durga Mens Parlour",
-    "phone": 8970242433,
-    "note": "Closed on Tuesdays",
+    "name": "Sri Durga Mens' Parlour",
+    "phone": 0,
+    "note": "8970242433",
     "inout": "out",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/durgasalon.jpg?alt=media&token=2d3f963b-2657-4f02-a88d-17f3fd23705d"
@@ -1649,8 +1649,8 @@
       }
     },
     "name": "Om Sai general store",
-    "phone": 8904297612,
-    "note": "",
+    "phone": 0,
+    "note": "8904297612",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/om%20sai.jpg?alt=media&token=fb303738-c7e3-4737-9633-2826fd5b2360"
@@ -1673,8 +1673,8 @@
       }
     },
     "name": "Malasa Footware",
-    "phone": 9740536587,
-    "note": "",
+    "phone": 0,
+    "note": "9740536587",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/malasa.jpg?alt=media&token=c744ecb6-8a80-4f09-a1e2-35e53009c7cd"
@@ -1697,8 +1697,8 @@
       }
     },
     "name": "Hegde corner",
-    "phone": 9449487548,
-    "note": "",
+    "phone": 0,
+    "note": "9449487548",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/hegde.jpg?alt=media&token=00f92fd1-e885-4c07-89f1-d218230f06f9"
@@ -1721,8 +1721,8 @@
       }
     },
     "name": "Shrajan store",
-    "phone": 9844897804,
-    "note": "",
+    "phone": 0,
+    "note": "9844897804",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/shrajan.jpg?alt=media&token=72f61a52-3835-4056-8d6f-3c1169dcef45"
@@ -1745,8 +1745,8 @@
       }
     },
     "name": "Janani hairdresser",
-    "phone": 8943560193,
-    "note": "",
+    "phone": 0,
+    "note": "8943560193",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/janani.jpg?alt=media&token=545f9e65-d5b3-448a-91af-5d9b86ab7ac8"
@@ -1770,7 +1770,7 @@
     },
     "name": "Porlu collections",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/porlu.jpg?alt=media&token=7625a2ea-b1ba-49dd-b301-1d251fe53054"
@@ -1793,8 +1793,8 @@
       }
     },
     "name": "Kamath Store",
-    "phone": 9686967079,
-    "note": "",
+    "phone": 0,
+    "note": "9686967079",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/kamath.jpg?alt=media&token=0c1a332d-5f76-4df0-af99-8f91c7274c41"
@@ -1817,8 +1817,8 @@
       }
     },
     "name": "NVS stores",
-    "phone": 9980437707,
-    "note": "",
+    "phone": 0,
+    "note": "9980437707",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/NVS.jpg?alt=media&token=dde9dc37-16b7-4f6c-90ef-ebc162577e32"
@@ -1840,9 +1840,9 @@
         }
       }
     },
-    "name": "Radha Krishna hotel",
-    "phone": 9845978044,
-    "note": "",
+    "name": "Radha Krishna",
+    "phone": 0,
+    "note": "9845978044",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://res.cloudinary.com/do1jebbgp/image/upload/v1661792466/NMAMIT-Map/radhakr_e4ouxu.jpg"
@@ -1866,7 +1866,7 @@
     },
     "name": "Menz Addict",
     "phone": 7353317316,
-    "note": "clothes n shit",
+    "note": "7353317316 | clothes",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/menzaddict.jpg?alt=media&token=13ec476d-237f-49a0-8636-d84a14abecd7"
@@ -1889,8 +1889,8 @@
       }
     },
     "name": "Pingara hair dressers",
-    "phone": 9611080597,
-    "note": "",
+    "phone": 0,
+    "note": "9611080597",
     "inout": "NA",
     "cat": "other",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/pingara.jpg?alt=media&token=e7b681cd-3f35-41ce-bf6f-0787c6dbd83c"
@@ -1913,8 +1913,8 @@
       }
     },
     "name": "Kateeleshwari food corner",
-    "phone": 9164592601,
-    "note": "",
+    "phone": 0,
+    "note": "9164592601",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/kateel.jpg?alt=media&token=64cb03a1-4536-4bd7-a6e6-8f7f32b0446a"
@@ -1937,8 +1937,8 @@
       }
     },
     "name": "Kateeleshwari fruits",
-    "phone": 8722950038,
-    "note": "",
+    "phone": 0,
+    "note": "8722950038",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/kateel.jpg?alt=media&token=64cb03a1-4536-4bd7-a6e6-8f7f32b0446a"
@@ -1962,10 +1962,58 @@
     },
     "name": "Government hospital",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "med",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/govthosp.jpg?alt=media&token=c91a3d9a-26be-4a41-b668-a4a1afb64544"
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.185094422241773,
+        "lng": 74.943687783637
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Nitte Rural Medical Center",
+    "phone": 0,
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
+    "inout": "NA",
+    "cat": "med",
+    "imgUrl": ""
+  },
+  {
+    "geometry": {
+      "location": {
+        "lat": 13.183104689648923,
+        "lng": 74.93459624959885
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 37.7404190302915,
+          "lng": -122.4159020697085
+        },
+        "southwest": {
+          "lat": 37.7377210697085,
+          "lng": -122.4186000302915
+        }
+      }
+    },
+    "name": "Clinic",
+    "phone": 0,
+    "note": "💊",
+    "inout": "NA",
+    "cat": "med",
+    "imgUrl": ""
   },
   {
     "geometry": {
@@ -1986,7 +2034,7 @@
     },
     "name": "Bus stop",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "stop",
     "imgUrl": ""
@@ -2010,7 +2058,7 @@
     },
     "name": "Auto stand",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "stop",
     "imgUrl": ""
@@ -2034,7 +2082,7 @@
     },
     "name": "Iyengar bakery",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "shop",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/iyengar.jpg?alt=media&token=2dbb23c0-0268-4158-b86b-a39fde5e888e"
@@ -2058,7 +2106,7 @@
     },
     "name": "Crystal Clean",
     "phone": 0,
-    "note": "",
+    "note": "Vehicle wash",
     "inout": "NA",
     "cat": "vehicle",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/IMG20220831152339.jpg?alt=media&token=57958d91-8c6b-4c87-8db3-c6451f225033"
@@ -2082,7 +2130,7 @@
     },
     "name": "Nitte Laxmi Fuels",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "vehicle",
     "imgUrl": ""
@@ -2106,7 +2154,7 @@
     },
     "name": "Om Sai Ram Auto Works",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "vehicle",
     "imgUrl": ""
@@ -2130,7 +2178,7 @@
     },
     "name": "Nitte Boys PG",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "NA",
     "cat": "hostel",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/hosBOYSPG.jpg?alt=media&token=99ccb0c7-d590-4f38-a6d6-0186fdcead92"
@@ -2154,57 +2202,9 @@
     },
     "name": "Ratna's",
     "phone": 0,
-    "note": "",
+    "note": "please connect to the internet and restart the app to get latest data from the server..",
     "inout": "out",
     "cat": "food",
     "imgUrl": "https://firebasestorage.googleapis.com/v0/b/academic-script-312305.appspot.com/o/ratnas.jpg?alt=media&token=355a3bcd-0634-4f43-a787-610039ee5bdb"
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 0,
-        "lng": 0
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "Nitte Co-op store",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "shop",
-    "imgUrl": ""
-  },
-  {
-    "geometry": {
-      "location": {
-        "lat": 0,
-        "lng": 0
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.7404190302915,
-          "lng": -122.4159020697085
-        },
-        "southwest": {
-          "lat": 37.7377210697085,
-          "lng": -122.4186000302915
-        }
-      }
-    },
-    "name": "Nitte Co-op store",
-    "phone": 0,
-    "note": "",
-    "inout": "NA",
-    "cat": "shop",
-    "imgUrl": ""
   }
 ]

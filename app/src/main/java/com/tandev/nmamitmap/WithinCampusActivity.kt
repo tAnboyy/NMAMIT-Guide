@@ -411,7 +411,7 @@ class SearchTabActivity : AppCompatActivity() {
 
                     listView.setOnItemClickListener { adapterView, view, i, l ->
 
-                        Toast.makeText(this, teachers[i].name + " selected", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "go to specified block -> floor", Toast.LENGTH_SHORT)
                             .show();
                         val intent = Intent(this, MapsActivity::class.java)
                         val lat = teachers[i].latLng.latitude
