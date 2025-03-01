@@ -16,7 +16,6 @@ import com.example.nmamitmap.Place
 import com.example.nmamitmap.PlacesReader
 import com.example.nmamitmap.R
 import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
-import java.security.AccessController.getContext
 
 class SearchTabActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivitySearchTab2Binding

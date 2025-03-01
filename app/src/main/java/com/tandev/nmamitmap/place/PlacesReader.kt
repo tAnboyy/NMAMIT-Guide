@@ -15,9 +15,11 @@
 package com.example.nmamitmap
 
 import android.content.Context
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.tandev.nmamitmap.MapsActivity
+import com.example.nmamitmap.R
 import java.io.InputStream
 import java.io.InputStreamReader
 
@@ -25,7 +27,7 @@ class PlacesReader(private val context: Context) {
 
     private val gson = Gson()
 
-    val body = MapsActivity.RES_BODY2
+    private val body = MapsActivity.RES_BODY2
 
     private val inputStream: InputStream
         get() = context.resources.openRawResource(R.raw.places)
@@ -33,16 +35,18 @@ class PlacesReader(private val context: Context) {
     fun read(): List<Place> {
         val itemType = object : TypeToken<List<PlaceResponse>>() {}.type
 
+        val reader1: String = body
 
-        if (MapsActivity.CAN_FETCH) {
-            val reader: String = body
-            return gson.fromJson<List<PlaceResponse>>(reader, itemType).map {
+//        Log.d("reader2", (reader1=="").toString())
+
+        if (MapsActivity.CAN_FETCH && reader1.isNotEmpty()) {
+            Log.d("reader", reader1 + reader1.isEmpty().toString())
+            return gson.fromJson<List<PlaceResponse>>(reader1, itemType).map {
                 it.toPlace()
             }
-
         } else {
-            val reader = InputStreamReader(inputStream)
-            return gson.fromJson<List<PlaceResponse>>(reader, itemType).map {
+            val reader2 = InputStreamReader(inputStream)
+            return gson.fromJson<List<PlaceResponse>>(reader2, itemType).map {
                 it.toPlace()
             }
         }
