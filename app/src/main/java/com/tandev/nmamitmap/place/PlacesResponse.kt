@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.example.nmamitmap
+package com.tandev.nmamitmap
 
 import com.google.android.gms.maps.model.LatLng
+import com.tandev.nmamitmap.place.Place
 
 data class PlaceResponse(
     val geometry: Geometry,

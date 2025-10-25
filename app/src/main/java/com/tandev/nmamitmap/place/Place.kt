@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.example.nmamitmap
+package com.tandev.nmamitmap.place
 
 import com.google.android.gms.maps.model.LatLng
 

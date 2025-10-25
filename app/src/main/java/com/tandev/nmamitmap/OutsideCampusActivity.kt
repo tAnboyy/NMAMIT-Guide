@@ -12,10 +12,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import com.example.nmamitmap.Place
-import com.example.nmamitmap.PlacesReader
-import com.example.nmamitmap.R
-import com.example.nmamitmap.databinding.ActivitySearchTab2Binding
+import com.tandev.nmamitmap.place.Place
+import com.tandev.nmamitmap.place.PlacesReader
+import com.tandev.nmamitmap.R
+import com.tandev.nmamitmap.databinding.ActivitySearchTab2Binding
 import java.security.AccessController.getContext
 
 class SearchTabActivity2 : AppCompatActivity() {

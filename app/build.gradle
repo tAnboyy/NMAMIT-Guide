@@ -6,12 +6,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace "com.tandev.nmamitmap"
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.tandev.nmamitmap"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

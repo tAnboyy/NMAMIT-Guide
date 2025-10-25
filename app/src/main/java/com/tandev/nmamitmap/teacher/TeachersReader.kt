@@ -12,14 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.example.nmamitmap
+package com.tandev.nmamitmap.teacher
 
 import android.content.Context
-import com.example.nmamitmap.databinding.ActivitySearchTabBinding
+import com.tandev.nmamitmap.databinding.ActivitySearchTabBinding
 import com.tandev.nmamitmap.teacher.Teacher
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.tandev.nmamitmap.MapsActivity
+import com.tandev.nmamitmap.R
 import java.io.InputStream
 import java.io.InputStreamReader
 

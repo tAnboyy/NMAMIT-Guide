@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
-import com.example.nmamitmap.R
+import com.tandev.nmamitmap.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
