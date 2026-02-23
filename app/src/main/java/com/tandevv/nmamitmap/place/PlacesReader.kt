@@ -12,16 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.tandev.nmamitmap.place
+package com.tandevv.nmamitmap.place
 
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.tandev.nmamitmap.MapsActivity
-import com.tandev.nmamitmap.PlaceResponse
-import com.tandev.nmamitmap.R
-import com.tandev.nmamitmap.toPlace
+import com.tandevv.nmamitmap.MapsActivity
+import com.tandevv.nmamitmap.PlaceResponse
+import com.tandevv.nmamitmap.R
+import com.tandevv.nmamitmap.toPlace
 import java.io.InputStream
 import java.io.InputStreamReader
 

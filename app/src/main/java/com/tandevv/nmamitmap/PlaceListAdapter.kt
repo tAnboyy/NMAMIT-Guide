@@ -1,4 +1,4 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -8,10 +8,8 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.tandev.nmamitmap.place.Place
-import com.tandev.nmamitmap.R
-import com.tandev.nmamitmap.teacher.Teacher
+import com.tandevv.nmamitmap.place.Place
+import com.tandevv.nmamitmap.R
 
 class PlaceListAdapter(private val context: Activity, private val arrayList: ArrayList<Place>): ArrayAdapter<Place>(context,
     R.layout.place_list_item, arrayList) {

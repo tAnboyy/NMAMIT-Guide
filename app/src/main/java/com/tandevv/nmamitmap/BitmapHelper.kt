@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 
 import android.content.Context
@@ -21,7 +21,6 @@ import android.graphics.Canvas
 import android.util.Log
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
-import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.google.android.gms.maps.model.BitmapDescriptor

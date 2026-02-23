@@ -1,7 +1,6 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 import android.app.Activity
-import android.app.Application
 import android.content.Context
 import android.content.IntentSender
 import android.util.Log

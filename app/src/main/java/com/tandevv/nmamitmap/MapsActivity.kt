@@ -1,4 +1,4 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 import android.app.ActivityOptions
 import android.content.Context
@@ -22,8 +22,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.tandev.nmamitmap.place.Place
-import com.tandev.nmamitmap.place.PlacesReader
+import com.tandevv.nmamitmap.place.Place
+import com.tandevv.nmamitmap.place.PlacesReader
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
@@ -52,7 +52,7 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import com.tandev.nmamitmap.databinding.ActivityMapsBinding
+import com.tandevv.nmamitmap.databinding.ActivityMapsBinding
 import com.vmadalin.easypermissions.EasyPermissions
 import okhttp3.Call
 import okhttp3.Callback

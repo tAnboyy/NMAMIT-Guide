@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tandev.nmamitmap.SearchTabActivity">
+    tools:context="com.tandevv.nmamitmap.SearchTabActivity"
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingBottom="0dp">
+        android:paddingBottom="0dp"
+        android:fitsSystemWindows="true"
+        >
 
         <!--        <com.google.android.material.appbar.AppBarLayout-->
         <!--            android:layout_width="match_parent"-->

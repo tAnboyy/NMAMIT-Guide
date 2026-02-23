@@ -1,4 +1,4 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 import android.app.Application
 

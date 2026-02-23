@@ -1,4 +1,4 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 import com.google.android.gms.maps.model.LatLng
 import kotlin.Comparable
 

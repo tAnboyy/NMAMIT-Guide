@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tandev.nmamitmap.SearchTabActivity">
+    tools:context="com.tandevv.nmamitmap.SearchTabActivity">
 
 <!--    <com.google.android.material.appbar.AppBarLayout-->
 <!--        android:layout_width="match_parent"-->
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="0dp"
-        tools:context="com.tandev.nmamitmap.MapsActivity" />
+        tools:context="com.tandevv.nmamitmap.MapsActivity" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

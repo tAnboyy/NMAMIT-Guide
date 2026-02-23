@@ -12,37 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap.place
 
 import com.google.android.gms.maps.model.LatLng
-import com.tandev.nmamitmap.place.Place
 
-data class PlaceResponse(
-    val geometry: Geometry,
+
+data class Place(
     val name: String,
+    val latLng: LatLng,
     val note: String,
     val phone: Long,
     val cat: String,
     val inout: String,
     val imgUrl: String
-) {
-
-    data class Geometry(
-        val location: GeometryLocation
-    )
-
-    data class GeometryLocation(
-        val lat: Double,
-        val lng: Double
-    )
-}
-
-fun PlaceResponse.toPlace(): Place = Place(
-    name = name,
-    latLng = LatLng(geometry.location.lat, geometry.location.lng),
-    note = note,
-    phone = phone,
-    cat = cat,
-    inout = inout,
-    imgUrl = imgUrl
 )

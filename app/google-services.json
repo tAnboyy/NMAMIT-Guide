@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:79103112903:android:d04bc63f214b81ee8970e2",
         "android_client_info": {
-          "package_name": "com.tandev.nmamitmap"
+          "package_name": "com.tandevv.nmamitmap"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "79103112903-5mvv5uh8rrvps1gfjaqhh86vvb20ahju.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.tandev.nmamitmap",
+            "package_name": "com.tandevv.nmamitmap",
             "certificate_hash": "a7949653a8d304c634189137783084c8a3a937b9"
           }
         },

@@ -12,21 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.tandev.nmamitmap.teacher
+package com.tandevv.nmamitmap
 
-import com.tandev.nmamitmap.teacher.Teacher
 import com.google.android.gms.maps.model.LatLng
-import com.tandev.nmamitmap.PlaceResponse
+import com.tandevv.nmamitmap.place.Place
 
-data class TeacherResponse(
-    val geometry: PlaceResponse.Geometry,
+data class PlaceResponse(
+    val geometry: Geometry,
     val name: String,
-    val branch: String,
-    val latLng: LatLng,
-    val block: String,
-    val floor: String,
-    val phone: String,
-    val index: Int,
+    val note: String,
+    val phone: Long,
+    val cat: String,
+    val inout: String,
     val imgUrl: String
 ) {
 
@@ -40,13 +37,12 @@ data class TeacherResponse(
     )
 }
 
-fun TeacherResponse.toTeacher(): Teacher = Teacher(
+fun PlaceResponse.toPlace(): Place = Place(
     name = name,
     latLng = LatLng(geometry.location.lat, geometry.location.lng),
-    floor = floor,
-    block = block,
-    branch = branch,
+    note = note,
     phone = phone,
-    index = index,
+    cat = cat,
+    inout = inout,
     imgUrl = imgUrl
 )

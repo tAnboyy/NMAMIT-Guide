@@ -1,4 +1,4 @@
-package com.tandev.nmamitmap
+package com.tandevv.nmamitmap
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.tandev.nmamitmap.place.Place
-import com.tandev.nmamitmap.place.PlacesReader
+import com.tandevv.nmamitmap.place.Place
+import com.tandevv.nmamitmap.place.PlacesReader
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
